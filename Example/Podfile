@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CustomSizeController_Example' do
+  pod 'CustomSizeController', :path => '../'
+
+  target 'CustomSizeController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
