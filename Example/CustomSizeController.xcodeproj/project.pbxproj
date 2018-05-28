@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		0B64C55697D6FE9BEC26F2DE /* Pods_CustomSizeController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomSizeController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1950F0286E3EE64C5F7F5B71 /* Pods_CustomSizeController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomSizeController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		50EAA890AD49A70E7FDD7600 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		50EAA890AD49A70E7FDD7600 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CustomSizeController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomSizeController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,10 +42,10 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		94E527973E7BD3A5B8B174F6 /* Pods-CustomSizeController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Tests/Pods-CustomSizeController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B4362DCF45BD8A29FA1528BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B4362DCF45BD8A29FA1528BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D373FA2444DAD867D6FC338B /* Pods-CustomSizeController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Example/Pods-CustomSizeController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D44C6807FBF7174579792ADB /* Pods-CustomSizeController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Tests/Pods-CustomSizeController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F225CDA1BA1F705E77798746 /* CustomSizeController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CustomSizeController.podspec; path = ../CustomSizeController.podspec; sourceTree = "<group>"; };
+		F225CDA1BA1F705E77798746 /* CustomSizeController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CustomSizeController.podspec; path = ../CustomSizeController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F4BE946371218951BFC62452 /* Pods-CustomSizeController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Example/Pods-CustomSizeController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

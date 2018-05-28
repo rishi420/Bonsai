@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40DFD317950C61574BD72CEB12372BC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		48BEC6B47ABCE1BB8FF518A2738A09A0 /* CustomSizeController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3962006010932DD2D10FBC428E9F1026 /* CustomSizeController-dummy.m */; };
+		491C0AD29F32EC699D4E5A3F68756CFD /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B5F557863C920EE19A585AC5947DA3 /* ReplaceMe.swift */; };
+		5780F6144A110802B22075DC541A82A9 /* Pods-CustomSizeController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD436624DE3DE61309843AF0782742A2 /* Pods-CustomSizeController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		619371317C1E3A4344C5DFB99E57EE41 /* Pods-CustomSizeController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1AD60CC2D9CDFE09A9DC3714ECB79A /* Pods-CustomSizeController_Tests-dummy.m */; };
+		6B1B49533B1F5929B1E340EC60AD6AB3 /* Pods-CustomSizeController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDBA0BED73E48A51F730BAE558495F /* Pods-CustomSizeController_Example-dummy.m */; };
+		B5876AE5CB5CE0818F15B288EE94E83B /* Pods-CustomSizeController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF19DBC9F6B7B7E449C1E42C3AB2AB20 /* Pods-CustomSizeController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C575BFA9922F524776F769F072F3A5E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		CC3299C524DAD9C48D76C6E7CA4B35A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D58904A4B36742EF859AA723B4180574 /* CustomSizeController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CCFE50ED1C0DB769B501786783A3E061 /* CustomSizeController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C3A485E0A623C210345947B32D2BC35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 920CD9E14C837A5636BF08595657C6D8;
+			remoteInfo = CustomSizeController;
+		};
+		591AB0C7575FDBF10C544B192F183135 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 042901E92965BD92079E48971784D642;
+			remoteInfo = "Pods-CustomSizeController_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EFA386BF7D268748119BCF1B0674A73 /* Pods-CustomSizeController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		169814F1F5ACC30154C100195F87F1E6 /* Pods-CustomSizeController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Tests-resources.sh"; sourceTree = "<group>"; };
+		2699469A9E6D75944AD6A08266ADF622 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2993E592C42E804761FF55BE4790AF7E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		313D452CCB32447884FE0D5A887527EF /* Pods-CustomSizeController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomSizeController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3962006010932DD2D10FBC428E9F1026 /* CustomSizeController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CustomSizeController-dummy.m"; sourceTree = "<group>"; };
+		3D1AD60CC2D9CDFE09A9DC3714ECB79A /* Pods-CustomSizeController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomSizeController_Tests-dummy.m"; sourceTree = "<group>"; };
+		45C79B901D3244462B5E56755073D2A7 /* CustomSizeController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CustomSizeController.xcconfig; sourceTree = "<group>"; };
+		4652597A57681C96A7EAE6DB5D0B2EAB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4ACDBA0BED73E48A51F730BAE558495F /* Pods-CustomSizeController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomSizeController_Example-dummy.m"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6C25CE62C8FE8DE55E6358D7F79A9EC5 /* CustomSizeController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CustomSizeController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6C560B4721F8523E70CEA80460482C90 /* Pods-CustomSizeController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomSizeController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		7310BD7F57BD68671749D6859AF3C3C0 /* Pods_CustomSizeController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CustomSizeController_Example.framework; path = "Pods-CustomSizeController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B5F557863C920EE19A585AC5947DA3 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = CustomSizeController/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A01B4386396663B3A9E19981F942C79A /* Pods-CustomSizeController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Example-resources.sh"; sourceTree = "<group>"; };
+		ADBB161E88EBB10D9D0E7D12EDABE236 /* Pods_CustomSizeController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CustomSizeController_Tests.framework; path = "Pods-CustomSizeController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC94360C1B727F27EC4CC61A714E0ADD /* Pods-CustomSizeController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CustomSizeController_Tests.modulemap"; sourceTree = "<group>"; };
+		BD436624DE3DE61309843AF0782742A2 /* Pods-CustomSizeController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomSizeController_Example-umbrella.h"; sourceTree = "<group>"; };
+		C2CB2960451E728F85554001ED30FD2C /* Pods-CustomSizeController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomSizeController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C554A84C3553BD8A3A7FB751648E9A2B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C74BE9294F26E15839C23A6D71A409F2 /* CustomSizeController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomSizeController-prefix.pch"; sourceTree = "<group>"; };
+		CCFE50ED1C0DB769B501786783A3E061 /* CustomSizeController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomSizeController-umbrella.h"; sourceTree = "<group>"; };
+		CF19DBC9F6B7B7E449C1E42C3AB2AB20 /* Pods-CustomSizeController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomSizeController_Tests-umbrella.h"; sourceTree = "<group>"; };
+		CFDE99F1456CEE0DDAC411A8812A90E7 /* Pods-CustomSizeController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomSizeController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D2F8EF54FBEA83257F36B17A02D18351 /* Pods-CustomSizeController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomSizeController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		DB9E501A69935187333051ACC8447385 /* CustomSizeController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CustomSizeController.framework; path = CustomSizeController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC11CDC68E831C8E475BE126E9FE1C6E /* Pods-CustomSizeController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomSizeController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DCB6444DC97939E02803FA785295521A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD8FAD19E167CBE2B3A25E67E4AFF574 /* CustomSizeController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CustomSizeController.modulemap; sourceTree = "<group>"; };
+		E125DF3144100A3E9B73D450CDD0FA4E /* Pods-CustomSizeController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomSizeController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E142359FADDA768293453A26A3DF7891 /* Pods-CustomSizeController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CustomSizeController_Example.modulemap"; sourceTree = "<group>"; };
+		E31F0A6FD3E3975B1C7BDAC8C894C8F5 /* Pods-CustomSizeController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F27CADB2B4ED24C9E587C5201E92FB05 /* Pods-CustomSizeController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomSizeController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57C7CD8D036124E6B77C0A08F38F98B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3299C524DAD9C48D76C6E7CA4B35A4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0DDAEEB06B92DDC30B3F5DC039E63BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40DFD317950C61574BD72CEB12372BC9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7AB389272EB9CA5DBF7812B9CF26672 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C575BFA9922F524776F769F072F3A5E2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1232BB149F4C7B96FBF123865986362B /* Pods-CustomSizeController_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DCB6444DC97939E02803FA785295521A /* Info.plist */,
+				BC94360C1B727F27EC4CC61A714E0ADD /* Pods-CustomSizeController_Tests.modulemap */,
+				E125DF3144100A3E9B73D450CDD0FA4E /* Pods-CustomSizeController_Tests-acknowledgements.markdown */,
+				F27CADB2B4ED24C9E587C5201E92FB05 /* Pods-CustomSizeController_Tests-acknowledgements.plist */,
+				3D1AD60CC2D9CDFE09A9DC3714ECB79A /* Pods-CustomSizeController_Tests-dummy.m */,
+				0EFA386BF7D268748119BCF1B0674A73 /* Pods-CustomSizeController_Tests-frameworks.sh */,
+				169814F1F5ACC30154C100195F87F1E6 /* Pods-CustomSizeController_Tests-resources.sh */,
+				CF19DBC9F6B7B7E449C1E42C3AB2AB20 /* Pods-CustomSizeController_Tests-umbrella.h */,
+				6C560B4721F8523E70CEA80460482C90 /* Pods-CustomSizeController_Tests.debug.xcconfig */,
+				C2CB2960451E728F85554001ED30FD2C /* Pods-CustomSizeController_Tests.release.xcconfig */,
+			);
+			name = "Pods-CustomSizeController_Tests";
+			path = "Target Support Files/Pods-CustomSizeController_Tests";
+			sourceTree = "<group>";
+		};
+		1349479FEA624892C22630D7DC729405 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				274E6F94774CB2FF864A0CE9A953CE2C /* Pods-CustomSizeController_Example */,
+				1232BB149F4C7B96FBF123865986362B /* Pods-CustomSizeController_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		215CF2F9CF8AACDDD06FCDC338C6EA8C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCD3975CF535D0CFB5E70EDD77E867FA /* CustomSizeController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		274E6F94774CB2FF864A0CE9A953CE2C /* Pods-CustomSizeController_Example */ = {
+			isa = PBXGroup;
+			children = (
+				C554A84C3553BD8A3A7FB751648E9A2B /* Info.plist */,
+				E142359FADDA768293453A26A3DF7891 /* Pods-CustomSizeController_Example.modulemap */,
+				DC11CDC68E831C8E475BE126E9FE1C6E /* Pods-CustomSizeController_Example-acknowledgements.markdown */,
+				313D452CCB32447884FE0D5A887527EF /* Pods-CustomSizeController_Example-acknowledgements.plist */,
+				4ACDBA0BED73E48A51F730BAE558495F /* Pods-CustomSizeController_Example-dummy.m */,
+				E31F0A6FD3E3975B1C7BDAC8C894C8F5 /* Pods-CustomSizeController_Example-frameworks.sh */,
+				A01B4386396663B3A9E19981F942C79A /* Pods-CustomSizeController_Example-resources.sh */,
+				BD436624DE3DE61309843AF0782742A2 /* Pods-CustomSizeController_Example-umbrella.h */,
+				CFDE99F1456CEE0DDAC411A8812A90E7 /* Pods-CustomSizeController_Example.debug.xcconfig */,
+				D2F8EF54FBEA83257F36B17A02D18351 /* Pods-CustomSizeController_Example.release.xcconfig */,
+			);
+			name = "Pods-CustomSizeController_Example";
+			path = "Target Support Files/Pods-CustomSizeController_Example";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				215CF2F9CF8AACDDD06FCDC338C6EA8C /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				8F6F34600339C92632643338903131F7 /* Products */,
+				1349479FEA624892C22630D7DC729405 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8B9D6E174583B3D6A8A6AEC9C0110923 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6C25CE62C8FE8DE55E6358D7F79A9EC5 /* CustomSizeController.podspec */,
+				2993E592C42E804761FF55BE4790AF7E /* LICENSE */,
+				4652597A57681C96A7EAE6DB5D0B2EAB /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		8F6F34600339C92632643338903131F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E501A69935187333051ACC8447385 /* CustomSizeController.framework */,
+				7310BD7F57BD68671749D6859AF3C3C0 /* Pods_CustomSizeController_Example.framework */,
+				ADBB161E88EBB10D9D0E7D12EDABE236 /* Pods_CustomSizeController_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCD3975CF535D0CFB5E70EDD77E867FA /* CustomSizeController */ = {
+			isa = PBXGroup;
+			children = (
+				80B5F557863C920EE19A585AC5947DA3 /* ReplaceMe.swift */,
+				8B9D6E174583B3D6A8A6AEC9C0110923 /* Pod */,
+				C60304371004D71578DBA8E1CE8DAB24 /* Support Files */,
+			);
+			name = CustomSizeController;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C60304371004D71578DBA8E1CE8DAB24 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD8FAD19E167CBE2B3A25E67E4AFF574 /* CustomSizeController.modulemap */,
+				45C79B901D3244462B5E56755073D2A7 /* CustomSizeController.xcconfig */,
+				3962006010932DD2D10FBC428E9F1026 /* CustomSizeController-dummy.m */,
+				C74BE9294F26E15839C23A6D71A409F2 /* CustomSizeController-prefix.pch */,
+				CCFE50ED1C0DB769B501786783A3E061 /* CustomSizeController-umbrella.h */,
+				2699469A9E6D75944AD6A08266ADF622 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CustomSizeController";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C5C1F6BE0E2CBB709DDDBD3776EA484E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5780F6144A110802B22075DC541A82A9 /* Pods-CustomSizeController_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC7E1D3F96D66AFA20A0E43BF5B7C52F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58904A4B36742EF859AA723B4180574 /* CustomSizeController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70B1B36E2288A35E6227A35A3FCEF93 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5876AE5CB5CE0818F15B288EE94E83B /* Pods-CustomSizeController_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		042901E92965BD92079E48971784D642 /* Pods-CustomSizeController_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFB2DC5C6762483E6DA04A4D3F72B631 /* Build configuration list for PBXNativeTarget "Pods-CustomSizeController_Example" */;
+			buildPhases = (
+				53BBA88F96EE908A878F67C13BEB7176 /* Sources */,
+				D0DDAEEB06B92DDC30B3F5DC039E63BB /* Frameworks */,
+				C5C1F6BE0E2CBB709DDDBD3776EA484E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				297EDC9A806CE43E72560E6E4251EAB7 /* PBXTargetDependency */,
+			);
+			name = "Pods-CustomSizeController_Example";
+			productName = "Pods-CustomSizeController_Example";
+			productReference = 7310BD7F57BD68671749D6859AF3C3C0 /* Pods_CustomSizeController_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0D05CEC89419F47FCFD153370ECA1C27 /* Pods-CustomSizeController_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 721D812F05F3DD302A089FC1238E7353 /* Build configuration list for PBXNativeTarget "Pods-CustomSizeController_Tests" */;
+			buildPhases = (
+				79AEFDD47E9B006D5A07F5F714862499 /* Sources */,
+				F7AB389272EB9CA5DBF7812B9CF26672 /* Frameworks */,
+				F70B1B36E2288A35E6227A35A3FCEF93 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9435B7F224E4EAE5C1329D67C389069 /* PBXTargetDependency */,
+			);
+			name = "Pods-CustomSizeController_Tests";
+			productName = "Pods-CustomSizeController_Tests";
+			productReference = ADBB161E88EBB10D9D0E7D12EDABE236 /* Pods_CustomSizeController_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		920CD9E14C837A5636BF08595657C6D8 /* CustomSizeController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EB9434818873025ED864F4695D6810B /* Build configuration list for PBXNativeTarget "CustomSizeController" */;
+			buildPhases = (
+				F6FB17F94A81F3C5CF39C5B36CA03480 /* Sources */,
+				57C7CD8D036124E6B77C0A08F38F98B5 /* Frameworks */,
+				DC7E1D3F96D66AFA20A0E43BF5B7C52F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomSizeController;
+			productName = CustomSizeController;
+			productReference = DB9E501A69935187333051ACC8447385 /* CustomSizeController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8F6F34600339C92632643338903131F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				920CD9E14C837A5636BF08595657C6D8 /* CustomSizeController */,
+				042901E92965BD92079E48971784D642 /* Pods-CustomSizeController_Example */,
+				0D05CEC89419F47FCFD153370ECA1C27 /* Pods-CustomSizeController_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53BBA88F96EE908A878F67C13BEB7176 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B1B49533B1F5929B1E340EC60AD6AB3 /* Pods-CustomSizeController_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79AEFDD47E9B006D5A07F5F714862499 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				619371317C1E3A4344C5DFB99E57EE41 /* Pods-CustomSizeController_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6FB17F94A81F3C5CF39C5B36CA03480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48BEC6B47ABCE1BB8FF518A2738A09A0 /* CustomSizeController-dummy.m in Sources */,
+				491C0AD29F32EC699D4E5A3F68756CFD /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		297EDC9A806CE43E72560E6E4251EAB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CustomSizeController;
+			target = 920CD9E14C837A5636BF08595657C6D8 /* CustomSizeController */;
+			targetProxy = 1C3A485E0A623C210345947B32D2BC35 /* PBXContainerItemProxy */;
+		};
+		B9435B7F224E4EAE5C1329D67C389069 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-CustomSizeController_Example";
+			target = 042901E92965BD92079E48971784D642 /* Pods-CustomSizeController_Example */;
+			targetProxy = 591AB0C7575FDBF10C544B192F183135 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0804618256A54B357222B621C6110BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C560B4721F8523E70CEA80460482C90 /* Pods-CustomSizeController_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CustomSizeController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CustomSizeController_Tests/Pods-CustomSizeController_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0F83D36DB72B83D98B20E0D9DC609C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F8EF54FBEA83257F36B17A02D18351 /* Pods-CustomSizeController_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CustomSizeController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CustomSizeController_Example/Pods-CustomSizeController_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		862C62AA3B6FDCE746DD8BBA9C1275D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFDE99F1456CEE0DDAC411A8812A90E7 /* Pods-CustomSizeController_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CustomSizeController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CustomSizeController_Example/Pods-CustomSizeController_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8A9B009CEDF1741873BFC6E44DEFE11E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C79B901D3244462B5E56755073D2A7 /* CustomSizeController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CustomSizeController/CustomSizeController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CustomSizeController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CustomSizeController/CustomSizeController.modulemap";
+				PRODUCT_MODULE_NAME = CustomSizeController;
+				PRODUCT_NAME = CustomSizeController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BDEB0F8C211B54B6A355FAF26701F3E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2CB2960451E728F85554001ED30FD2C /* Pods-CustomSizeController_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CustomSizeController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CustomSizeController_Tests/Pods-CustomSizeController_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D3469930696468AA8C1B3628547D0E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C79B901D3244462B5E56755073D2A7 /* CustomSizeController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CustomSizeController/CustomSizeController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CustomSizeController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CustomSizeController/CustomSizeController.modulemap";
+				PRODUCT_MODULE_NAME = CustomSizeController;
+				PRODUCT_NAME = CustomSizeController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
+				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		721D812F05F3DD302A089FC1238E7353 /* Build configuration list for PBXNativeTarget "Pods-CustomSizeController_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0804618256A54B357222B621C6110BF6 /* Debug */,
+				BDEB0F8C211B54B6A355FAF26701F3E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EB9434818873025ED864F4695D6810B /* Build configuration list for PBXNativeTarget "CustomSizeController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3469930696468AA8C1B3628547D0E7C /* Debug */,
+				8A9B009CEDF1741873BFC6E44DEFE11E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFB2DC5C6762483E6DA04A4D3F72B631 /* Build configuration list for PBXNativeTarget "Pods-CustomSizeController_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				862C62AA3B6FDCE746DD8BBA9C1275D2 /* Debug */,
+				0F83D36DB72B83D98B20E0D9DC609C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "CustomSizeController",
+  "version": "0.1.0",
+  "summary": "A short description of CustomSizeController.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/rishi420/CustomSizeController",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "rishi420": "rishi420@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/rishi420/CustomSizeController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CustomSizeController/Classes/**/*"
+}

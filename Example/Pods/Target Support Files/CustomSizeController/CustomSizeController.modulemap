@@ -1,0 +1,6 @@
+framework module CustomSizeController {
+  umbrella header "CustomSizeController-umbrella.h"
+
+  export *
+  module * { export * }
+}

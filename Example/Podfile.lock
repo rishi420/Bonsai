@@ -1,0 +1,16 @@
+PODS:
+  - CustomSizeController (0.1.0)
+
+DEPENDENCIES:
+  - CustomSizeController (from `../`)
+
+EXTERNAL SOURCES:
+  CustomSizeController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CustomSizeController: d1b3d9b12e3aac3043dc35e8f1bfc33c46393e44
+
+PODFILE CHECKSUM: 2f42e40f9999a287d6771f9ea6613caa9b78e940
+
+COCOAPODS: 1.5.0
