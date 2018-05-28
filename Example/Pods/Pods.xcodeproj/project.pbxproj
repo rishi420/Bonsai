@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A549411FF21FA7AC1649F4B0E0CB016 /* CustomSizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EB7987A9196454006BEA7D663D6D5E /* CustomSizeController.swift */; };
 		40DFD317950C61574BD72CEB12372BC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		48BEC6B47ABCE1BB8FF518A2738A09A0 /* CustomSizeController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3962006010932DD2D10FBC428E9F1026 /* CustomSizeController-dummy.m */; };
-		491C0AD29F32EC699D4E5A3F68756CFD /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B5F557863C920EE19A585AC5947DA3 /* ReplaceMe.swift */; };
 		5780F6144A110802B22075DC541A82A9 /* Pods-CustomSizeController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD436624DE3DE61309843AF0782742A2 /* Pods-CustomSizeController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		619371317C1E3A4344C5DFB99E57EE41 /* Pods-CustomSizeController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1AD60CC2D9CDFE09A9DC3714ECB79A /* Pods-CustomSizeController_Tests-dummy.m */; };
 		6B1B49533B1F5929B1E340EC60AD6AB3 /* Pods-CustomSizeController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDBA0BED73E48A51F730BAE558495F /* Pods-CustomSizeController_Example-dummy.m */; };
 		B5876AE5CB5CE0818F15B288EE94E83B /* Pods-CustomSizeController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF19DBC9F6B7B7E449C1E42C3AB2AB20 /* Pods-CustomSizeController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C575BFA9922F524776F769F072F3A5E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		CC3299C524DAD9C48D76C6E7CA4B35A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		D58904A4B36742EF859AA723B4180574 /* CustomSizeController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CCFE50ED1C0DB769B501786783A3E061 /* CustomSizeController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2A4C2D7254AD6768C1FF572E6D3990C /* CustomSizeController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 886F76E7A871715A8CADD95D5A8130DA /* CustomSizeController-dummy.m */; };
+		D58904A4B36742EF859AA723B4180574 /* CustomSizeController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27EDBF5996EE5B719B1FAFA2F3627F8F /* CustomSizeController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,35 +39,35 @@
 /* Begin PBXFileReference section */
 		0EFA386BF7D268748119BCF1B0674A73 /* Pods-CustomSizeController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		169814F1F5ACC30154C100195F87F1E6 /* Pods-CustomSizeController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Tests-resources.sh"; sourceTree = "<group>"; };
-		2699469A9E6D75944AD6A08266ADF622 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2993E592C42E804761FF55BE4790AF7E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		25EB7987A9196454006BEA7D663D6D5E /* CustomSizeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomSizeController.swift; path = CustomSizeController/Classes/CustomSizeController.swift; sourceTree = "<group>"; };
+		27EDBF5996EE5B719B1FAFA2F3627F8F /* CustomSizeController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomSizeController-umbrella.h"; sourceTree = "<group>"; };
+		2883163545C25C6C82031A06EF47EEC5 /* CustomSizeController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CustomSizeController.modulemap; sourceTree = "<group>"; };
+		2FC3BEDCA8A10EBBC4D36B7395D2AC27 /* CustomSizeController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomSizeController-prefix.pch"; sourceTree = "<group>"; };
 		313D452CCB32447884FE0D5A887527EF /* Pods-CustomSizeController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomSizeController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		3962006010932DD2D10FBC428E9F1026 /* CustomSizeController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CustomSizeController-dummy.m"; sourceTree = "<group>"; };
 		3D1AD60CC2D9CDFE09A9DC3714ECB79A /* Pods-CustomSizeController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomSizeController_Tests-dummy.m"; sourceTree = "<group>"; };
-		45C79B901D3244462B5E56755073D2A7 /* CustomSizeController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CustomSizeController.xcconfig; sourceTree = "<group>"; };
-		4652597A57681C96A7EAE6DB5D0B2EAB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		47573050C19684EFB47BC7199D83C60B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ACDBA0BED73E48A51F730BAE558495F /* Pods-CustomSizeController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomSizeController_Example-dummy.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6C25CE62C8FE8DE55E6358D7F79A9EC5 /* CustomSizeController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CustomSizeController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6C560B4721F8523E70CEA80460482C90 /* Pods-CustomSizeController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomSizeController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7310BD7F57BD68671749D6859AF3C3C0 /* Pods_CustomSizeController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CustomSizeController_Example.framework; path = "Pods-CustomSizeController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		80B5F557863C920EE19A585AC5947DA3 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = CustomSizeController/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		886F76E7A871715A8CADD95D5A8130DA /* CustomSizeController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CustomSizeController-dummy.m"; sourceTree = "<group>"; };
+		8DE98755B33806C26C3DBAFFFC2D24BE /* CustomSizeController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CustomSizeController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94A7E9B68454296785144C3E98D40EC2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		A01B4386396663B3A9E19981F942C79A /* Pods-CustomSizeController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Example-resources.sh"; sourceTree = "<group>"; };
 		ADBB161E88EBB10D9D0E7D12EDABE236 /* Pods_CustomSizeController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CustomSizeController_Tests.framework; path = "Pods-CustomSizeController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC94360C1B727F27EC4CC61A714E0ADD /* Pods-CustomSizeController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CustomSizeController_Tests.modulemap"; sourceTree = "<group>"; };
 		BD436624DE3DE61309843AF0782742A2 /* Pods-CustomSizeController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomSizeController_Example-umbrella.h"; sourceTree = "<group>"; };
 		C2CB2960451E728F85554001ED30FD2C /* Pods-CustomSizeController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomSizeController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C554A84C3553BD8A3A7FB751648E9A2B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C74BE9294F26E15839C23A6D71A409F2 /* CustomSizeController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomSizeController-prefix.pch"; sourceTree = "<group>"; };
-		CCFE50ED1C0DB769B501786783A3E061 /* CustomSizeController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomSizeController-umbrella.h"; sourceTree = "<group>"; };
+		C77DF0427B7487FB6529E039E1CEA231 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		CF19DBC9F6B7B7E449C1E42C3AB2AB20 /* Pods-CustomSizeController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomSizeController_Tests-umbrella.h"; sourceTree = "<group>"; };
 		CFDE99F1456CEE0DDAC411A8812A90E7 /* Pods-CustomSizeController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomSizeController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D2F8EF54FBEA83257F36B17A02D18351 /* Pods-CustomSizeController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomSizeController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DB9E501A69935187333051ACC8447385 /* CustomSizeController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CustomSizeController.framework; path = CustomSizeController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC11CDC68E831C8E475BE126E9FE1C6E /* Pods-CustomSizeController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomSizeController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DCB6444DC97939E02803FA785295521A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD8FAD19E167CBE2B3A25E67E4AFF574 /* CustomSizeController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CustomSizeController.modulemap; sourceTree = "<group>"; };
+		E03B321E2AC8F2B891CF2D91D3EE8C3A /* CustomSizeController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CustomSizeController.xcconfig; sourceTree = "<group>"; };
 		E125DF3144100A3E9B73D450CDD0FA4E /* Pods-CustomSizeController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomSizeController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E142359FADDA768293453A26A3DF7891 /* Pods-CustomSizeController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CustomSizeController_Example.modulemap"; sourceTree = "<group>"; };
 		E31F0A6FD3E3975B1C7BDAC8C894C8F5 /* Pods-CustomSizeController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		215CF2F9CF8AACDDD06FCDC338C6EA8C /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BCD3975CF535D0CFB5E70EDD77E867FA /* CustomSizeController */,
+				C0A03C0AC0D16353401C4FD30FB3CF3A /* CustomSizeController */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -155,6 +155,30 @@
 			path = "Target Support Files/Pods-CustomSizeController_Example";
 			sourceTree = "<group>";
 		};
+		349381E4A53FBC31273F550B9AD8CE9C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8DE98755B33806C26C3DBAFFFC2D24BE /* CustomSizeController.podspec */,
+				94A7E9B68454296785144C3E98D40EC2 /* LICENSE */,
+				C77DF0427B7487FB6529E039E1CEA231 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		566ECC4345CA012D74D78A1BB6162705 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2883163545C25C6C82031A06EF47EEC5 /* CustomSizeController.modulemap */,
+				E03B321E2AC8F2B891CF2D91D3EE8C3A /* CustomSizeController.xcconfig */,
+				886F76E7A871715A8CADD95D5A8130DA /* CustomSizeController-dummy.m */,
+				2FC3BEDCA8A10EBBC4D36B7395D2AC27 /* CustomSizeController-prefix.pch */,
+				27EDBF5996EE5B719B1FAFA2F3627F8F /* CustomSizeController-umbrella.h */,
+				47573050C19684EFB47BC7199D83C60B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CustomSizeController";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -164,16 +188,6 @@
 				8F6F34600339C92632643338903131F7 /* Products */,
 				1349479FEA624892C22630D7DC729405 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		8B9D6E174583B3D6A8A6AEC9C0110923 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				6C25CE62C8FE8DE55E6358D7F79A9EC5 /* CustomSizeController.podspec */,
-				2993E592C42E804761FF55BE4790AF7E /* LICENSE */,
-				4652597A57681C96A7EAE6DB5D0B2EAB /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		8F6F34600339C92632643338903131F7 /* Products */ = {
@@ -194,29 +208,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BCD3975CF535D0CFB5E70EDD77E867FA /* CustomSizeController */ = {
+		C0A03C0AC0D16353401C4FD30FB3CF3A /* CustomSizeController */ = {
 			isa = PBXGroup;
 			children = (
-				80B5F557863C920EE19A585AC5947DA3 /* ReplaceMe.swift */,
-				8B9D6E174583B3D6A8A6AEC9C0110923 /* Pod */,
-				C60304371004D71578DBA8E1CE8DAB24 /* Support Files */,
+				25EB7987A9196454006BEA7D663D6D5E /* CustomSizeController.swift */,
+				349381E4A53FBC31273F550B9AD8CE9C /* Pod */,
+				566ECC4345CA012D74D78A1BB6162705 /* Support Files */,
 			);
 			name = CustomSizeController;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		C60304371004D71578DBA8E1CE8DAB24 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DD8FAD19E167CBE2B3A25E67E4AFF574 /* CustomSizeController.modulemap */,
-				45C79B901D3244462B5E56755073D2A7 /* CustomSizeController.xcconfig */,
-				3962006010932DD2D10FBC428E9F1026 /* CustomSizeController-dummy.m */,
-				C74BE9294F26E15839C23A6D71A409F2 /* CustomSizeController-prefix.pch */,
-				CCFE50ED1C0DB769B501786783A3E061 /* CustomSizeController-umbrella.h */,
-				2699469A9E6D75944AD6A08266ADF622 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CustomSizeController";
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -297,7 +297,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EB9434818873025ED864F4695D6810B /* Build configuration list for PBXNativeTarget "CustomSizeController" */;
 			buildPhases = (
-				F6FB17F94A81F3C5CF39C5B36CA03480 /* Sources */,
+				27D90F9567CF6FE659B95769EF1291D9 /* Sources */,
 				57C7CD8D036124E6B77C0A08F38F98B5 /* Frameworks */,
 				DC7E1D3F96D66AFA20A0E43BF5B7C52F /* Headers */,
 			);
@@ -339,6 +339,15 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		27D90F9567CF6FE659B95769EF1291D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2A4C2D7254AD6768C1FF572E6D3990C /* CustomSizeController-dummy.m in Sources */,
+				1A549411FF21FA7AC1649F4B0E0CB016 /* CustomSizeController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53BBA88F96EE908A878F67C13BEB7176 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,15 +361,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				619371317C1E3A4344C5DFB99E57EE41 /* Pods-CustomSizeController_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F6FB17F94A81F3C5CF39C5B36CA03480 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				48BEC6B47ABCE1BB8FF518A2738A09A0 /* CustomSizeController-dummy.m in Sources */,
-				491C0AD29F32EC699D4E5A3F68756CFD /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +450,71 @@
 			};
 			name = Release;
 		};
+		4EFC33E2EBF8D2EB334620A718D47DFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E03B321E2AC8F2B891CF2D91D3EE8C3A /* CustomSizeController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CustomSizeController/CustomSizeController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CustomSizeController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CustomSizeController/CustomSizeController.modulemap";
+				PRODUCT_MODULE_NAME = CustomSizeController;
+				PRODUCT_NAME = CustomSizeController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		75748ACE8A36CCFFE33FAFF3DFC554ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E03B321E2AC8F2B891CF2D91D3EE8C3A /* CustomSizeController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CustomSizeController/CustomSizeController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CustomSizeController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CustomSizeController/CustomSizeController.modulemap";
+				PRODUCT_MODULE_NAME = CustomSizeController;
+				PRODUCT_NAME = CustomSizeController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		862C62AA3B6FDCE746DD8BBA9C1275D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CFDE99F1456CEE0DDAC411A8812A90E7 /* Pods-CustomSizeController_Example.debug.xcconfig */;
@@ -484,39 +549,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		8A9B009CEDF1741873BFC6E44DEFE11E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45C79B901D3244462B5E56755073D2A7 /* CustomSizeController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CustomSizeController/CustomSizeController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CustomSizeController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CustomSizeController/CustomSizeController.modulemap";
-				PRODUCT_MODULE_NAME = CustomSizeController;
-				PRODUCT_NAME = CustomSizeController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -673,38 +705,6 @@
 			};
 			name = Release;
 		};
-		D3469930696468AA8C1B3628547D0E7C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45C79B901D3244462B5E56755073D2A7 /* CustomSizeController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CustomSizeController/CustomSizeController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CustomSizeController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CustomSizeController/CustomSizeController.modulemap";
-				PRODUCT_MODULE_NAME = CustomSizeController;
-				PRODUCT_NAME = CustomSizeController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -729,8 +729,8 @@
 		7EB9434818873025ED864F4695D6810B /* Build configuration list for PBXNativeTarget "CustomSizeController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3469930696468AA8C1B3628547D0E7C /* Debug */,
-				8A9B009CEDF1741873BFC6E44DEFE11E /* Release */,
+				75748ACE8A36CCFFE33FAFF3DFC554ED /* Debug */,
+				4EFC33E2EBF8D2EB334620A718D47DFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

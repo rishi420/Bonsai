@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CustomSizeController: d1b3d9b12e3aac3043dc35e8f1bfc33c46393e44
+  CustomSizeController: cdcd06f0914ead25f149ed2e8a8517ebd1267ac7
 
 PODFILE CHECKSUM: 2f42e40f9999a287d6771f9ea6613caa9b78e940
 
