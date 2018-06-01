@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol CustomSizeControllerDelegate: NSObjectProtocol {
+public protocol CustomSizeControllerDelegate: UIViewControllerTransitioningDelegate {
     
     /// Returns a frame for presented viewController on containerView
     ///
@@ -27,40 +27,39 @@ public extension CustomSizeControllerDelegate {
 
 public class CustomSizeController: UIPresentationController, CustomSizeControllerDelegate {
     
-    public var isDisabledTapOutside = false
+    public var blurEffectView: UIVisualEffectView!
     weak public var sizeDelegate: CustomSizeControllerDelegate?
     
-    private let blurEffectView: UIVisualEffectView!
-    
-    @objc func dismiss() {
-        
-        guard !isDisabledTapOutside else {
-            return
-        }
-        
+    @objc public func dismiss() {
         presentedViewController.dismiss(animated: true, completion: nil)
     }
     
-    override public init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
+    convenience public init(presentedViewController: UIViewController, isDisabledTapOutside: Bool = false) {
+        self.init(presentedViewController: presentedViewController, presenting: nil)
         
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.isUserInteractionEnabled = true
         
+        if !isDisabledTapOutside {
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismiss))
+            blurEffectView.addGestureRecognizer(tapGestureRecognizer)
+        }
+    
+        presentedView!.layer.masksToBounds = true
+        presentedView!.layer.cornerRadius = 10
+    }
+    
+    override private init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismiss))
-        blurEffectView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     override public var frameOfPresentedViewInContainerView: CGRect {
-        
         return (sizeDelegate ?? self).frameOfPresentedView(in: containerView!.frame)
     }
     
     override public func dismissalTransitionWillBegin() {
-        
         presentedViewController.transitionCoordinator?.animate(alongsideTransition: { [weak self] (UIViewControllerTransitionCoordinatorContext) in
             self?.blurEffectView.alpha = 0
         }, completion: { [weak self] (UIViewControllerTransitionCoordinatorContext) in
@@ -69,7 +68,6 @@ public class CustomSizeController: UIPresentationController, CustomSizeControlle
     }
     
     override public func presentationTransitionWillBegin() {
-        
         blurEffectView.alpha = 0
         containerView?.addSubview(blurEffectView)
     
@@ -80,17 +78,15 @@ public class CustomSizeController: UIPresentationController, CustomSizeControlle
         })
     }
     
-    override public func containerViewWillLayoutSubviews() {
-        super.containerViewWillLayoutSubviews()
-        
-        presentedView!.layer.masksToBounds = true
-        presentedView!.layer.cornerRadius = 10
-    }
-    
     override public func containerViewDidLayoutSubviews() {
         super.containerViewDidLayoutSubviews()
-        
         presentedView?.frame = frameOfPresentedViewInContainerView
         blurEffectView.frame = containerView!.bounds
+    }
+}
+
+extension CustomSizeController: UIViewControllerTransitioningDelegate {
+    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return self
     }
 }

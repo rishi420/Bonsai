@@ -11,46 +11,56 @@ import CustomSizeController
 
 class ViewController: UIViewController {
     
+    var customSizeC: CustomSizeController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    
+    // Popup
+    @IBAction func showAsPopupButtonAction(_ sender: Any) {
+        CustomSizePopupUtility.shared.show()
     }
     
+    // FROM CODE
     @IBAction func ShowSmallVCButtonAction(_ sender: Any) {
         
-        //let vc = UIViewController()
+        //let vc = UIViewController() // Any ViewController
         let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
-        vc.modalPresentationStyle = .custom
-        vc.transitioningDelegate = self
         vc.view.backgroundColor = .red
         
+        customSizeC = CustomSizeController(presentedViewController: vc)
+        
+        // Disable tap outside
+        //customSizeC = CustomSizeController(presentedViewController: vc, isDisabledTapOutside: true)
+        
+        customSizeC?.sizeDelegate = self
+        
+        vc.modalPresentationStyle = .custom
+        vc.transitioningDelegate = customSizeC
+        
+        //vc.modalTransitionStyle = .crossDissolve
+        
         present(vc, animated: true, completion: nil)
+        
+        // Dismiss after delay
+        //customSizeC?.perform(#selector(customSizeC?.dismiss), with: nil, afterDelay: 5)
     }
     
+    // FROM STORYBOARD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let smallVC = segue.destination as? SmallViewController {
             
+            customSizeC = CustomSizeController(presentedViewController: smallVC)
+            customSizeC?.sizeDelegate = self
+            
             smallVC.modalPresentationStyle = .custom
+            smallVC.transitioningDelegate = customSizeC
+            
             smallVC.view.backgroundColor = .blue
-            smallVC.transitioningDelegate = self
         }
-    }
-}
-
-extension ViewController: UIViewControllerTransitioningDelegate {
-    
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        
-        let customSizePC = CustomSizeController(presentedViewController: presented, presenting: presenting)
-        customSizePC.sizeDelegate = self
-        //customSizePC.isDisabledTapOutside = true
-        
-        return customSizePC
     }
 }
 

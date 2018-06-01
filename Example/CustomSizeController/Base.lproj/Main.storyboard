@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomeSizePresentationController_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomSizeController_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,8 +25,15 @@
                                     <action selector="ShowSmallVCButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tti-lT-0GM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjE-YT-1Pf">
+                                <rect key="frame" x="116" y="242" width="143" height="30"/>
+                                <state key="normal" title="Show as Popup View"/>
+                                <connections>
+                                    <action selector="showAsPopupButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vvM-AV-QuI"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAG-dz-aiA">
-                                <rect key="frame" x="90.5" y="418.5" width="194" height="30"/>
+                                <rect key="frame" x="90.5" y="384.5" width="194" height="30"/>
                                 <state key="normal" title="Show Small VC (storyBoard)"/>
                                 <connections>
                                     <segue destination="37k-zS-NPD" kind="show" identifier="" id="Qkt-1x-X2m"/>
@@ -36,9 +43,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HuZ-8b-Y90" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2ij-tE-Zet"/>
+                            <constraint firstItem="vjE-YT-1Pf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oy0-0J-tEw"/>
                             <constraint firstItem="HuZ-8b-Y90" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S7S-gu-qaC"/>
+                            <constraint firstItem="vjE-YT-1Pf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-76.5" id="aJO-xa-RJf"/>
                             <constraint firstItem="yAG-dz-aiA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hwd-iI-TfR"/>
-                            <constraint firstItem="yAG-dz-aiA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="yDN-li-VpR"/>
+                            <constraint firstItem="yAG-dz-aiA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="66" id="yDN-li-VpR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -49,7 +58,7 @@
         <!--Small View Controller-->
         <scene sceneID="ubT-9U-ibZ">
             <objects>
-                <viewController storyboardIdentifier="SmallVC" id="37k-zS-NPD" customClass="SmallViewController" customModule="CustomeSizePresentationController_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SmallVC" id="37k-zS-NPD" customClass="SmallViewController" customModule="CustomSizeController_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yuy-Gk-dBE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeg-ch-RVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066" y="119"/>
+            <point key="canvasLocation" x="942" y="107"/>
         </scene>
     </scenes>
 </document>
