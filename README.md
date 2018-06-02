@@ -5,8 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/CustomSizeController.svg?style=flat)](https://cocoapods.org/pods/CustomSizeController)
 [![Platform](https://img.shields.io/cocoapods/p/CustomSizeController.svg?style=flat)](https://cocoapods.org/pods/CustomSizeController)
 
-## Overview
-
 CustomSizeController is a subclass of UIPresentationController allowing custom size for any UIViewController.
 
 ## Usage
@@ -15,25 +13,13 @@ CustomSizeController is a subclass of UIPresentationController allowing custom s
 import CustomSizeController
 ```
 
-Add these two extensions to your view controller
+Add `CustomSizeControllerDelegate` extension to your view controller
 
 ```Swift
-extension ViewController: UIViewControllerTransitioningDelegate {
-
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-
-        let customSizePC = CustomSizeController(presentedViewController: presented, presenting: presenting)
-        customSizePC.sizeDelegate = self
-        //customSizePC.isDisabledTapOutside = true
-
-        return customSizePC
-    }
-}
-
-extension ViewController: CustomSizeControllerDelegate {
-
+extension YourViewController: CustomSizeControllerDelegate {
+    
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
-
+        
         return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (4/3)))
     }
 }
@@ -42,14 +28,23 @@ return a frame for the small view controller from `frameOfPresentedView(in:)` fu
 
 ## How to Present the view controller 
 
+```Swift
+var customSizeC: CustomSizeController?
+```
+
 ### From Code:
 
 ```Swift
 let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
+customSizeC = CustomSizeController(presentedViewController: vc)
+customSizeC?.sizeDelegate = self
+        
 vc.modalPresentationStyle = .custom
-vc.transitioningDelegate = self
+vc.transitioningDelegate = customSizeC
+
 present(vc, animated: true, completion: nil)
 ```
+
 ### From Storyboard:
 
 ```Swift
@@ -57,6 +52,9 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
     if let smallVC = segue.destination as? SmallViewController {
 
+        customSizeC = CustomSizeController(presentedViewController: smallVC)
+        customSizeC?.sizeDelegate = self
+            
         smallVC.modalPresentationStyle = .custom
         smallVC.transitioningDelegate = self
     }
@@ -65,7 +63,17 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
 ### Disable dismiss on tap outside
 
-customSizePC.isDisabledTapOutside = true
+Initiate `CustomSizeController` with outside tap disabled
+
+```Swift
+customSizeC = CustomSizeController(presentedViewController: vc, isDisabledTapOutside: true)
+```
+
+###  Auto dismiss after delay
+
+```Swift
+    customSizeC?.perform(#selector(customSizeC?.dismiss), with: nil, afterDelay: 5)
+```
 
 ## Example
 
