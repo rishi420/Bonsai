@@ -72,7 +72,7 @@ customSizeC = CustomSizeController(presentedViewController: vc, isDisabledTapOut
 ###  Auto dismiss after delay
 
 ```Swift
-    customSizeC?.perform(#selector(customSizeC?.dismiss), with: nil, afterDelay: 5)
+customSizeC?.perform(#selector(customSizeC?.dismiss), with: nil, afterDelay: 5)
 ```
 
 ## Example
