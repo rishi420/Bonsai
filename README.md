@@ -56,7 +56,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         customSizeC?.sizeDelegate = self
             
         smallVC.modalPresentationStyle = .custom
-        smallVC.transitioningDelegate = self
+        smallVC.transitioningDelegate = customSizeC
     }
 }
 ```
