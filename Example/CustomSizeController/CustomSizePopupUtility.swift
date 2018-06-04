@@ -20,9 +20,6 @@ class CustomSizePopupUtility: NSObject {
         let customSizeC = CustomSizeController(presentedViewController: vc)
         customSizeC.sizeDelegate = self
         
-        vc.modalPresentationStyle = .custom
-        vc.transitioningDelegate = customSizeC
-        
         UIApplication.topViewController()?.present(vc, animated: true, completion: nil)
     }
 }

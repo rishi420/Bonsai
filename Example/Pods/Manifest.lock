@@ -1,5 +1,5 @@
 PODS:
-  - CustomSizeController (0.1.0)
+  - CustomSizeController (1.0.0)
 
 DEPENDENCIES:
   - CustomSizeController (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CustomSizeController: cdcd06f0914ead25f149ed2e8a8517ebd1267ac7
+  CustomSizeController: d7f31fca133421f112dda812c9ac375ad1279d8b
 
 PODFILE CHECKSUM: 2f42e40f9999a287d6771f9ea6613caa9b78e940
 

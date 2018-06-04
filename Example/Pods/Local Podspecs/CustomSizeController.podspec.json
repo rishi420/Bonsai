@@ -1,6 +1,6 @@
 {
   "name": "CustomSizeController",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "summary": "Custom size any view controller",
   "description": "his CocoaPod adds the ability to change frame of any view controller",
   "homepage": "https://github.com/rishi420/CustomSizeController",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/rishi420/CustomSizeController.git",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
   "swift_version": "4",
   "platforms": {

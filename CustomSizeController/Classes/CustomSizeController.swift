@@ -49,6 +49,9 @@ public class CustomSizeController: UIPresentationController, CustomSizeControlle
     
         presentedView!.layer.masksToBounds = true
         presentedView!.layer.cornerRadius = 10
+        
+        presentedViewController.modalPresentationStyle = .custom
+        presentedViewController.transitioningDelegate = self
     }
     
     override private init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
@@ -88,5 +91,15 @@ public class CustomSizeController: UIPresentationController, CustomSizeControlle
 extension CustomSizeController: UIViewControllerTransitioningDelegate {
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return self
+    }
+    
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideInTransition(fromDirection: .down)
+        //return nil
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideInTransition(fromDirection: .down, reverse: true)
+        //return nil
     }
 }

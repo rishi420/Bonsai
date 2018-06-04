@@ -37,9 +37,6 @@ class ViewController: UIViewController {
         
         customSizeC?.sizeDelegate = self
         
-        vc.modalPresentationStyle = .custom
-        vc.transitioningDelegate = customSizeC
-        
         //vc.modalTransitionStyle = .crossDissolve
         
         present(vc, animated: true, completion: nil)
@@ -55,9 +52,6 @@ class ViewController: UIViewController {
             
             customSizeC = CustomSizeController(presentedViewController: smallVC)
             customSizeC?.sizeDelegate = self
-            
-            smallVC.modalPresentationStyle = .custom
-            smallVC.transitioningDelegate = customSizeC
             
             smallVC.view.backgroundColor = .blue
         }
