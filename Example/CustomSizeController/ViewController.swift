@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
         vc.view.backgroundColor = .red
         
-        customSizeC = CustomSizeController(presentedViewController: vc)
+        customSizeC = CustomSizeController(presentedViewController: vc, fromDirection: .right)
         
         // Disable tap outside
         //customSizeC = CustomSizeController(presentedViewController: vc, isDisabledTapOutside: true)
@@ -41,6 +41,8 @@ class ViewController: UIViewController {
         
         present(vc, animated: true, completion: nil)
         
+        //customSizeC?.dismissDirection = .down
+        
         // Dismiss after delay
         //customSizeC?.perform(#selector(customSizeC?.dismiss), with: nil, afterDelay: 5)
     }
@@ -50,7 +52,7 @@ class ViewController: UIViewController {
         
         if let smallVC = segue.destination as? SmallViewController {
             
-            customSizeC = CustomSizeController(presentedViewController: smallVC)
+            customSizeC = CustomSizeController(presentedViewController: smallVC, fromDirection: .left)
             customSizeC?.sizeDelegate = self
             
             smallVC.view.backgroundColor = .blue

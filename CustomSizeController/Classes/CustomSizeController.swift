@@ -28,14 +28,18 @@ public extension CustomSizeControllerDelegate {
 public class CustomSizeController: UIPresentationController, CustomSizeControllerDelegate {
     
     public var blurEffectView: UIVisualEffectView!
+    private var fromDirection: Direction!
+    public var dismissDirection: Direction?
     weak public var sizeDelegate: CustomSizeControllerDelegate?
     
     @objc public func dismiss() {
         presentedViewController.dismiss(animated: true, completion: nil)
     }
     
-    convenience public init(presentedViewController: UIViewController, isDisabledTapOutside: Bool = false) {
+    convenience public init(presentedViewController: UIViewController, fromDirection: Direction, isDisabledTapOutside: Bool = false) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
+        
+        self.fromDirection = fromDirection
         
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -72,6 +76,7 @@ public class CustomSizeController: UIPresentationController, CustomSizeControlle
     
     override public func presentationTransitionWillBegin() {
         blurEffectView.alpha = 0
+        blurEffectView.frame = containerView!.bounds
         containerView?.addSubview(blurEffectView)
     
         presentedViewController.transitionCoordinator?.animate(alongsideTransition: { [weak self] (UIViewControllerTransitionCoordinatorContext) in
@@ -86,6 +91,15 @@ public class CustomSizeController: UIPresentationController, CustomSizeControlle
         presentedView?.frame = frameOfPresentedViewInContainerView
         blurEffectView.frame = containerView!.bounds
     }
+    
+//    override public func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//
+//        blurEffectView.frame = containerView!.bounds
+//
+//        let _ = coordinator.animate(alongsideTransition: { [weak self] (ctx) in
+//            self?.presentedView?.frame = self?.frameOfPresentedViewInContainerView ?? .zero
+//        })
+//    }
 }
 
 extension CustomSizeController: UIViewControllerTransitioningDelegate {
@@ -94,12 +108,10 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
     }
     
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SlideInTransition(fromDirection: .down)
-        //return nil
+        return SlideInTransition(fromDirection: fromDirection)
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SlideInTransition(fromDirection: .down, reverse: true)
-        //return nil
+        return SlideInTransition(fromDirection: dismissDirection ?? fromDirection, reverse: true)
     }
 }

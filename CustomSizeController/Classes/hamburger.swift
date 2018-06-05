@@ -1,6 +1,6 @@
 import UIKit
 
-enum Direction {
+public enum Direction {
     case left, right, up, down
 }
 
@@ -59,7 +59,7 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         
         UIView.animate(withDuration: duration, delay: 0, options: options,
             animations: { [weak self] in
-                if self!.reverse { // TODO: CHECK THIS
+                if self?.reverse == true {
                     viewToAnimate.frame = offsetFrame
                 } else {
                     viewToAnimate.frame = transitionContext.finalFrame(for: viewControllerToAnimate)

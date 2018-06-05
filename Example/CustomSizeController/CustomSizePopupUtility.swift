@@ -17,7 +17,8 @@ class CustomSizePopupUtility: NSObject {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
         vc.view.backgroundColor = .brown
         
-        let customSizeC = CustomSizeController(presentedViewController: vc)
+        let customSizeC = CustomSizeController(presentedViewController: vc, fromDirection: .up)
+        customSizeC.dismissDirection = .down
         customSizeC.sizeDelegate = self
         
         UIApplication.topViewController()?.present(vc, animated: true, completion: nil)
