@@ -57,8 +57,8 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         
         let options: UIViewAnimationOptions = [.curveEaseOut]
         
-        UIView.animate(withDuration: duration, delay: 0, options: options,
-            animations: { [weak self] in
+        UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: options, animations: { [weak self] in
+            
                 if self?.reverse == true {
                     viewToAnimate.frame = offsetFrame
                 } else {
