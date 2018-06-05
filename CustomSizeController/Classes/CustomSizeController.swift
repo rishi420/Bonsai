@@ -30,6 +30,8 @@ public class CustomSizeController: UIPresentationController, CustomSizeControlle
     public var blurEffectView: UIVisualEffectView!
     private var fromDirection: Direction!
     public var dismissDirection: Direction?
+    public var duration: TimeInterval = 0.3
+    public var springWithDamping: CGFloat = 0.8
     weak public var sizeDelegate: CustomSizeControllerDelegate?
     
     @objc public func dismiss() {
@@ -108,10 +110,16 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
     }
     
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SlideInTransition(fromDirection: fromDirection)
+        let transitioning = SlideInTransition(fromDirection: fromDirection)
+        transitioning.duration = duration
+        transitioning.springWithDamping = springWithDamping
+        return transitioning
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SlideInTransition(fromDirection: dismissDirection ?? fromDirection, reverse: true)
+        let transitioning = SlideInTransition(fromDirection: dismissDirection ?? fromDirection, reverse: true)
+        transitioning.duration = duration
+        transitioning.springWithDamping = springWithDamping
+        return transitioning
     }
 }

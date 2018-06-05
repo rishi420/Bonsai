@@ -19,6 +19,8 @@ class CustomSizePopupUtility: NSObject {
         
         let customSizeC = CustomSizeController(presentedViewController: vc, fromDirection: .up)
         customSizeC.dismissDirection = .down
+        customSizeC.springWithDamping = 0.7
+        customSizeC.duration = 0.3
         customSizeC.sizeDelegate = self
         
         UIApplication.topViewController()?.present(vc, animated: true, completion: nil)
