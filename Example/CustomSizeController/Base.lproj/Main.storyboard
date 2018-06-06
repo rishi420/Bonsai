@@ -36,7 +36,7 @@
                                 <rect key="frame" x="90.5" y="384.5" width="194" height="30"/>
                                 <state key="normal" title="Show Small VC (storyBoard)"/>
                                 <connections>
-                                    <segue destination="37k-zS-NPD" kind="show" identifier="" id="Qkt-1x-X2m"/>
+                                    <segue destination="37k-zS-NPD" kind="show" identifier="" customClass="CoverPartiallySegue" customModule="CustomSizeController" id="Qkt-1x-X2m"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,6 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="223" y="107"/>
         </scene>
         <!--Small View Controller-->
         <scene sceneID="ubT-9U-ibZ">
@@ -106,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeg-ch-RVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942" y="107"/>
+            <point key="canvasLocation" x="1471" y="107"/>
         </scene>
     </scenes>
 </document>

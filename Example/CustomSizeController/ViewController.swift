@@ -11,7 +11,7 @@ import CustomSizeController
 
 class ViewController: UIViewController {
     
-    var customSizeC: CustomSizeController?
+    //var customSizeC: CustomSizeController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +30,12 @@ class ViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
         vc.view.backgroundColor = .red
         
-        customSizeC = CustomSizeController(presentedViewController: vc, fromDirection: .right)
+        let customSizeC = CustomSizeController(presentedViewController: vc, fromDirection: .right)
         
         // Disable tap outside
         //customSizeC = CustomSizeController(presentedViewController: vc, isDisabledTapOutside: true)
         
-        customSizeC?.sizeDelegate = self
+        customSizeC.sizeDelegate = self
         
         //vc.modalTransitionStyle = .crossDissolve
         
@@ -48,16 +48,16 @@ class ViewController: UIViewController {
     }
     
     // FROM STORYBOARD
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if let smallVC = segue.destination as? SmallViewController {
-            
-            customSizeC = CustomSizeController(presentedViewController: smallVC, fromDirection: .left)
-            customSizeC?.sizeDelegate = self
-            
-            smallVC.view.backgroundColor = .blue
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        if let smallVC = segue.destination as? SmallViewController {
+//            
+//            let customSizeC = CustomSizeController(presentedViewController: smallVC, fromDirection: .left)
+//            customSizeC.sizeDelegate = self
+//            
+//            smallVC.view.backgroundColor = .blue
+//        }
+//    }
 }
 
 extension ViewController: CustomSizeControllerDelegate {

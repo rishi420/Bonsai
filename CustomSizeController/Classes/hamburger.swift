@@ -4,30 +4,29 @@ public enum Direction {
     case left, right, up, down
 }
 
-//class CoverPartiallySegue: UIStoryboardSegue, UIViewControllerTransitioningDelegate {
-//
-//    var direction: Direction = .left
-//    var presentationController: CustomSizeController! = nil
-//
-//    override func perform() {
-//        destination.modalPresentationStyle = .custom
-//        destination.transitioningDelegate = self
-//        super.perform()
-//    }
-//
-//    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-//        presentationController = CustomSizeController(presentedViewController: presented)
-//        return presentationController
-//    }
-//
-//    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        return SlideInTransition(fromDirection: direction)
-//    }
-//
-//    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        return SlideInTransition(fromDirection: direction, reverse: true)
-//    }
-//}
+public class CoverPartiallySegue: UIStoryboardSegue, UIViewControllerTransitioningDelegate {
+
+    var direction: Direction = .left
+    //var presentationController: CustomSizeController! = nil
+
+    override public func perform() {
+        let presentationController = CustomSizeController(presentedViewController: destination, fromDirection: direction)
+        super.perform()
+    }
+
+    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        let presentationController = CustomSizeController(presentedViewController: presented, fromDirection: direction)
+        return presentationController
+    }
+    
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideInTransition(fromDirection: direction)
+    }
+
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideInTransition(fromDirection: direction, reverse: true)
+    }
+}
 
 class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
