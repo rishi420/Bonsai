@@ -1,10 +1,13 @@
+//
+//  SlideInTransition.swift
+//  CustomSizeController
+//
+//  Created by Warif Akhand Rishi on 9/6/18.
+//
+
 import UIKit
 
-public enum Direction {
-    case left, right, up, down
-}
-
-class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
+class SlideInTransition: NSObject {
     
     var duration: TimeInterval = 0.3
     var springWithDamping: CGFloat = 0.8
@@ -15,6 +18,9 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         self.reverse = reverse
         self.fromDirection = fromDirection
     }
+}
+
+extension SlideInTransition: UIViewControllerAnimatedTransitioning {
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
@@ -35,11 +41,11 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: springWithDamping, initialSpringVelocity: 0.0, options: options, animations: { [weak self] in
             
-                if self?.reverse == true {
-                    viewToAnimate.frame = offsetFrame
-                } else {
-                    viewToAnimate.frame = transitionContext.finalFrame(for: viewControllerToAnimate)
-                }
+            if self?.reverse == true {
+                viewToAnimate.frame = offsetFrame
+            } else {
+                viewToAnimate.frame = transitionContext.finalFrame(for: viewControllerToAnimate)
+            }
             }, completion: { _ in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
@@ -53,7 +59,7 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
 private extension Direction {
     
     func offsetFrameForView(view: UIView, containerView: UIView) -> CGRect {
-    
+        
         var frame = view.frame
         
         switch self {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02CA96A973EDBC6A0A9BD56A286E9CF4 /* hamburger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A0C96051BFEA9F2655C78D0E2DEC22 /* hamburger.swift */; };
 		1AE6BCF4B80535C50864BA5076A6284A /* CustomSizeController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA47DDC3D2D22C8A29D5FB4D7F61D41E /* CustomSizeController-dummy.m */; };
 		40DFD317950C61574BD72CEB12372BC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		54AAF3EB70A3E4E02C0505B24B7DB443 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -16,6 +15,7 @@
 		6B1B49533B1F5929B1E340EC60AD6AB3 /* Pods-CustomSizeController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDBA0BED73E48A51F730BAE558495F /* Pods-CustomSizeController_Example-dummy.m */; };
 		9901D418E0709BED2934E5F9F066B67E /* CustomSizeController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA69B6E9828F8A02F18787B5EA84D5C /* CustomSizeController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5876AE5CB5CE0818F15B288EE94E83B /* Pods-CustomSizeController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF19DBC9F6B7B7E449C1E42C3AB2AB20 /* Pods-CustomSizeController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC09ACD220CBDD990078616D /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09ACD120CBDD990078616D /* SlideInTransition.swift */; };
 		C575BFA9922F524776F769F072F3A5E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		E6F76CE2EC975F9019860C373426B445 /* CustomSizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5969B718E1F7F52E4D3473BEACF348 /* CustomSizeController.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08A0C96051BFEA9F2655C78D0E2DEC22 /* hamburger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = hamburger.swift; path = CustomSizeController/Classes/hamburger.swift; sourceTree = "<group>"; };
 		0EFA386BF7D268748119BCF1B0674A73 /* Pods-CustomSizeController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		169814F1F5ACC30154C100195F87F1E6 /* Pods-CustomSizeController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Tests-resources.sh"; sourceTree = "<group>"; };
 		2ADE6CA54945963DE759301EF747FCE0 /* CustomSizeController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CustomSizeController.modulemap; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A01B4386396663B3A9E19981F942C79A /* Pods-CustomSizeController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Example-resources.sh"; sourceTree = "<group>"; };
 		ADBB161E88EBB10D9D0E7D12EDABE236 /* Pods_CustomSizeController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomSizeController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC09ACD120CBDD990078616D /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlideInTransition.swift; path = CustomSizeController/Classes/SlideInTransition.swift; sourceTree = "<group>"; };
 		BC94360C1B727F27EC4CC61A714E0ADD /* Pods-CustomSizeController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CustomSizeController_Tests.modulemap"; sourceTree = "<group>"; };
 		BD436624DE3DE61309843AF0782742A2 /* Pods-CustomSizeController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomSizeController_Example-umbrella.h"; sourceTree = "<group>"; };
 		C2CB2960451E728F85554001ED30FD2C /* Pods-CustomSizeController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomSizeController_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				4A5969B718E1F7F52E4D3473BEACF348 /* CustomSizeController.swift */,
-				08A0C96051BFEA9F2655C78D0E2DEC22 /* hamburger.swift */,
+				BC09ACD120CBDD990078616D /* SlideInTransition.swift */,
 				9A832F1E559619AE3AB609C23DCE6D44 /* Pod */,
 				945BDA961814A08A45FAE7A5E9F7E68C /* Support Files */,
 			);
@@ -363,8 +363,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE6BCF4B80535C50864BA5076A6284A /* CustomSizeController-dummy.m in Sources */,
+				BC09ACD220CBDD990078616D /* SlideInTransition.swift in Sources */,
 				E6F76CE2EC975F9019860C373426B445 /* CustomSizeController.swift in Sources */,
-				02CA96A973EDBC6A0A9BD56A286E9CF4 /* hamburger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

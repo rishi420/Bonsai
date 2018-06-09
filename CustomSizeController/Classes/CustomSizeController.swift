@@ -8,6 +8,10 @@
 
 import UIKit
 
+public enum Direction {
+    case left, right, up, down
+}
+
 public protocol CustomSizeControllerDelegate: UIViewControllerTransitioningDelegate {
     
     /// Returns a frame for presented viewController on containerView
