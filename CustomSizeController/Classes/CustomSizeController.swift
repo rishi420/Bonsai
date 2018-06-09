@@ -77,10 +77,11 @@ public class CustomSizeController: UIPresentationController, CustomSizeControlle
     }
     
     override public func presentationTransitionWillBegin() {
+        
         blurEffectView.alpha = 0
         blurEffectView.frame = containerView!.bounds
         containerView?.addSubview(blurEffectView)
-    
+        
         presentedViewController.transitionCoordinator?.animate(alongsideTransition: { [weak self] (UIViewControllerTransitionCoordinatorContext) in
             self?.blurEffectView.alpha = 1
         }, completion: { (UIViewControllerTransitionCoordinatorContext) in
@@ -94,17 +95,10 @@ public class CustomSizeController: UIPresentationController, CustomSizeControlle
         blurEffectView.frame = containerView!.bounds
     }
     
-//    override public func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//
-//        blurEffectView.frame = containerView!.bounds
-//
-//        let _ = coordinator.animate(alongsideTransition: { [weak self] (ctx) in
-//            self?.presentedView?.frame = self?.frameOfPresentedViewInContainerView ?? .zero
-//        })
-//    }
 }
 
 extension CustomSizeController: UIViewControllerTransitioningDelegate {
+    
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return self
     }

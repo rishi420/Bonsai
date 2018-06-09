@@ -4,30 +4,6 @@ public enum Direction {
     case left, right, up, down
 }
 
-public class CoverPartiallySegue: UIStoryboardSegue, UIViewControllerTransitioningDelegate {
-
-    var direction: Direction = .left
-    //var presentationController: CustomSizeController! = nil
-
-    override public func perform() {
-        let presentationController = CustomSizeController(presentedViewController: destination, fromDirection: direction)
-        super.perform()
-    }
-
-    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        let presentationController = CustomSizeController(presentedViewController: presented, fromDirection: direction)
-        return presentationController
-    }
-    
-    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SlideInTransition(fromDirection: direction)
-    }
-
-    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SlideInTransition(fromDirection: direction, reverse: true)
-    }
-}
-
 class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
     var duration: TimeInterval = 0.3
