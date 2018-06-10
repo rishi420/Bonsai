@@ -22,6 +22,13 @@ extension YourViewController: CustomSizeControllerDelegate {
         
         return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (4/3)))
     }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+    
+        let customSizeC = CustomSizeController(presentedViewController: presented, fromDirection: .left)
+        customSizeC.sizeDelegate = self
+        return customSizeC
+    }
 }
 ```
 return a frame for the small view controller from `frameOfPresentedView(in:)` function. 
@@ -36,8 +43,6 @@ var customSizeC: CustomSizeController?
 
 ```Swift
 let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
-customSizeC = CustomSizeController(presentedViewController: vc)
-customSizeC?.sizeDelegate = self
         
 vc.modalPresentationStyle = .custom
 vc.transitioningDelegate = customSizeC
@@ -51,9 +56,6 @@ present(vc, animated: true, completion: nil)
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
     if let smallVC = segue.destination as? SmallViewController {
-
-        customSizeC = CustomSizeController(presentedViewController: smallVC)
-        customSizeC?.sizeDelegate = self
             
         smallVC.modalPresentationStyle = .custom
         smallVC.transitioningDelegate = self
