@@ -19,17 +19,22 @@ public protocol CustomSizeControllerDelegate: UIViewControllerTransitioningDeleg
     /// - Parameter: containerViewFrame
     
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController?
 }
 
-public extension CustomSizeControllerDelegate {
+extension CustomSizeController: CustomSizeControllerDelegate {
     
-    func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
-        
+    public func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height/2), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height/2))
+    }
+    
+    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return self
     }
 }
 
-public class CustomSizeController: UIPresentationController, CustomSizeControllerDelegate {
+public class CustomSizeController: UIPresentationController {
     
     public var blurEffectView: UIVisualEffectView!
     private var fromDirection: Direction!
@@ -98,16 +103,16 @@ public class CustomSizeController: UIPresentationController, CustomSizeControlle
         presentedView?.frame = frameOfPresentedViewInContainerView
         blurEffectView.frame = containerView!.bounds
     }
-    
 }
 
 extension CustomSizeController: UIViewControllerTransitioningDelegate {
     
-    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return self
-    }
-    
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if let sizeDelegate = sizeDelegate,  sizeDelegate.responds(to:#selector(animationController(forPresented:presenting:source:))) {
+            return sizeDelegate.animationController!(forPresented: presented, presenting: presenting, source: source)
+        }
+        
         let transitioning = SlideInTransition(fromDirection: fromDirection)
         transitioning.duration = duration
         transitioning.springWithDamping = springWithDamping
@@ -115,6 +120,11 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if let sizeDelegate = sizeDelegate,  sizeDelegate.responds(to:#selector(animationController(forDismissed:))) {
+            return sizeDelegate.animationController!(forDismissed:dismissed)
+        }
+        
         let transitioning = SlideInTransition(fromDirection: dismissDirection ?? fromDirection, reverse: true)
         transitioning.duration = duration
         transitioning.springWithDamping = springWithDamping

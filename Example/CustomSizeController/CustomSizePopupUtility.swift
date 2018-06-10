@@ -17,11 +17,8 @@ class CustomSizePopupUtility: NSObject {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
         vc.view.backgroundColor = .brown
         
-        let customSizeC = CustomSizeController(presentedViewController: vc, fromDirection: .up)
-        customSizeC.dismissDirection = .down
-        customSizeC.springWithDamping = 0.7
-        customSizeC.duration = 0.3
-        customSizeC.sizeDelegate = self
+        vc.transitioningDelegate = self
+        vc.modalPresentationStyle = .custom
         
         UIApplication.topViewController()?.present(vc, animated: true, completion: nil)
     }
@@ -51,6 +48,17 @@ extension UIApplication {
 
 extension CustomSizePopupUtility: CustomSizeControllerDelegate {
     
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        
+        let customSizeC = CustomSizeController(presentedViewController: presented, fromDirection: .up)
+        customSizeC.dismissDirection = .down
+        customSizeC.springWithDamping = 0.7
+        customSizeC.duration = 0.3
+        customSizeC.sizeDelegate = self
+        
+        return customSizeC
+    }
+
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         
         let popupSize = CGSize(width: 300, height: 160)

@@ -11,8 +11,6 @@ import CustomSizeController
 
 class ViewController: UIViewController {
     
-    var customSizeC: CustomSizeController?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,18 +27,15 @@ class ViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
         vc.view.backgroundColor = .red
         
-        customSizeC = CustomSizeController(presentedViewController: vc, fromDirection: .right)
+        vc.transitioningDelegate = self
+        vc.modalPresentationStyle = .custom
         
         // Disable tap outside
         //customSizeC = CustomSizeController(presentedViewController: vc, isDisabledTapOutside: true)
         
-        customSizeC?.sizeDelegate = self
-        
         //vc.modalTransitionStyle = .crossDissolve
         
         present(vc, animated: true, completion: nil)
-        
-        //customSizeC?.dismissDirection = .down
         
         // Dismiss after delay
         //customSizeC?.perform(#selector(customSizeC?.dismiss), with: nil, afterDelay: 5)
@@ -51,10 +46,10 @@ class ViewController: UIViewController {
         
         if let smallVC = segue.destination as? SmallViewController {
             
-            customSizeC = CustomSizeController(presentedViewController: smallVC, fromDirection: .left)
-            customSizeC?.sizeDelegate = self
-            
             smallVC.view.backgroundColor = .blue
+            
+            smallVC.transitioningDelegate = self
+            smallVC.modalPresentationStyle = .custom
         }
     }
 }
@@ -65,5 +60,11 @@ extension ViewController: CustomSizeControllerDelegate {
         
         return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (4/3)))
     }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        
+        let customSizeC = CustomSizeController(presentedViewController: presented, fromDirection: .left)
+        customSizeC.sizeDelegate = self
+        return customSizeC
+    }
 }
-
