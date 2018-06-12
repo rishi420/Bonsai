@@ -24,7 +24,7 @@ extension SlideInTransition: UIViewControllerAnimatedTransitioning {
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        let viewControllerKey = reverse ? UITransitionContextViewControllerKey.from : UITransitionContextViewControllerKey.to
+        let viewControllerKey: UITransitionContextViewControllerKey = reverse ? .from : .to
         let viewControllerToAnimate = transitionContext.viewController(forKey: viewControllerKey)!
         
         let viewToAnimate = viewControllerToAnimate.view!
