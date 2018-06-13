@@ -63,6 +63,9 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 }
 ```
 
+## Customization
+
+
 ### Disable dismiss on tap outside
 
 Initiate `CustomSizeController` with outside tap disabled
@@ -76,6 +79,23 @@ customSizeC = CustomSizeController(presentedViewController: vc, isDisabledTapOut
 ```Swift
 customSizeC?.perform(#selector(customSizeC?.dismiss), with: nil, afterDelay: 5)
 ```
+
+### Custom animation
+
+```Swift
+extension YourViewController: UIViewControllerTransitioningDelegate {
+
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        // Your presentation animation hear
+    }
+
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        // Your dismiss animation here
+    }
+}
+```
+
+
 
 ## Example
 
