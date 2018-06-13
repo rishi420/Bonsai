@@ -23,34 +23,43 @@ public protocol CustomSizeControllerDelegate: UIViewControllerTransitioningDeleg
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController?
 }
 
-extension CustomSizeController: CustomSizeControllerDelegate {
-    
-    public func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
-        return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height/2), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height/2))
-    }
-    
-    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return self
-    }
-}
-
 public class CustomSizeController: UIPresentationController {
     
     public var blurEffectView: UIVisualEffectView!
-    private var fromDirection: Direction!
-    public var dismissDirection: Direction?
     public var duration: TimeInterval = 0.3
     public var springWithDamping: CGFloat = 0.8
-    weak public var sizeDelegate: CustomSizeControllerDelegate?
+    public var dismissDirection: Direction?
     
-    @objc public func dismiss() {
-        presentedViewController.dismiss(animated: true, completion: nil)
-    }
+    var originFrame: CGRect?
+    var fromDirection: Direction!
+    
+    weak public var sizeDelegate: CustomSizeControllerDelegate?
     
     convenience public init(presentedViewController: UIViewController, fromDirection: Direction, isDisabledTapOutside: Bool = false) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.fromDirection = fromDirection
+        
+        setup(presentedViewController: presentedViewController, isDisabledTapOutside: isDisabledTapOutside)
+    }
+    
+    convenience public init(presentedViewController: UIViewController, fromOrigin: CGRect, isDisabledTapOutside: Bool = false) {
+        self.init(presentedViewController: presentedViewController, presenting: nil)
+        
+        self.originFrame = fromOrigin
+        
+        setup(presentedViewController: presentedViewController, isDisabledTapOutside: isDisabledTapOutside)
+    }
+    
+    override private init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
+        super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
+    }
+    
+    @objc public func dismiss() {
+        presentedViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    private func setup(presentedViewController: UIViewController, isDisabledTapOutside: Bool) {
         
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -61,16 +70,12 @@ public class CustomSizeController: UIPresentationController {
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismiss))
             blurEffectView.addGestureRecognizer(tapGestureRecognizer)
         }
-    
+        
         presentedView!.layer.masksToBounds = true
         presentedView!.layer.cornerRadius = 10
         
         presentedViewController.modalPresentationStyle = .custom
         presentedViewController.transitioningDelegate = self
-    }
-    
-    override private init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
-        super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
     }
     
     override public var frameOfPresentedViewInContainerView: CGRect {
@@ -110,6 +115,17 @@ public class CustomSizeController: UIPresentationController {
     }
 }
 
+extension CustomSizeController: CustomSizeControllerDelegate {
+    
+    public func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
+        return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height/2), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height/2))
+    }
+    
+    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return self
+    }
+}
+
 extension CustomSizeController: UIViewControllerTransitioningDelegate {
     
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -118,10 +134,17 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
             return sizeDelegate.animationController!(forPresented: presented, presenting: presenting, source: source)
         }
         
-        let transitioning = SlideInTransition(fromDirection: fromDirection)
-        transitioning.duration = duration
-        transitioning.springWithDamping = springWithDamping
-        return transitioning
+        if let originFrame = originFrame {
+            let transitioning = PopTransition(originFrame: originFrame)
+            transitioning.duration = duration
+            transitioning.springWithDamping = springWithDamping
+            return transitioning
+        } else {
+            let transitioning = SlideInTransition(fromDirection: fromDirection)
+            transitioning.duration = duration
+            transitioning.springWithDamping = springWithDamping
+            return transitioning
+        }
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -130,9 +153,16 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
             return sizeDelegate.animationController!(forDismissed:dismissed)
         }
         
-        let transitioning = SlideInTransition(fromDirection: dismissDirection ?? fromDirection, reverse: true)
-        transitioning.duration = duration
-        transitioning.springWithDamping = springWithDamping
-        return transitioning
+        if let originFrame = originFrame {
+            let transitioning = PopTransition(originFrame: originFrame, reverse: true)
+            transitioning.duration = duration
+            transitioning.springWithDamping = springWithDamping
+            return transitioning
+        } else {
+            let transitioning = SlideInTransition(fromDirection: dismissDirection ?? fromDirection, reverse: true)
+            transitioning.duration = duration
+            transitioning.springWithDamping = springWithDamping
+            return transitioning
+        }
     }
 }

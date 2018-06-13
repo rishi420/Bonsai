@@ -15,7 +15,6 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		94D4C90C792AE3FAEEA27058 /* Pods_CustomSizeController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B64C55697D6FE9BEC26F2DE /* Pods_CustomSizeController_Example.framework */; };
 		BC03EB7220C14F2D00D1930E /* CustomSizePopupUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC03EB7120C14F2D00D1930E /* CustomSizePopupUtility.swift */; };
-		BC5BA16320CE50C9008D16AC /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5BA16220CE50C9008D16AC /* PopAnimator.swift */; };
 		BC74107B20BC40A0008039B3 /* SmallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC74107A20BC409F008039B3 /* SmallViewController.swift */; };
 		EB7C651A8F189B9057251F43 /* Pods_CustomSizeController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1950F0286E3EE64C5F7F5B71 /* Pods_CustomSizeController_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +46,6 @@
 		94E527973E7BD3A5B8B174F6 /* Pods-CustomSizeController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Tests/Pods-CustomSizeController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B4362DCF45BD8A29FA1528BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BC03EB7120C14F2D00D1930E /* CustomSizePopupUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSizePopupUtility.swift; sourceTree = "<group>"; };
-		BC5BA16220CE50C9008D16AC /* PopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		BC74107A20BC409F008039B3 /* SmallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallViewController.swift; sourceTree = "<group>"; };
 		D373FA2444DAD867D6FC338B /* Pods-CustomSizeController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Example/Pods-CustomSizeController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D44C6807FBF7174579792ADB /* Pods-CustomSizeController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Tests/Pods-CustomSizeController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				BC5BA16220CE50C9008D16AC /* PopAnimator.swift */,
 				BC74107A20BC409F008039B3 /* SmallViewController.swift */,
 				BC03EB7120C14F2D00D1930E /* CustomSizePopupUtility.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -335,7 +332,6 @@
 				BC03EB7220C14F2D00D1930E /* CustomSizePopupUtility.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				BC5BA16320CE50C9008D16AC /* PopAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

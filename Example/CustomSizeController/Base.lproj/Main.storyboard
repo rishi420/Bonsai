@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNp-8a-uGx">
-                                <rect key="frame" x="31" y="458" width="30" height="30"/>
+                                <rect key="frame" x="254" y="518" width="30" height="30"/>
                                 <state key="normal" title="Pop"/>
                             </button>
                         </subviews>
@@ -50,9 +50,9 @@
                             <constraint firstItem="vjE-YT-1Pf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oy0-0J-tEw"/>
                             <constraint firstItem="HuZ-8b-Y90" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S7S-gu-qaC"/>
                             <constraint firstItem="vjE-YT-1Pf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-76.5" id="aJO-xa-RJf"/>
-                            <constraint firstItem="XNp-8a-uGx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-141.5" id="cid-1h-FuK"/>
+                            <constraint firstItem="XNp-8a-uGx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="81.5" id="cid-1h-FuK"/>
                             <constraint firstItem="yAG-dz-aiA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hwd-iI-TfR"/>
-                            <constraint firstItem="XNp-8a-uGx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="139.5" id="pwe-mg-mSo"/>
+                            <constraint firstItem="XNp-8a-uGx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="199.5" id="pwe-mg-mSo"/>
                             <constraint firstItem="yAG-dz-aiA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="66" id="yDN-li-VpR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

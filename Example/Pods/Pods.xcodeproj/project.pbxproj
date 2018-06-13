@@ -16,6 +16,7 @@
 		9901D418E0709BED2934E5F9F066B67E /* CustomSizeController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA69B6E9828F8A02F18787B5EA84D5C /* CustomSizeController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5876AE5CB5CE0818F15B288EE94E83B /* Pods-CustomSizeController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF19DBC9F6B7B7E449C1E42C3AB2AB20 /* Pods-CustomSizeController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC09ACD220CBDD990078616D /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09ACD120CBDD990078616D /* SlideInTransition.swift */; };
+		BC0CA3B820D135180017DEE7 /* PopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CA3B720D135180017DEE7 /* PopTransition.swift */; };
 		C575BFA9922F524776F769F072F3A5E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		E6F76CE2EC975F9019860C373426B445 /* CustomSizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5969B718E1F7F52E4D3473BEACF348 /* CustomSizeController.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		A01B4386396663B3A9E19981F942C79A /* Pods-CustomSizeController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomSizeController_Example-resources.sh"; sourceTree = "<group>"; };
 		ADBB161E88EBB10D9D0E7D12EDABE236 /* Pods_CustomSizeController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomSizeController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC09ACD120CBDD990078616D /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlideInTransition.swift; path = CustomSizeController/Classes/SlideInTransition.swift; sourceTree = "<group>"; };
+		BC0CA3B720D135180017DEE7 /* PopTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopTransition.swift; path = CustomSizeController/Classes/PopTransition.swift; sourceTree = "<group>"; };
 		BC94360C1B727F27EC4CC61A714E0ADD /* Pods-CustomSizeController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CustomSizeController_Tests.modulemap"; sourceTree = "<group>"; };
 		BD436624DE3DE61309843AF0782742A2 /* Pods-CustomSizeController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomSizeController_Example-umbrella.h"; sourceTree = "<group>"; };
 		C2CB2960451E728F85554001ED30FD2C /* Pods-CustomSizeController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomSizeController_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				4A5969B718E1F7F52E4D3473BEACF348 /* CustomSizeController.swift */,
 				BC09ACD120CBDD990078616D /* SlideInTransition.swift */,
+				BC0CA3B720D135180017DEE7 /* PopTransition.swift */,
 				9A832F1E559619AE3AB609C23DCE6D44 /* Pod */,
 				945BDA961814A08A45FAE7A5E9F7E68C /* Support Files */,
 			);
@@ -320,7 +323,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -364,6 +367,7 @@
 			files = (
 				1AE6BCF4B80535C50864BA5076A6284A /* CustomSizeController-dummy.m in Sources */,
 				BC09ACD220CBDD990078616D /* SlideInTransition.swift in Sources */,
+				BC0CA3B820D135180017DEE7 /* PopTransition.swift in Sources */,
 				E6F76CE2EC975F9019860C373426B445 /* CustomSizeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,6 +675,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;

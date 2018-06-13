@@ -12,7 +12,6 @@ import CustomSizeController
 class ViewController: UIViewController {
     
     @IBOutlet weak var popButton: UIButton!
-    let transition = PopAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,24 +65,19 @@ extension ViewController: CustomSizeControllerDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         
-        let customSizeC = CustomSizeController(presentedViewController: presented, fromDirection: .left)
+        let customSizeC = CustomSizeController(presentedViewController: presented, fromOrigin: popButton.superview!.convert(popButton.frame, to: nil))
         customSizeC.sizeDelegate = self
         return customSizeC
     }
 }
 
-// Transition animation delegates
-extension ViewController {
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.originFrame =
-            popButton.superview!.convert(popButton.frame, to: nil)
-        transition.presenting = true
-        return transition
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.presenting = false
-        return transition
-    }
-    
-}
+/// Transition animation delegates
+//extension ViewController: UIViewControllerTransitioningDelegate {
+//    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
+//    }
+
+//    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
+//    }
+//}

@@ -3,6 +3,7 @@
 //  CustomSizeController
 //
 //  Created by Warif Akhand Rishi on 9/6/18.
+//  Copyright © 2018 Warif Akhand Rishi. All rights reserved.
 //
 
 import UIKit
