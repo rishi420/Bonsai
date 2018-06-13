@@ -50,7 +50,7 @@ extension CustomSizePopupUtility: CustomSizeControllerDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         
-        let customSizeC = CustomSizeController(presentedViewController: presented, fromDirection: .up)
+        let customSizeC = CustomSizeController(fromDirection: .up, presentedViewController: presented)
         customSizeC.dismissDirection = .down
         customSizeC.springWithDamping = 0.7
         customSizeC.duration = 0.3

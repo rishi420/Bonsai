@@ -65,7 +65,7 @@ extension ViewController: CustomSizeControllerDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         
-        let customSizeC = CustomSizeController(presentedViewController: presented, fromOrigin: popButton.superview!.convert(popButton.frame, to: nil))
+        let customSizeC = CustomSizeController(fromOrigin: popButton.superview!.convert(popButton.frame, to: nil), presentedViewController: presented)
         customSizeC.sizeDelegate = self
         return customSizeC
     }

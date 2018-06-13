@@ -25,7 +25,12 @@ extension YourViewController: CustomSizeControllerDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
     
-        let customSizeC = CustomSizeController(presentedViewController: presented, fromDirection: .left)
+        // Slide animation from .left, .right, .up, .down
+        let customSizeC = CustomSizeController(fromDirection: .down, presentedViewController: presented)
+        
+        // or pop animation initiate from a CGRect
+        //let customSizeC = CustomSizeController(fromOrigin: initialFrame, presentedViewController: presented)
+        
         customSizeC.sizeDelegate = self
         return customSizeC
     }

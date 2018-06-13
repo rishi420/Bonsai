@@ -35,7 +35,7 @@ public class CustomSizeController: UIPresentationController {
     
     weak public var sizeDelegate: CustomSizeControllerDelegate?
     
-    convenience public init(presentedViewController: UIViewController, fromDirection: Direction, isDisabledTapOutside: Bool = false) {
+    convenience public init(fromDirection: Direction, presentedViewController: UIViewController, isDisabledTapOutside: Bool = false) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.fromDirection = fromDirection
@@ -43,7 +43,7 @@ public class CustomSizeController: UIPresentationController {
         setup(presentedViewController: presentedViewController, isDisabledTapOutside: isDisabledTapOutside)
     }
     
-    convenience public init(presentedViewController: UIViewController, fromOrigin: CGRect, isDisabledTapOutside: Bool = false) {
+    convenience public init(fromOrigin: CGRect, presentedViewController: UIViewController, isDisabledTapOutside: Bool = false) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.originFrame = fromOrigin
@@ -61,7 +61,7 @@ public class CustomSizeController: UIPresentationController {
     
     private func setup(presentedViewController: UIViewController, isDisabledTapOutside: Bool) {
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffect = UIBlurEffect(style: .dark)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.isUserInteractionEnabled = true
