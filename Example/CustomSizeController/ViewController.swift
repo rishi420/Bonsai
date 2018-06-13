@@ -54,6 +54,8 @@ class ViewController: UIViewController {
             smallVC.modalPresentationStyle = .custom
         }
     }
+    
+    @IBAction func unwind(sender: UIStoryboardSegue) {}
 }
 
 extension ViewController: CustomSizeControllerDelegate {

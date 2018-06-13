@@ -52,8 +52,9 @@ extension CustomSizePopupUtility: CustomSizeControllerDelegate {
         
         let customSizeC = CustomSizeController(fromDirection: .up, presentedViewController: presented)
         customSizeC.dismissDirection = .down
-        customSizeC.springWithDamping = 0.7
-        customSizeC.duration = 0.3
+        customSizeC.springWithDamping = 0.8
+        customSizeC.duration = 0.4
+        customSizeC.isDisabledDismiss = true
         customSizeC.sizeDelegate = self
         
         return customSizeC
@@ -61,7 +62,7 @@ extension CustomSizePopupUtility: CustomSizeControllerDelegate {
 
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         
-        let popupSize = CGSize(width: 300, height: 160)
+        let popupSize = CGSize(width: 280, height: 150)
         
         return CGRect(origin: CGPoint(x: (containerViewFrame.width - popupSize.width) / 2, y: (containerViewFrame.height - popupSize.height) / 2), size: popupSize)
     }

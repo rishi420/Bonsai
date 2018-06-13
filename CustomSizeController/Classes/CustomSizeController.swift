@@ -26,56 +26,60 @@ public protocol CustomSizeControllerDelegate: UIViewControllerTransitioningDeleg
 public class CustomSizeController: UIPresentationController {
     
     public var blurEffectView: UIVisualEffectView!
-    public var duration: TimeInterval = 0.3
+    public var duration: TimeInterval = 0.4
     public var springWithDamping: CGFloat = 0.8
     public var dismissDirection: Direction?
+    public var isDisabledDismiss: Bool = false
     
     var originFrame: CGRect?
     var fromDirection: Direction!
     
     weak public var sizeDelegate: CustomSizeControllerDelegate?
     
-    convenience public init(fromDirection: Direction, presentedViewController: UIViewController, isDisabledTapOutside: Bool = false) {
+    convenience public init(fromDirection: Direction, presentedViewController: UIViewController) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.fromDirection = fromDirection
-        
-        setup(presentedViewController: presentedViewController, isDisabledTapOutside: isDisabledTapOutside)
+        setup(presentedViewController: presentedViewController)
     }
     
-    convenience public init(fromOrigin: CGRect, presentedViewController: UIViewController, isDisabledTapOutside: Bool = false) {
+    convenience public init(fromOrigin: CGRect, presentedViewController: UIViewController) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.originFrame = fromOrigin
-        
-        setup(presentedViewController: presentedViewController, isDisabledTapOutside: isDisabledTapOutside)
+        setup(presentedViewController: presentedViewController)
     }
     
     override private init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
     }
     
-    @objc public func dismiss() {
+    public func dismiss() {
         presentedViewController.dismiss(animated: true, completion: nil)
     }
     
-    private func setup(presentedViewController: UIViewController, isDisabledTapOutside: Bool) {
+    private func setup(presentedViewController: UIViewController) {
         
         let blurEffect = UIBlurEffect(style: .dark)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.isUserInteractionEnabled = true
         
-        if !isDisabledTapOutside {
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismiss))
-            blurEffectView.addGestureRecognizer(tapGestureRecognizer)
-        }
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        blurEffectView.addGestureRecognizer(tapGestureRecognizer)
         
         presentedView!.layer.masksToBounds = true
         presentedView!.layer.cornerRadius = 10
         
         presentedViewController.modalPresentationStyle = .custom
         presentedViewController.transitioningDelegate = self
+    }
+    
+    @objc private func handleTap() {
+        
+        if !isDisabledDismiss {
+            dismiss()
+        }
     }
     
     override public var frameOfPresentedViewInContainerView: CGRect {
