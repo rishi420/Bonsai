@@ -126,3 +126,27 @@ Warif Akhand Rishi, rishi420@gmail.com
 ## License
 
 CustomSizeController is available under the MIT license. See the LICENSE file for more info.
+
+## Credits
+
+Jelly 
+https://github.com/SebastianBoldt/Jelly
+
+PresentHalfModal 
+https://github.com/khuong291/PresentHalfModal
+
+SideMenu
+https://github.com/jonkykong/SideMenu
+
+TransitionTreasury
+https://github.com/DianQK/TransitionTreasury
+
+Transition
+https://github.com/Touchwonders/Transition
+
+StarWars.iOS
+https://github.com/Yalantis/StarWars.iOS
+
+Hero
+https://github.com/HeroTransitions/Hero
+
