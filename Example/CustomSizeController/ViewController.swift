@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     
     // Popup
     @IBAction func showAsPopupButtonAction(_ sender: Any) {
-        CustomSizePopupUtility.shared.show()
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
+        CustomSizePopupUtility.shared.show(viewController: vc)
     }
     
     // FROM CODE

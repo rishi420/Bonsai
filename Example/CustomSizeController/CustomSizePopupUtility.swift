@@ -13,14 +13,12 @@ class CustomSizePopupUtility: NSObject {
     
     static let shared = CustomSizePopupUtility()
     
-    func show() {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
-        vc.view.backgroundColor = .brown
+    func show(viewController: UIViewController) {
         
-        vc.transitioningDelegate = self
-        vc.modalPresentationStyle = .custom
+        viewController.transitioningDelegate = self
+        viewController.modalPresentationStyle = .custom
         
-        UIApplication.topViewController()?.present(vc, animated: true, completion: nil)
+        UIApplication.topViewController()?.present(viewController, animated: true, completion: nil)
     }
 }
 
