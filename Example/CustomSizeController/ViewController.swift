@@ -46,12 +46,12 @@ class ViewController: UIViewController {
     // FROM STORYBOARD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let smallVC = segue.destination as? SmallViewController {
+        if segue.destination is SmallViewController ||
+            segue.destination is SlideInMenuViewController ||
+            segue.destination is BubbleViewController {
             
-            smallVC.view.backgroundColor = .blue
-            
-            smallVC.transitioningDelegate = self
-            smallVC.modalPresentationStyle = .custom
+            segue.destination.transitioningDelegate = self
+            segue.destination.modalPresentationStyle = .custom
         }
     }
     
@@ -62,24 +62,22 @@ extension ViewController: CustomSizeControllerDelegate {
     
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         
+        if presentedViewController is SlideInMenuViewController {
+            return CGRect(origin: .zero, size: CGSize(width: containerViewFrame.width / 2, height: containerViewFrame.height))
+        }
+        
         return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (4/3)))
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         
-        let customSizeC = CustomSizeController(fromOrigin: popButton.superview!.convert(popButton.frame, to: nil), presentedViewController: presented)
+        var customSizeC = CustomSizeController(fromDirection: .left, presentedViewController: presented)
+        
+        if presented is BubbleViewController {
+            customSizeC = CustomSizeController(fromOrigin: popButton.superview!.convert(popButton.frame, to: nil), presentedViewController: presented)
+        }
+        
         customSizeC.sizeDelegate = self
         return customSizeC
     }
 }
-
-/// Transition animation delegates
-//extension ViewController: UIViewControllerTransitioningDelegate {
-//    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-
-//    }
-
-//    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-
-//    }
-//}
