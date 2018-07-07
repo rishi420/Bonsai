@@ -47,7 +47,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HuZ-8b-Y90" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2ij-tE-Zet"/>
                             <constraint firstItem="vjE-YT-1Pf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oy0-0J-tEw"/>
@@ -74,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="107"/>
+            <point key="canvasLocation" x="951.20000000000005" y="106.59670164917542"/>
         </scene>
         <!--Small View Controller-->
         <scene sceneID="ubT-9U-ibZ">
@@ -203,7 +204,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ri6-5u-ABY" firstAttribute="centerY" secondItem="7QF-0H-1fg" secondAttribute="centerY" id="0Zk-Hu-nXx"/>
                             <constraint firstItem="ri6-5u-ABY" firstAttribute="leading" secondItem="7tb-9d-crh" secondAttribute="leading" id="A7u-St-xrG"/>
@@ -269,7 +270,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.6891092224239499" green="0.83645305617108745" blue="0.9464109926568528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fjN-e2-Cmk" firstAttribute="centerX" secondItem="imi-CW-Rtw" secondAttribute="centerX" id="Aj1-Vu-42d"/>
                             <constraint firstItem="m6L-04-IKM" firstAttribute="centerY" secondItem="imi-CW-Rtw" secondAttribute="centerY" id="EWW-cv-UVJ"/>
@@ -335,7 +336,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.87188689720812185" green="0.73004978139703047" blue="0.0039897733599760857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="g5z-rl-MPh" firstAttribute="centerY" secondItem="EdR-Au-vQF" secondAttribute="centerY" id="088-WE-eJW"/>
                             <constraint firstItem="oa6-rk-Mla" firstAttribute="centerX" secondItem="EdR-Au-vQF" secondAttribute="centerX" id="2hI-0x-oqO"/>
