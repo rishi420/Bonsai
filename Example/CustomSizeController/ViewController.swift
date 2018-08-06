@@ -72,6 +72,7 @@ extension ViewController: CustomSizeControllerDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         
+        // TODO: TAKE SIZE DELEGATE IN PARAMETER
         var customSizeC = CustomSizeController(fromDirection: .left, presentedViewController: presented)
         
         if presented is BubbleViewController {
