@@ -29,7 +29,7 @@ public class CustomSizeController: UIPresentationController {
     public var duration: TimeInterval = 0.4
     public var springWithDamping: CGFloat = 0.8
     public var dismissDirection: Direction?
-    public var isDisabledDismiss: Bool = false
+    public var isDisabledDismiss: Bool = false // TODO: change variable name
     
     var originFrame: CGRect?
     var fromDirection: Direction!

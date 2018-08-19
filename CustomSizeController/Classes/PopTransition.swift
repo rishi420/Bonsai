@@ -56,11 +56,12 @@ extension PopTransition: UIViewControllerAnimatedTransitioning {
             
             guard let `self` = self else { return }
             
-            viewToAnimate.transform = self.reverse ?
-                scaleTransform : CGAffineTransform.identity
+            viewToAnimate.transform = self.reverse ? scaleTransform : .identity
             
             let frame = self.reverse ? initialFrame : finalFrame
             viewToAnimate.center = CGPoint(x: frame.midX, y: frame.midY)
+            
+            viewToAnimate.alpha = self.reverse ? 1 : 1
             
             }, completion: { _ in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
