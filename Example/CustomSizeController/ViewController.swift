@@ -9,48 +9,50 @@
 import UIKit
 import CustomSizeController
 
+private enum TransitionType {
+    case none
+    case slide
+    case bubble
+    case menu
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var popButton: UIButton!
+    
+    private var transitionType: TransitionType = .none
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    // Popup
-    @IBAction func showAsPopupButtonAction(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
-        CustomSizePopupUtility.shared.show(viewController: vc)
-    }
-    
-    // FROM CODE
+    // Code
     @IBAction func ShowSmallVCButtonAction(_ sender: Any) {
-        
-        //let vc = UIViewController() // Any ViewController
+
         let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
         vc.view.backgroundColor = .red
         
         vc.transitioningDelegate = self
         vc.modalPresentationStyle = .custom
         
-        // Disable tap outside
-        //customSizeC = CustomSizeController(presentedViewController: vc, isDisabledTapOutside: true)
-        
-        //vc.modalTransitionStyle = .crossDissolve
-        
         present(vc, animated: true, completion: nil)
         
         // Dismiss after delay
-        //customSizeC?.perform(#selector(customSizeC?.dismiss), with: nil, afterDelay: 5)
+        // customSizeC?.perform(#selector(customSizeC?.dismiss), with: nil, afterDelay: 5)
+        // TODO: NOTIFICAITON
     }
     
-    // FROM STORYBOARD
+    // Popup
+    @IBAction func showAsPopupButtonAction(_ sender: Any) {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
+        CustomSizePopupUtility.shared.show(viewController: vc)
+    }
+    
+    // Storyboard
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.destination is SmallViewController ||
-            segue.destination is SlideInMenuViewController ||
-            segue.destination is BubbleViewController {
-            
+        if segue.destination is SmallViewController {
             segue.destination.transitioningDelegate = self
             segue.destination.modalPresentationStyle = .custom
         }
@@ -63,11 +65,16 @@ extension ViewController: CustomSizeControllerDelegate {
     
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         
-        if presentedViewController is SlideInMenuViewController {
+        switch transitionType {
+        case .none:
+            return CGRect(origin: .zero, size: containerViewFrame.size)
+        case .slide:
+            return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / 2))
+        case .bubble:
+            return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (4/3)))
+        case .menu:
             return CGRect(origin: .zero, size: CGSize(width: containerViewFrame.width / 2, height: containerViewFrame.height))
         }
-        
-        return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (4/3)))
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
@@ -75,7 +82,7 @@ extension ViewController: CustomSizeControllerDelegate {
         // TODO: TAKE SIZE DELEGATE IN PARAMETER
         var customSizeC = CustomSizeController(fromDirection: .left, presentedViewController: presented)
         
-        if presented is BubbleViewController {
+        if transitionType == .bubble {
             customSizeC = CustomSizeController(fromOrigin: popButton.superview!.convert(popButton.frame, to: nil), presentedViewController: presented)
         }
         
