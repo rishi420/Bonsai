@@ -66,6 +66,18 @@ class ViewController: UIViewController {
 
 extension ViewController: CustomSizeControllerDelegate {
     
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        
+        switch transitionType {
+        case .none:
+            return nil
+        case .bubble:
+            return CustomSizeController(fromOrigin: popButton.superview!.convert(popButton.frame, to: nil), presentedViewController: presented, delegate: self)
+        case .slide(let fromDirection), .menu(let fromDirection):
+            return CustomSizeController(fromDirection: fromDirection, presentedViewController: presented, delegate: self)
+        }
+    }
+    
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         
         switch transitionType {
@@ -77,18 +89,6 @@ extension ViewController: CustomSizeControllerDelegate {
             return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / 2))
         case .menu:
             return CGRect(origin: .zero, size: CGSize(width: containerViewFrame.width / 2, height: containerViewFrame.height))
-        }
-    }
-    
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        
-        switch transitionType {
-        case .none:
-            return nil
-        case .bubble:
-            return CustomSizeController(fromOrigin: popButton.superview!.convert(popButton.frame, to: nil), presentedViewController: presented, delegate: self)
-        case .slide(let fromDirection), .menu(let fromDirection):
-            return CustomSizeController(fromDirection: fromDirection, presentedViewController: presented, delegate: self)
         }
     }
 }

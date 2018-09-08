@@ -28,7 +28,7 @@ public class CustomSizeController: UIPresentationController {
     public var blurEffectView: UIVisualEffectView!
     public var duration: TimeInterval = 0.4
     public var springWithDamping: CGFloat = 0.8
-    public var dismissDirection: Direction?
+    public var dismissDirection: Direction? // Availabel for slide in transition
     public var isDisabledDismiss: Bool = false // TODO: change variable name
     
     weak public var sizeDelegate: CustomSizeControllerDelegate?
