@@ -8,10 +8,6 @@
 
 import UIKit
 
-public enum Direction {
-    case left, right, up, down
-}
-
 public protocol CustomSizeControllerDelegate: UIViewControllerTransitioningDelegate {
     
     /// Returns a frame for presented viewController on containerView
@@ -30,11 +26,12 @@ public class CustomSizeController: UIPresentationController {
     public var springWithDamping: CGFloat = 0.8
     public var dismissDirection: Direction? // Availabel for slide in transition
     public var isDisabledDismiss: Bool = false // TODO: change variable name
-    
+    public var isDisabledDismissAnimation: Bool = false // TODO: change variable name
+    // TODO: CUSTOM VIEW CONTROLLER ANIMATION README
     weak public var sizeDelegate: CustomSizeControllerDelegate?
     
-    var originFrame: CGRect?
-    var fromDirection: Direction!
+    var originFrame: CGRect?   // For Bubble transition
+    var fromDirection: Direction! // For slide Transition
     
     convenience public init(fromDirection: Direction, presentedViewController: UIViewController, delegate: CustomSizeControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
@@ -163,11 +160,13 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
             let transitioning = PopTransition(originFrame: originFrame, reverse: true)
             transitioning.duration = duration
             transitioning.springWithDamping = springWithDamping
+            transitioning.isDisabledDismissAnimation = isDisabledDismissAnimation
             return transitioning
         } else {
             let transitioning = SlideInTransition(fromDirection: dismissDirection ?? fromDirection, reverse: true)
             transitioning.duration = duration
             transitioning.springWithDamping = springWithDamping
+            transitioning.isDisabledDismissAnimation = isDisabledDismissAnimation
             return transitioning
         }
     }

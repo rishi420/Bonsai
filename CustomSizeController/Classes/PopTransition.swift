@@ -13,6 +13,7 @@ class PopTransition: NSObject {
     
     var duration: TimeInterval = 0.3
     var springWithDamping: CGFloat = 0.8
+    var isDisabledDismissAnimation: Bool = false // TODO: change variable name
     var reverse: Bool
     var originFrame = CGRect.zero
     var dismissCompletion: (()->Void)?
@@ -55,6 +56,11 @@ extension PopTransition: UIViewControllerAnimatedTransitioning {
         UIView.animate(withDuration: duration, delay:0.0, usingSpringWithDamping: reverse ? 1 : springWithDamping, initialSpringVelocity: 0.0, animations: { [weak self] in
             
             guard let `self` = self else { return }
+            
+            if self.reverse && self.isDisabledDismissAnimation {
+                viewToAnimate.alpha = 0
+                return
+            }
             
             viewToAnimate.transform = self.reverse ? scaleTransform : .identity
             

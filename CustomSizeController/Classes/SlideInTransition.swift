@@ -8,12 +8,17 @@
 
 import UIKit
 
+public enum Direction {
+    case left, right, up, down
+}
+
 class SlideInTransition: NSObject {
     
     var duration: TimeInterval = 0.3
     var springWithDamping: CGFloat = 0.8
     let reverse: Bool
     let fromDirection: Direction
+    var isDisabledDismissAnimation: Bool = false // TODO: change variable name
     
     init(fromDirection: Direction, reverse: Bool = false) {
         self.reverse = reverse
@@ -42,7 +47,14 @@ extension SlideInTransition: UIViewControllerAnimatedTransitioning {
         
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: springWithDamping, initialSpringVelocity: 0.0, options: options, animations: { [weak self] in
             
-            if self?.reverse == true {
+            guard let `self` = self else { return }
+            
+            if self.reverse && self.isDisabledDismissAnimation {
+                viewToAnimate.alpha = 0
+                return
+            }
+            
+            if self.reverse == true {
                 viewToAnimate.frame = offsetFrame
             } else {
                 viewToAnimate.frame = transitionContext.finalFrame(for: viewControllerToAnimate)
