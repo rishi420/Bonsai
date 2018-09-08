@@ -31,22 +31,24 @@ public class CustomSizeController: UIPresentationController {
     public var dismissDirection: Direction?
     public var isDisabledDismiss: Bool = false // TODO: change variable name
     
+    weak public var sizeDelegate: CustomSizeControllerDelegate?
+    
     var originFrame: CGRect?
     var fromDirection: Direction!
     
-    weak public var sizeDelegate: CustomSizeControllerDelegate?
-    
-    convenience public init(fromDirection: Direction, presentedViewController: UIViewController) {
+    convenience public init(fromDirection: Direction, presentedViewController: UIViewController, delegate: CustomSizeControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.fromDirection = fromDirection
+        self.sizeDelegate = delegate
         setup(presentedViewController: presentedViewController)
     }
     
-    convenience public init(fromOrigin: CGRect, presentedViewController: UIViewController) {
+    convenience public init(fromOrigin: CGRect, presentedViewController: UIViewController, delegate: CustomSizeControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.originFrame = fromOrigin
+        self.sizeDelegate = delegate
         setup(presentedViewController: presentedViewController)
     }
     

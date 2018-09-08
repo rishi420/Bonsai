@@ -64,7 +64,6 @@ extension CollectionViewController: CustomSizeControllerDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         
-        // TODO: TAKE SIZE DELEGATE IN PARAMETER
         // TODO: dismiss button dismisses two view controllera
             
         guard let cell = aCollectionView.cellForItem(at: aCollectionView.indexPathsForSelectedItems!.first!) else {
@@ -72,10 +71,7 @@ extension CollectionViewController: CustomSizeControllerDelegate {
             return nil
         }
             
-        let customSizeC = CustomSizeController(fromOrigin: cell.superview!.convert(cell.frame, to: nil), presentedViewController: presented)
-        
-        customSizeC.sizeDelegate = self
-        return customSizeC
+        return CustomSizeController(fromOrigin: cell.superview!.convert(cell.frame, to: nil), presentedViewController: presented, delegate: self)
     }
 }
 

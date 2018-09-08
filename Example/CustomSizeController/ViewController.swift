@@ -11,10 +11,12 @@ import CustomSizeController
 
 private enum TransitionType {
     case none
-    case slide
     case bubble
-    case menu
+    case slide(fromDirection: Direction)
+    case menu(fromDirection: Direction)
 }
+
+// TODO:- Test with build in view controlers mailVC, SMSVC, VideoPlayerVC
 
 class ViewController: UIViewController {
     
@@ -29,12 +31,12 @@ class ViewController: UIViewController {
     // Code
     @IBAction func ShowSmallVCButtonAction(_ sender: Any) {
 
+        transitionType = .slide(fromDirection: .right)
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
         vc.view.backgroundColor = .red
-        
         vc.transitioningDelegate = self
         vc.modalPresentationStyle = .custom
-        
         present(vc, animated: true, completion: nil)
         
         // Dismiss after delay
@@ -53,6 +55,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.destination is SmallViewController {
+            transitionType = .slide(fromDirection: .down)
             segue.destination.transitioningDelegate = self
             segue.destination.modalPresentationStyle = .custom
         }
@@ -69,9 +72,9 @@ extension ViewController: CustomSizeControllerDelegate {
         case .none:
             return CGRect(origin: .zero, size: containerViewFrame.size)
         case .slide:
-            return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / 2))
-        case .bubble:
             return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (4/3)))
+        case .bubble:
+            return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / 2))
         case .menu:
             return CGRect(origin: .zero, size: CGSize(width: containerViewFrame.width / 2, height: containerViewFrame.height))
         }
@@ -79,14 +82,13 @@ extension ViewController: CustomSizeControllerDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         
-        // TODO: TAKE SIZE DELEGATE IN PARAMETER
-        var customSizeC = CustomSizeController(fromDirection: .left, presentedViewController: presented)
-        
-        if transitionType == .bubble {
-            customSizeC = CustomSizeController(fromOrigin: popButton.superview!.convert(popButton.frame, to: nil), presentedViewController: presented)
+        switch transitionType {
+        case .none:
+            return nil
+        case .bubble:
+            return CustomSizeController(fromOrigin: popButton.superview!.convert(popButton.frame, to: nil), presentedViewController: presented, delegate: self)
+        case .slide(let fromDirection), .menu(let fromDirection):
+            return CustomSizeController(fromDirection: fromDirection, presentedViewController: presented, delegate: self)
         }
-        
-        customSizeC.sizeDelegate = self
-        return customSizeC
     }
 }
