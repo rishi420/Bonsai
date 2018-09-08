@@ -52,7 +52,7 @@ extension PopTransition: UIViewControllerAnimatedTransitioning {
             transitionContext.containerView.addSubview(viewToAnimate)
         }
         
-        UIView.animate(withDuration: duration, delay:0.0, usingSpringWithDamping: springWithDamping, initialSpringVelocity: 0.0, animations: { [weak self] in
+        UIView.animate(withDuration: duration, delay:0.0, usingSpringWithDamping: reverse ? 1 : springWithDamping, initialSpringVelocity: 0.0, animations: { [weak self] in
             
             guard let `self` = self else { return }
             
@@ -61,7 +61,7 @@ extension PopTransition: UIViewControllerAnimatedTransitioning {
             let frame = self.reverse ? initialFrame : finalFrame
             viewToAnimate.center = CGPoint(x: frame.midX, y: frame.midY)
             
-            viewToAnimate.alpha = self.reverse ? 1 : 1
+            viewToAnimate.alpha = self.reverse ? 0.5 : 1
             
             }, completion: { _ in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
