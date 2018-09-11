@@ -67,7 +67,7 @@ extension CollectionViewController: CustomSizeControllerDelegate {
             return nil
         }
             
-        return CustomSizeController(fromOrigin: cell.superview!.convert(cell.frame, to: nil), presentedViewController: presented, delegate: self)
+        return CustomSizeController(fromView: cell, presentedViewController: presented, delegate: self)
     }
 }
 

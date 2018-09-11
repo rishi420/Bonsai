@@ -30,6 +30,7 @@ public class CustomSizeController: UIPresentationController {
     // TODO: CUSTOM VIEW CONTROLLER ANIMATION README
     weak public var sizeDelegate: CustomSizeControllerDelegate?
     
+    var originView: UIView?   // For Bubble transition
     var originFrame: CGRect?   // For Bubble transition
     var fromDirection: Direction! // For slide Transition
     
@@ -45,6 +46,14 @@ public class CustomSizeController: UIPresentationController {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.originFrame = fromOrigin
+        self.sizeDelegate = delegate
+        setup(presentedViewController: presentedViewController)
+    }
+    
+    convenience public init(fromView: UIView, presentedViewController: UIViewController, delegate: CustomSizeControllerDelegate?) {
+        self.init(presentedViewController: presentedViewController, presenting: nil)
+        
+        self.originView = fromView
         self.sizeDelegate = delegate
         setup(presentedViewController: presentedViewController)
     }
@@ -137,8 +146,15 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
             return sizeDelegate.animationController!(forPresented: presented, presenting: presenting, source: source)
         }
         
+        // TODO: REFACTOR
+        
         if let originFrame = originFrame {
             let transitioning = PopTransition(originFrame: originFrame)
+            transitioning.duration = duration
+            transitioning.springWithDamping = springWithDamping
+            return transitioning
+        } else if let originView = originView {
+            let transitioning = PopTransition(originView: originView)
             transitioning.duration = duration
             transitioning.springWithDamping = springWithDamping
             return transitioning
@@ -156,8 +172,15 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
             return sizeDelegate.animationController!(forDismissed:dismissed)
         }
         
+        // TODO: CHACK REFACTOR isDisabledDismissAnimation
         if let originFrame = originFrame {
             let transitioning = PopTransition(originFrame: originFrame, reverse: true)
+            transitioning.duration = duration
+            transitioning.springWithDamping = springWithDamping
+            transitioning.isDisabledDismissAnimation = isDisabledDismissAnimation
+            return transitioning
+        } else if let originFrame = originView {
+            let transitioning = PopTransition(originView: originFrame, reverse: true)
             transitioning.duration = duration
             transitioning.springWithDamping = springWithDamping
             transitioning.isDisabledDismissAnimation = isDisabledDismissAnimation

@@ -130,7 +130,7 @@ extension ViewController: CustomSizeControllerDelegate {
         case .none:
             return nil
         case .bubble:
-            return CustomSizeController(fromOrigin: popButton.superview!.convert(popButton.frame, to: nil), presentedViewController: presented, delegate: self)
+            return CustomSizeController(fromView: popButton, presentedViewController: presented, delegate: self)
         case .slide(let fromDirection), .menu(let fromDirection):
             return CustomSizeController(fromDirection: fromDirection, presentedViewController: presented, delegate: self)
         }

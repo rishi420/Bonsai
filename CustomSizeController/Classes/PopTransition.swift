@@ -16,11 +16,17 @@ class PopTransition: NSObject {
     var isDisabledDismissAnimation: Bool = false // TODO: change variable name
     var reverse: Bool
     var originFrame = CGRect.zero
+    var originView: UIView!
     var dismissCompletion: (()->Void)?
     
     init(originFrame: CGRect, reverse: Bool = false) {
         self.reverse = reverse
         self.originFrame = originFrame
+    }
+    
+    init(originView: UIView, reverse: Bool = false) {
+        self.reverse = reverse
+        self.originView = originView
     }
 }
 
@@ -38,7 +44,14 @@ extension PopTransition: UIViewControllerAnimatedTransitioning {
         let viewToAnimate = viewControllerToAnimate.view!
         viewToAnimate.frame = transitionContext.finalFrame(for: viewControllerToAnimate)
         
-        let initialFrame = originFrame
+        var initialFrame = originFrame
+        
+        if let originView = originView {
+            initialFrame = originView.superview!.convert(originView.frame, to: nil)
+        }
+        
+        // TODO:- CHECK THIS
+        
         let finalFrame = viewToAnimate.frame
 
         let xScaleFactor = initialFrame.width / finalFrame.width
