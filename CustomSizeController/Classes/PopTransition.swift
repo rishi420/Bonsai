@@ -14,9 +14,11 @@ class PopTransition: NSObject {
     var duration: TimeInterval = 0.3
     var springWithDamping: CGFloat = 0.8
     var isDisabledDismissAnimation: Bool = false // TODO: change variable name
-    var reverse: Bool
-    var originFrame = CGRect.zero
-    var originView: UIView!
+    
+    private let reverse: Bool
+    private var originFrame = CGRect.zero
+    private var originView: UIView!
+    
     var dismissCompletion: (()->Void)?
     
     init(originFrame: CGRect, reverse: Bool = false) {

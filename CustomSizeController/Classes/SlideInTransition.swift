@@ -16,9 +16,10 @@ class SlideInTransition: NSObject {
     
     var duration: TimeInterval = 0.3
     var springWithDamping: CGFloat = 0.8
-    let reverse: Bool
-    let fromDirection: Direction
     var isDisabledDismissAnimation: Bool = false // TODO: change variable name
+    
+    private let reverse: Bool
+    private let fromDirection: Direction
     
     init(fromDirection: Direction, reverse: Bool = false) {
         self.reverse = reverse
