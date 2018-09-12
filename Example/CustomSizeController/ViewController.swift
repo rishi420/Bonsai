@@ -18,7 +18,6 @@ private enum TransitionType {
 }
 
 // TODO: Test with build in view controlers mailVC, SMSVC, VideoPlayerVC
-// TODO: Rename PopTransition to BubbleTransition
 
 class ViewController: UIViewController {
     

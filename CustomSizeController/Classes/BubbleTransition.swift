@@ -1,5 +1,5 @@
 //
-//  PopTransition.swift
+//  BubbleTransition.swift
 //  CustomSizeController
 //
 //  Created by Warif Akhand Rishi on 14/6/18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PopTransition: NSObject {
+class BubbleTransition: NSObject {
     
     var duration: TimeInterval = 0.3
     var springWithDamping: CGFloat = 0.8
@@ -32,7 +32,7 @@ class PopTransition: NSObject {
     }
 }
 
-extension PopTransition: UIViewControllerAnimatedTransitioning {
+extension BubbleTransition: UIViewControllerAnimatedTransitioning {
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration

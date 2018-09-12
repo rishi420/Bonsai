@@ -149,12 +149,12 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
         // TODO: REFACTOR
         
         if let originFrame = originFrame {
-            let transitioning = PopTransition(originFrame: originFrame)
+            let transitioning = BubbleTransition(originFrame: originFrame)
             transitioning.duration = duration
             transitioning.springWithDamping = springWithDamping
             return transitioning
         } else if let originView = originView {
-            let transitioning = PopTransition(originView: originView)
+            let transitioning = BubbleTransition(originView: originView)
             transitioning.duration = duration
             transitioning.springWithDamping = springWithDamping
             return transitioning
@@ -174,13 +174,13 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
         
         // TODO: CHACK REFACTOR isDisabledDismissAnimation
         if let originFrame = originFrame {
-            let transitioning = PopTransition(originFrame: originFrame, reverse: true)
+            let transitioning = BubbleTransition(originFrame: originFrame, reverse: true)
             transitioning.duration = duration
             transitioning.springWithDamping = springWithDamping
             transitioning.isDisabledDismissAnimation = isDisabledDismissAnimation
             return transitioning
         } else if let originFrame = originView {
-            let transitioning = PopTransition(originView: originFrame, reverse: true)
+            let transitioning = BubbleTransition(originView: originFrame, reverse: true)
             transitioning.duration = duration
             transitioning.springWithDamping = springWithDamping
             transitioning.isDisabledDismissAnimation = isDisabledDismissAnimation
