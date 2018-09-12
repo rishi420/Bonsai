@@ -50,8 +50,6 @@ extension PopTransition: UIViewControllerAnimatedTransitioning {
             initialFrame = originView.superview!.convert(originView.frame, to: nil)
         }
         
-        // TODO:- CHECK THIS
-        
         let finalFrame = viewToAnimate.frame
 
         let xScaleFactor = initialFrame.width / finalFrame.width

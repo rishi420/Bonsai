@@ -53,7 +53,7 @@ extension CustomSizePopupUtility: CustomSizeControllerDelegate {
         // TODO: USE inset by and frame IN INIT
         let customSizeC = CustomSizeController(fromOrigin: originFrame, presentedViewController: presented, delegate: self)
         customSizeC.springWithDamping = 0.5
-        customSizeC.duration = 0.4
+        customSizeC.duration = 0.5
         customSizeC.isDisabledDismiss = true
         customSizeC.isDisabledDismissAnimation = true
         
