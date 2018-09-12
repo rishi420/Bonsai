@@ -59,8 +59,6 @@ extension CollectionViewController: CustomSizeControllerDelegate {
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        
-        // TODO: dismiss button dismisses two view controllera
             
         guard let cell = aCollectionView.cellForItem(at: aCollectionView.indexPathsForSelectedItems!.first!) else {
             print("No selected cell")

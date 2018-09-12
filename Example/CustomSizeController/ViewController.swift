@@ -18,7 +18,6 @@ private enum TransitionType {
 
 // TODO:- Test with build in view controlers mailVC, SMSVC, VideoPlayerVC
 // TODO:- Rename PopTransition to BubbleTransition
-// TODO:- Pop animation origin after rotation
 
 class ViewController: UIViewController {
     
@@ -105,6 +104,7 @@ extension ViewController {
         vc.transitioningDelegate = self
         vc.modalPresentationStyle = .custom
     
+        // TODO:- NOTIFIATION DISMISS BUG
         // Dismiss after delay
         vc.perform(#selector(vc.dismiss(animated:completion:)), with: nil, afterDelay: 2)
         
@@ -116,9 +116,6 @@ extension ViewController {
         print("bubbleButtonAction")
         showSmallVC(transition: .bubble)
     }
-    
-    // MARK: Unwind Segue
-    @IBAction func unwind(sender: UIStoryboardSegue) {}
 }
 
 // MARK:- CustomSizeControllerDelegate

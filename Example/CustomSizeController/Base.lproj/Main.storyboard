@@ -164,7 +164,8 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eMj-Sl-bp2" kind="unwind" unwindAction="unwindWithSender:" id="QWi-JD-v2h"/>
+                                    <action selector="dismissButtonAction:" destination="37k-zS-NPD" eventType="touchUpInside" id="AyW-58-61B"/>
+                                    <segue destination="eMj-Sl-bp2" kind="unwind" unwindAction="unwindWithSender:" id="rnn-n4-wxQ"/>
                                 </connections>
                             </button>
                         </subviews>
