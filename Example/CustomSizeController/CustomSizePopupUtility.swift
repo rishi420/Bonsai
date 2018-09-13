@@ -50,7 +50,6 @@ extension CustomSizePopupUtility: CustomSizeControllerDelegate {
         
         let frame = frameOfPresentedView(in: source.view.frame)
         let originFrame = frame.insetBy(dx: -20, dy: -20)
-        // TODO: USE inset by and frame IN INIT
         let customSizeC = CustomSizeController(fromOrigin: originFrame, presentedViewController: presented, delegate: self)
         customSizeC.springWithDamping = 0.5
         customSizeC.duration = 0.5
