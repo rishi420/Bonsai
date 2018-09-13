@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BubbleTransition: NSObject {
+class BubbleTransition: NSObject, CustomTransitionProperties {
     
     var duration: TimeInterval = 0.3
     var springWithDamping: CGFloat = 0.8

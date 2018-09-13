@@ -12,7 +12,7 @@ public enum Direction {
     case left, right, up, down
 }
 
-class SlideInTransition: NSObject {
+class SlideInTransition: NSObject, CustomTransitionProperties {
     
     var duration: TimeInterval = 0.3
     var springWithDamping: CGFloat = 0.8

@@ -19,14 +19,21 @@ public protocol CustomSizeControllerDelegate: UIViewControllerTransitioningDeleg
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController?
 }
 
-public class CustomSizeController: UIPresentationController {
+public protocol CustomTransitionProperties {
+    var duration: TimeInterval {get set}
+    var springWithDamping: CGFloat {get set}
+    var isDisabledDismissAnimation: Bool {get set} // TODO: change variable name
+}
+
+public class CustomSizeController: UIPresentationController, CustomTransitionProperties {
     
-    public var blurEffectView: UIVisualEffectView!
     public var duration: TimeInterval = 0.4
     public var springWithDamping: CGFloat = 0.8
+    public var isDisabledDismissAnimation: Bool = false // TODO: change variable name
+    public var blurEffectView: UIVisualEffectView!
     public var dismissDirection: Direction? // Availabel for slide in transition
     public var isDisabledDismiss: Bool = false // TODO: change variable name
-    public var isDisabledDismissAnimation: Bool = false // TODO: change variable name
+    
     // TODO: CUSTOM VIEW CONTROLLER ANIMATION README
     weak public var sizeDelegate: CustomSizeControllerDelegate?
     
@@ -140,30 +147,31 @@ extension CustomSizeController: CustomSizeControllerDelegate {
 
 extension CustomSizeController: UIViewControllerTransitioningDelegate {
     
+    private func setupTransitioningProperties(transitioning: CustomTransitionProperties?) -> UIViewControllerAnimatedTransitioning? {
+        var transitioning = transitioning
+        transitioning?.duration = duration
+        transitioning?.springWithDamping = springWithDamping
+        transitioning?.isDisabledDismissAnimation = isDisabledDismissAnimation
+        return transitioning as? UIViewControllerAnimatedTransitioning
+    }
+    
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         if let sizeDelegate = sizeDelegate,  sizeDelegate.responds(to:#selector(animationController(forPresented:presenting:source:))) {
             return sizeDelegate.animationController!(forPresented: presented, presenting: presenting, source: source)
         }
         
-        // TODO: REFACTOR
+        var transitioning: CustomTransitionProperties?
         
         if let originFrame = originFrame {
-            let transitioning = BubbleTransition(originFrame: originFrame)
-            transitioning.duration = duration
-            transitioning.springWithDamping = springWithDamping
-            return transitioning
+            transitioning = BubbleTransition(originFrame: originFrame)
         } else if let originView = originView {
-            let transitioning = BubbleTransition(originView: originView)
-            transitioning.duration = duration
-            transitioning.springWithDamping = springWithDamping
-            return transitioning
+            transitioning = BubbleTransition(originView: originView)
         } else {
-            let transitioning = SlideInTransition(fromDirection: fromDirection)
-            transitioning.duration = duration
-            transitioning.springWithDamping = springWithDamping
-            return transitioning
+            transitioning = SlideInTransition(fromDirection: fromDirection)
         }
+        
+        return setupTransitioningProperties(transitioning: transitioning)
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -172,25 +180,16 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
             return sizeDelegate.animationController!(forDismissed:dismissed)
         }
         
-        // TODO: CHACK REFACTOR isDisabledDismissAnimation
+        var transitioning: CustomTransitionProperties?
+        
         if let originFrame = originFrame {
-            let transitioning = BubbleTransition(originFrame: originFrame, reverse: true)
-            transitioning.duration = duration
-            transitioning.springWithDamping = springWithDamping
-            transitioning.isDisabledDismissAnimation = isDisabledDismissAnimation
-            return transitioning
+            transitioning = BubbleTransition(originFrame: originFrame, reverse: true)
         } else if let originFrame = originView {
-            let transitioning = BubbleTransition(originView: originFrame, reverse: true)
-            transitioning.duration = duration
-            transitioning.springWithDamping = springWithDamping
-            transitioning.isDisabledDismissAnimation = isDisabledDismissAnimation
-            return transitioning
+            transitioning = BubbleTransition(originView: originFrame, reverse: true)
         } else {
-            let transitioning = SlideInTransition(fromDirection: dismissDirection ?? fromDirection, reverse: true)
-            transitioning.duration = duration
-            transitioning.springWithDamping = springWithDamping
-            transitioning.isDisabledDismissAnimation = isDisabledDismissAnimation
-            return transitioning
+            transitioning = SlideInTransition(fromDirection: dismissDirection ?? fromDirection, reverse: true)
         }
+        
+        return setupTransitioningProperties(transitioning: transitioning)
     }
 }
