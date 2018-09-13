@@ -8,8 +8,13 @@
 
 import UIKit
 
-public enum Direction {
-    case left, right, up, down
+public enum Direction: UInt32 {
+    
+    case left, right, top, bottom
+    
+    public static func randomDirection() -> Direction {
+        return Direction(rawValue: arc4random_uniform(4))!
+    }
 }
 
 class SlideInTransition: NSObject, CustomTransitionProperties {
@@ -81,9 +86,9 @@ private extension Direction {
             frame.origin.x = -frame.width
         case .right:
             frame.origin.x = containerView.bounds.width
-        case .up:
+        case .top:
             frame.origin.y = -frame.height
-        case .down:
+        case .bottom:
             frame.origin.y = containerView.bounds.height
         }
         

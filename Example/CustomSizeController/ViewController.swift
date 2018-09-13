@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         print("Prepare Segue")
         
         if segue.destination is SmallViewController {
-            transitionType = .slide(fromDirection: .down)
+            transitionType = .slide(fromDirection: .bottom)
             segue.destination.transitioningDelegate = self
             segue.destination.modalPresentationStyle = .custom
         }
@@ -70,12 +70,12 @@ extension ViewController {
     
     @IBAction func topButtonAction(_ sender: Any) {
         print("Top Button Action")
-        showSmallVC(transition: .slide(fromDirection: .up))
+        showSmallVC(transition: .slide(fromDirection: .top))
     }
     
     @IBAction func bottomButtonAction(_ sender: Any) {
         print("Bottom Button Action")
-        showSmallVC(transition: .slide(fromDirection: .down))
+        showSmallVC(transition: .slide(fromDirection: .bottom))
     }
     
     // MARK: Menu Buttons
@@ -128,6 +128,8 @@ extension ViewController {
             return
         }
         
+        transitionType = .slide(fromDirection: Direction.randomDirection())
+        
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary;
         imagePicker.allowsEditing = true
@@ -140,6 +142,8 @@ extension ViewController {
         
     @IBAction func videoPlayerButtonAction(_ sender: Any) {
         print("Video Player Button Action")
+        
+        transitionType = .slide(fromDirection: Direction.randomDirection())
         
         let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
         let player = AVPlayer(url: videoURL!)
