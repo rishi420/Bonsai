@@ -8,6 +8,7 @@
 
 import UIKit
 import CustomSizeController
+import AVKit // Needed for AVPlayerViewController example
 
 private enum TransitionType {
     case none
@@ -17,7 +18,7 @@ private enum TransitionType {
     case notification(fromDirection: Direction)
 }
 
-// TODO: Test with build in view controlers mailVC, SMSVC, VideoPlayerVC
+// TODO: Readme file mailVC, SMSVC, VideoPlayerVC, photoLibrary
 
 class ViewController: UIViewController {
     
@@ -116,6 +117,41 @@ extension ViewController {
     @IBAction func bubbleButtonAction(_ sender: Any) {
         print("Bubble Button Action")
         showSmallVC(transition: .bubble)
+    }
+    
+    // MARK: Native Buttons
+    @IBAction func imagePickerButtonAction(_ sender: Any) {
+        print("Image Picker Button Action")
+        
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
+            print("Source type not available")
+            return
+        }
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary;
+        imagePicker.allowsEditing = true
+        
+        imagePicker.transitioningDelegate = self
+        imagePicker.modalPresentationStyle = .custom
+        
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+        
+    @IBAction func videoPlayerButtonAction(_ sender: Any) {
+        print("Video Player Button Action")
+        
+        let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+        let player = AVPlayer(url: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        
+        playerViewController.transitioningDelegate = self
+        playerViewController.modalPresentationStyle = .custom
+        
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
     }
 }
 

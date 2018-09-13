@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-8b-Y90">
-                                <rect key="frame" x="10" y="318.5" width="30" height="30"/>
+                                <rect key="frame" x="10" y="350.5" width="30" height="30"/>
                                 <state key="normal" title="Left"/>
                                 <connections>
                                     <action selector="leftButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OzR-hd-Icx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vN-JV-pYf">
-                                <rect key="frame" x="329" y="318.5" width="36" height="30"/>
+                                <rect key="frame" x="329" y="350.5" width="36" height="30"/>
                                 <state key="normal" title="Right"/>
                                 <connections>
                                     <action selector="rightButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCS-XT-CqG"/>
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rQv-ee-f0X">
-                                <rect key="frame" x="103.5" y="258.5" width="168" height="150"/>
+                                <rect key="frame" x="103.5" y="260.5" width="168" height="210"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjE-YT-1Pf">
                                         <rect key="frame" x="12.5" y="0.0" width="143" height="30"/>
@@ -84,24 +84,38 @@
                                             <segue destination="qQV-zJ-Y9a" kind="show" id="y4J-YZ-Xur"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwr-eg-p1U">
+                                        <rect key="frame" x="8.5" y="150" width="151" height="30"/>
+                                        <state key="normal" title="Image Picker Example"/>
+                                        <connections>
+                                            <action selector="imagePickerButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tcv-3y-iqZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSB-Wa-RhI">
+                                        <rect key="frame" x="10" y="180" width="148" height="30"/>
+                                        <state key="normal" title="Video Player Example"/>
+                                        <connections>
+                                            <action selector="videoPlayerButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DjD-3o-ecI"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HuZ-8b-Y90" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2ij-tE-Zet"/>
+                            <constraint firstItem="HuZ-8b-Y90" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2ij-tE-Zet"/>
                             <constraint firstItem="HuZ-8b-Y90" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="4hL-LV-FFx"/>
-                            <constraint firstItem="2vN-JV-pYf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="HLW-oz-BBZ"/>
+                            <constraint firstItem="2vN-JV-pYf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" symbolic="YES" id="HLW-oz-BBZ"/>
                             <constraint firstItem="1al-jq-QeX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="LVj-K8-UfL"/>
-                            <constraint firstItem="1al-jq-QeX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Map-zj-4QY"/>
-                            <constraint firstItem="uqn-1r-Rzf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PDT-ww-TiW"/>
-                            <constraint firstItem="rQv-ee-f0X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RZ1-ky-ZCP"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HuZ-8b-Y90" secondAttribute="trailing" constant="20" symbolic="YES" id="SuR-67-LMW"/>
-                            <constraint firstItem="2vN-JV-pYf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hff-1W-ngQ"/>
+                            <constraint firstItem="1al-jq-QeX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Map-zj-4QY"/>
+                            <constraint firstItem="uqn-1r-Rzf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PDT-ww-TiW"/>
+                            <constraint firstItem="rQv-ee-f0X" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RZ1-ky-ZCP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HuZ-8b-Y90" secondAttribute="trailing" constant="20" symbolic="YES" id="SuR-67-LMW"/>
+                            <constraint firstItem="2vN-JV-pYf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hff-1W-ngQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2vN-JV-pYf" secondAttribute="trailing" constant="10" id="qgm-pN-1dR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uqn-1r-Rzf" secondAttribute="bottom" constant="10" id="t0F-rJ-RGK"/>
-                            <constraint firstItem="rQv-ee-f0X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yMm-Qe-3bp"/>
+                            <constraint firstItem="rQv-ee-f0X" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="yMm-Qe-3bp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
