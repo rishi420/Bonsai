@@ -54,7 +54,7 @@ extension CustomSizePopupUtility: CustomSizeControllerDelegate {
         let customSizeC = CustomSizeController(fromOrigin: originFrame, presentedViewController: presented, delegate: self)
         customSizeC.springWithDamping = 0.5
         customSizeC.duration = 0.5
-        customSizeC.isDisabledDismiss = true
+        customSizeC.isDisabledTapOutside = true
         customSizeC.isDisabledDismissAnimation = true
         
         return customSizeC

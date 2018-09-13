@@ -13,7 +13,7 @@ class BubbleTransition: NSObject, CustomTransitionProperties {
     
     var duration: TimeInterval = 0.3
     var springWithDamping: CGFloat = 0.8
-    var isDisabledDismissAnimation: Bool = false // TODO: change variable name
+    var isDisabledDismissAnimation: Bool = false 
     
     private let reverse: Bool
     private var originFrame = CGRect.zero

@@ -22,17 +22,17 @@ public protocol CustomSizeControllerDelegate: UIViewControllerTransitioningDeleg
 public protocol CustomTransitionProperties {
     var duration: TimeInterval {get set}
     var springWithDamping: CGFloat {get set}
-    var isDisabledDismissAnimation: Bool {get set} // TODO: change variable name
+    var isDisabledDismissAnimation: Bool {get set}
 }
 
 public class CustomSizeController: UIPresentationController, CustomTransitionProperties {
     
     public var duration: TimeInterval = 0.4
     public var springWithDamping: CGFloat = 0.8
-    public var isDisabledDismissAnimation: Bool = false // TODO: change variable name
+    public var isDisabledDismissAnimation: Bool = false
     public var blurEffectView: UIVisualEffectView!
-    public var dismissDirection: Direction? // Availabel for slide in transition
-    public var isDisabledDismiss: Bool = false // TODO: change variable name
+    public var dismissDirection: Direction? // Availabel only for slide in transition
+    public var isDisabledTapOutside: Bool = false
     
     // TODO: CUSTOM VIEW CONTROLLER ANIMATION README
     weak public var sizeDelegate: CustomSizeControllerDelegate?
@@ -92,7 +92,7 @@ public class CustomSizeController: UIPresentationController, CustomTransitionPro
     
     @objc private func handleTap() {
         
-        if !isDisabledDismiss {
+        if !isDisabledTapOutside {
             dismiss()
         }
     }
