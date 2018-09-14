@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  CustomSizeController
+//  BonsaiController
 //
 //  Created by rishi420 on 05/28/2018.
 //  Copyright (c) 2018 rishi420. All rights reserved.

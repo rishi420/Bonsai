@@ -51,7 +51,7 @@ extension CollectionViewController: UICollectionViewDelegate {
     
 }
 
-extension CollectionViewController: CustomSizeControllerDelegate {
+extension CollectionViewController: BonsaiControllerDelegate {
     
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         
@@ -65,7 +65,7 @@ extension CollectionViewController: CustomSizeControllerDelegate {
             return nil
         }
             
-        return CustomSizeController(fromView: cell, presentedViewController: presented, delegate: self)
+        return BonsaiController(fromView: cell, presentedViewController: presented, delegate: self)
     }
 }
 

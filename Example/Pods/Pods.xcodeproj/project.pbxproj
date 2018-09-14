@@ -18,7 +18,7 @@
 		BC09ACD220CBDD990078616D /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09ACD120CBDD990078616D /* SlideInTransition.swift */; };
 		BC0CA3B820D135180017DEE7 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CA3B720D135180017DEE7 /* BubbleTransition.swift */; };
 		C575BFA9922F524776F769F072F3A5E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		E6F76CE2EC975F9019860C373426B445 /* CustomSizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5969B718E1F7F52E4D3473BEACF348 /* CustomSizeController.swift */; };
+		E6F76CE2EC975F9019860C373426B445 /* BonsaiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5969B718E1F7F52E4D3473BEACF348 /* BonsaiController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,7 @@
 		2ADE6CA54945963DE759301EF747FCE0 /* CustomSizeController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CustomSizeController.modulemap; sourceTree = "<group>"; };
 		313D452CCB32447884FE0D5A887527EF /* Pods-CustomSizeController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomSizeController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3D1AD60CC2D9CDFE09A9DC3714ECB79A /* Pods-CustomSizeController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomSizeController_Tests-dummy.m"; sourceTree = "<group>"; };
-		4A5969B718E1F7F52E4D3473BEACF348 /* CustomSizeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomSizeController.swift; path = CustomSizeController/Classes/CustomSizeController.swift; sourceTree = "<group>"; };
+		4A5969B718E1F7F52E4D3473BEACF348 /* BonsaiController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonsaiController.swift; path = CustomSizeController/Classes/BonsaiController.swift; sourceTree = "<group>"; };
 		4ACDBA0BED73E48A51F730BAE558495F /* Pods-CustomSizeController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomSizeController_Example-dummy.m"; sourceTree = "<group>"; };
 		4CA69B6E9828F8A02F18787B5EA84D5C /* CustomSizeController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomSizeController-umbrella.h"; sourceTree = "<group>"; };
 		56A138788DBA68113938F5D74127DFF4 /* CustomSizeController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = CustomSizeController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -207,7 +207,7 @@
 		AA29BE2D47C96122BC237916874F383A /* CustomSizeController */ = {
 			isa = PBXGroup;
 			children = (
-				4A5969B718E1F7F52E4D3473BEACF348 /* CustomSizeController.swift */,
+				4A5969B718E1F7F52E4D3473BEACF348 /* BonsaiController.swift */,
 				BC09ACD120CBDD990078616D /* SlideInTransition.swift */,
 				BC0CA3B720D135180017DEE7 /* BubbleTransition.swift */,
 				9A832F1E559619AE3AB609C23DCE6D44 /* Pod */,
@@ -368,7 +368,7 @@
 				1AE6BCF4B80535C50864BA5076A6284A /* CustomSizeController-dummy.m in Sources */,
 				BC09ACD220CBDD990078616D /* SlideInTransition.swift in Sources */,
 				BC0CA3B820D135180017DEE7 /* BubbleTransition.swift in Sources */,
-				E6F76CE2EC975F9019860C373426B445 /* CustomSizeController.swift in Sources */,
+				E6F76CE2EC975F9019860C373426B445 /* BonsaiController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

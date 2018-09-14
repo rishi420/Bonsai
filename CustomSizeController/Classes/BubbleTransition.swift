@@ -1,6 +1,6 @@
 //
 //  BubbleTransition.swift
-//  CustomSizeController
+//  BonsaiController
 //
 //  Created by Warif Akhand Rishi on 14/6/18.
 //  Copyright © 2018 Warif Akhand Rishi. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BubbleTransition: NSObject, CustomTransitionProperties {
+class BubbleTransition: NSObject, BonsaiTransitionProperties {
     
     var duration: TimeInterval = 0.3
     var springWithDamping: CGFloat = 0.8

@@ -1,6 +1,6 @@
 //
 //  SlideInTransition.swift
-//  CustomSizeController
+//  BonsaiController
 //
 //  Created by Warif Akhand Rishi on 9/6/18.
 //  Copyright © 2018 Warif Akhand Rishi. All rights reserved.
@@ -17,7 +17,7 @@ public enum Direction: UInt32 {
     }
 }
 
-class SlideInTransition: NSObject, CustomTransitionProperties {
+class SlideInTransition: NSObject, BonsaiTransitionProperties {
     
     var duration: TimeInterval = 0.3
     var springWithDamping: CGFloat = 0.8

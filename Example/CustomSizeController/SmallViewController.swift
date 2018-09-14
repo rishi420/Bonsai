@@ -1,6 +1,6 @@
 //
 //  SmallViewController.swift
-//  CustomSizeController
+//  BonsaiController
 //
 //  Created by Warif Akhand Rishi on 27/5/18.
 //  Copyright © 2018 Warif Akhand Rishi. All rights reserved.

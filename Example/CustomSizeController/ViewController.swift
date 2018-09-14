@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  CustomSizeController
+//  BonsaiController
 //
 //  Created by Warif Akhand Rishi on 22/5/18.
 //  Copyright © 2018 Warif Akhand Rishi. All rights reserved.
@@ -159,8 +159,8 @@ extension ViewController {
     }
 }
 
-// MARK:- CustomSizeController Delegate
-extension ViewController: CustomSizeControllerDelegate {
+// MARK:- BonsaiController Delegate
+extension ViewController: BonsaiControllerDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         
@@ -168,9 +168,9 @@ extension ViewController: CustomSizeControllerDelegate {
         case .none:
             return nil
         case .bubble:
-            return CustomSizeController(fromView: popButton, presentedViewController: presented, delegate: self)
+            return BonsaiController(fromView: popButton, presentedViewController: presented, delegate: self)
         case .slide(let fromDirection), .menu(let fromDirection), .notification(let fromDirection):
-            return CustomSizeController(fromDirection: fromDirection, presentedViewController: presented, delegate: self)
+            return BonsaiController(fromDirection: fromDirection, presentedViewController: presented, delegate: self)
         }
     }
     

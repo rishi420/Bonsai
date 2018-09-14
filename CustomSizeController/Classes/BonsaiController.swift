@@ -1,6 +1,6 @@
 //
-//  CustomSizeController.swift
-//  CustomSizeController
+//  BonsaiController.swift
+//  BonsaiController
 //
 //  Created by Warif Akhand Rishi on 22/5/18.
 //  Copyright © 2018 Warif Akhand Rishi. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol CustomSizeControllerDelegate: UIViewControllerTransitioningDelegate {
+public protocol BonsaiControllerDelegate: UIViewControllerTransitioningDelegate {
     
     /// Returns a frame for presented viewController on containerView
     ///
@@ -19,13 +19,13 @@ public protocol CustomSizeControllerDelegate: UIViewControllerTransitioningDeleg
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController?
 }
 
-public protocol CustomTransitionProperties {
+public protocol BonsaiTransitionProperties {
     var duration: TimeInterval {get set}
     var springWithDamping: CGFloat {get set}
     var isDisabledDismissAnimation: Bool {get set}
 }
 
-public class CustomSizeController: UIPresentationController, CustomTransitionProperties {
+public class BonsaiController: UIPresentationController, BonsaiTransitionProperties {
     
     public var duration: TimeInterval = 0.4
     public var springWithDamping: CGFloat = 0.8
@@ -35,13 +35,13 @@ public class CustomSizeController: UIPresentationController, CustomTransitionPro
     public var isDisabledTapOutside: Bool = false
     
     // TODO: CUSTOM VIEW CONTROLLER ANIMATION README
-    weak public var sizeDelegate: CustomSizeControllerDelegate?
+    weak public var sizeDelegate: BonsaiControllerDelegate?
     
     var originView: UIView?   // For Bubble transition
     var originFrame: CGRect?   // For Bubble transition
     var fromDirection: Direction! // For slide Transition
     
-    convenience public init(fromDirection: Direction, presentedViewController: UIViewController, delegate: CustomSizeControllerDelegate?) {
+    convenience public init(fromDirection: Direction, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.fromDirection = fromDirection
@@ -49,7 +49,7 @@ public class CustomSizeController: UIPresentationController, CustomTransitionPro
         setup(presentedViewController: presentedViewController)
     }
     
-    convenience public init(fromOrigin: CGRect, presentedViewController: UIViewController, delegate: CustomSizeControllerDelegate?) {
+    convenience public init(fromOrigin: CGRect, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.originFrame = fromOrigin
@@ -57,7 +57,7 @@ public class CustomSizeController: UIPresentationController, CustomTransitionPro
         setup(presentedViewController: presentedViewController)
     }
     
-    convenience public init(fromView: UIView, presentedViewController: UIViewController, delegate: CustomSizeControllerDelegate?) {
+    convenience public init(fromView: UIView, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.originView = fromView
@@ -134,7 +134,7 @@ public class CustomSizeController: UIPresentationController, CustomTransitionPro
     }
 }
 
-extension CustomSizeController: CustomSizeControllerDelegate {
+extension BonsaiController: BonsaiControllerDelegate {
     
     public func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height/2), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height/2))
@@ -145,9 +145,9 @@ extension CustomSizeController: CustomSizeControllerDelegate {
     }
 }
 
-extension CustomSizeController: UIViewControllerTransitioningDelegate {
+extension BonsaiController: UIViewControllerTransitioningDelegate {
     
-    private func setupTransitioningProperties(transitioning: CustomTransitionProperties?) -> UIViewControllerAnimatedTransitioning? {
+    private func setupTransitioningProperties(transitioning: BonsaiTransitionProperties?) -> UIViewControllerAnimatedTransitioning? {
         var transitioning = transitioning
         transitioning?.duration = duration
         transitioning?.springWithDamping = springWithDamping
@@ -161,7 +161,7 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
             return sizeDelegate.animationController!(forPresented: presented, presenting: presenting, source: source)
         }
         
-        var transitioning: CustomTransitionProperties?
+        var transitioning: BonsaiTransitionProperties?
         
         if let originFrame = originFrame {
             transitioning = BubbleTransition(originFrame: originFrame)
@@ -180,7 +180,7 @@ extension CustomSizeController: UIViewControllerTransitioningDelegate {
             return sizeDelegate.animationController!(forDismissed:dismissed)
         }
         
-        var transitioning: CustomTransitionProperties?
+        var transitioning: BonsaiTransitionProperties?
         
         if let originFrame = originFrame {
             transitioning = BubbleTransition(originFrame: originFrame, reverse: true)
