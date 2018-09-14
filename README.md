@@ -63,7 +63,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let smallVC = segue.destination as? SmallViewController {
             
         smallVC.modalPresentationStyle = .custom
-        smallVC.transitioningDelegate = self
+        smallVC.transitioningDelegate = customSizeC
     }
 }
 ```
