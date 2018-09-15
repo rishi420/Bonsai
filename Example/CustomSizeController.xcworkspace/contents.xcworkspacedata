@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:CustomSizeController.xcodeproj">
+      location = "group:/Users/warifakhandrishi/Desktop/Workspace/CustomSizeController/Example/BonsaiController.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

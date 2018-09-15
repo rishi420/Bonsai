@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "CustomSizeController_Example.app"
-               BlueprintName = "CustomSizeController_Example"
-               ReferencedContainer = "container:CustomSizeController.xcodeproj">
+               BuildableName = "BonsaiController_Example.app"
+               BlueprintName = "BonsaiController_Example"
+               ReferencedContainer = "container:BonsaiController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "CustomSizeController_Tests.xctest"
-               BlueprintName = "CustomSizeController_Tests"
-               ReferencedContainer = "container:CustomSizeController.xcodeproj">
+               BuildableName = "BonsaiController_Tests.xctest"
+               BlueprintName = "BonsaiController_Tests"
+               ReferencedContainer = "container:BonsaiController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "CustomSizeController_Tests.xctest"
-               BlueprintName = "CustomSizeController_Tests"
-               ReferencedContainer = "container:CustomSizeController.xcodeproj">
+               BuildableName = "BonsaiController_Tests.xctest"
+               BlueprintName = "BonsaiController_Tests"
+               ReferencedContainer = "container:BonsaiController.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "CustomSizeController_Example.app"
-            BlueprintName = "CustomSizeController_Example"
-            ReferencedContainer = "container:CustomSizeController.xcodeproj">
+            BuildableName = "BonsaiController_Example.app"
+            BlueprintName = "BonsaiController_Example"
+            ReferencedContainer = "container:BonsaiController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "CustomSizeController_Example.app"
-            BlueprintName = "CustomSizeController_Example"
-            ReferencedContainer = "container:CustomSizeController.xcodeproj">
+            BuildableName = "BonsaiController_Example.app"
+            BlueprintName = "BonsaiController_Example"
+            ReferencedContainer = "container:BonsaiController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -99,9 +99,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "CustomSizeController_Example.app"
-            BlueprintName = "CustomSizeController_Example"
-            ReferencedContainer = "container:CustomSizeController.xcodeproj">
+            BuildableName = "BonsaiController_Example.app"
+            BlueprintName = "BonsaiController_Example"
+            ReferencedContainer = "container:BonsaiController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
