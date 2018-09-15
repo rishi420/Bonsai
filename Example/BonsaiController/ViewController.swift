@@ -94,7 +94,7 @@ extension ViewController {
         print("Popup Button Action")
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
-        CustomSizePopupUtility.shared.show(viewController: vc)
+        BonsaiPopupUtility.shared.show(viewController: vc)
     }
     
     // MARK: Notification Button

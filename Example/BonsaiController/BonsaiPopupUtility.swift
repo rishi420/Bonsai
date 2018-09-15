@@ -1,5 +1,5 @@
 //
-//  CustomSizePopupUtility.swift
+//  BonsaiPopupUtility.swift
 //  CustomSizeController_Example
 //
 //  Created by Warif Akhand Rishi on 1/6/18.
@@ -9,9 +9,9 @@
 import UIKit
 import CustomSizeController
 
-class CustomSizePopupUtility: NSObject {
+class BonsaiPopupUtility: NSObject {
     
-    static let shared = CustomSizePopupUtility()
+    static let shared = BonsaiPopupUtility()
     
     func show(viewController: UIViewController) {
         
@@ -44,7 +44,7 @@ extension UIApplication {
     }
 }
 
-extension CustomSizePopupUtility: BonsaiControllerDelegate {
+extension BonsaiPopupUtility: BonsaiControllerDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         

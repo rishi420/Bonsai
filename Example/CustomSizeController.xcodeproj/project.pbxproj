@@ -14,7 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		94D4C90C792AE3FAEEA27058 /* Pods_CustomSizeController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B64C55697D6FE9BEC26F2DE /* Pods_CustomSizeController_Example.framework */; };
-		BC03EB7220C14F2D00D1930E /* CustomSizePopupUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC03EB7120C14F2D00D1930E /* CustomSizePopupUtility.swift */; };
+		BC03EB7220C14F2D00D1930E /* BonsaiPopupUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC03EB7120C14F2D00D1930E /* BonsaiPopupUtility.swift */; };
 		BC61BCB22116D203006969E0 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61BCB12116D203006969E0 /* CollectionViewController.swift */; };
 		BC61BCB42116D27C006969E0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61BCB32116D27C006969E0 /* CollectionViewCell.swift */; };
 		BC74107B20BC40A0008039B3 /* SmallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC74107A20BC409F008039B3 /* SmallViewController.swift */; };
@@ -47,7 +47,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		94E527973E7BD3A5B8B174F6 /* Pods-CustomSizeController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Tests/Pods-CustomSizeController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B4362DCF45BD8A29FA1528BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		BC03EB7120C14F2D00D1930E /* CustomSizePopupUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSizePopupUtility.swift; sourceTree = "<group>"; };
+		BC03EB7120C14F2D00D1930E /* BonsaiPopupUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonsaiPopupUtility.swift; sourceTree = "<group>"; };
 		BC61BCB12116D203006969E0 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		BC61BCB32116D27C006969E0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BC74107A20BC409F008039B3 /* SmallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for CustomSizeController */,
+				607FACD21AFB9204008FA782 /* Example for BonsaiController */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				AB13F431DD2F2E964712EAB1 /* Pods */,
@@ -98,7 +98,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for CustomSizeController */ = {
+		607FACD21AFB9204008FA782 /* Example for BonsaiController */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -106,14 +106,14 @@
 				BC74107A20BC409F008039B3 /* SmallViewController.swift */,
 				BC61BCB12116D203006969E0 /* CollectionViewController.swift */,
 				BC61BCB32116D27C006969E0 /* CollectionViewCell.swift */,
-				BC03EB7120C14F2D00D1930E /* CustomSizePopupUtility.swift */,
+				BC03EB7120C14F2D00D1930E /* BonsaiPopupUtility.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for CustomSizeController";
-			path = CustomSizeController;
+			name = "Example for BonsaiController";
+			path = BonsaiController;
 			sourceTree = "<group>";
 		};
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
@@ -336,7 +336,7 @@
 			files = (
 				BC74107B20BC40A0008039B3 /* SmallViewController.swift in Sources */,
 				BC61BCB42116D27C006969E0 /* CollectionViewCell.swift in Sources */,
-				BC03EB7220C14F2D00D1930E /* CustomSizePopupUtility.swift in Sources */,
+				BC03EB7220C14F2D00D1930E /* BonsaiPopupUtility.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				BC61BCB22116D203006969E0 /* CollectionViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
@@ -489,7 +489,7 @@
 			baseConfigurationReference = F4BE946371218951BFC62452 /* Pods-CustomSizeController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CustomSizeController/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BonsaiController/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -504,7 +504,7 @@
 			baseConfigurationReference = D373FA2444DAD867D6FC338B /* Pods-CustomSizeController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CustomSizeController/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BonsaiController/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
