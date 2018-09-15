@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FD950760DE96FDEF73AD2EC /* Pods_BonsaiController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2D4044E757FF49CEE27814 /* Pods_BonsaiController_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 		BC61BCB22116D203006969E0 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61BCB12116D203006969E0 /* CollectionViewController.swift */; };
 		BC61BCB42116D27C006969E0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61BCB32116D27C006969E0 /* CollectionViewCell.swift */; };
 		BC74107B20BC40A0008039B3 /* SmallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC74107A20BC409F008039B3 /* SmallViewController.swift */; };
+		C0297E313A06FDD815414F20 /* Pods_BonsaiController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E6AC5A5F2EF984CB9F04F5 /* Pods_BonsaiController_Example.framework */; };
 		EB7C651A8F189B9057251F43 /* Pods_CustomSizeController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1950F0286E3EE64C5F7F5B71 /* Pods_CustomSizeController_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		0B64C55697D6FE9BEC26F2DE /* Pods_CustomSizeController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomSizeController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E6AC5A5F2EF984CB9F04F5 /* Pods_BonsaiController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonsaiController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1950F0286E3EE64C5F7F5B71 /* Pods_CustomSizeController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomSizeController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EAA890AD49A70E7FDD7600 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BonsaiController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonsaiController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,14 +48,19 @@
 		607FACE51AFB9204008FA782 /* BonsaiController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonsaiController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		6A4C78421957D0D925618EA2 /* Pods-BonsaiController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonsaiController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BonsaiController_Example/Pods-BonsaiController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		7FE69E785FDC4BFA3DF9065C /* Pods-BonsaiController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonsaiController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BonsaiController_Tests/Pods-BonsaiController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8E06610C7E302E5B7833009E /* Pods-BonsaiController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonsaiController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BonsaiController_Example/Pods-BonsaiController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		94E527973E7BD3A5B8B174F6 /* Pods-CustomSizeController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Tests/Pods-CustomSizeController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B4362DCF45BD8A29FA1528BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BC03EB7120C14F2D00D1930E /* BonsaiPopupUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonsaiPopupUtility.swift; sourceTree = "<group>"; };
 		BC61BCB12116D203006969E0 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		BC61BCB32116D27C006969E0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BC74107A20BC409F008039B3 /* SmallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallViewController.swift; sourceTree = "<group>"; };
+		D26AAAC4042B13ACAEC1A4AD /* Pods-BonsaiController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonsaiController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BonsaiController_Tests/Pods-BonsaiController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D373FA2444DAD867D6FC338B /* Pods-CustomSizeController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Example/Pods-CustomSizeController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D44C6807FBF7174579792ADB /* Pods-CustomSizeController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Tests/Pods-CustomSizeController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF2D4044E757FF49CEE27814 /* Pods_BonsaiController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonsaiController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F225CDA1BA1F705E77798746 /* CustomSizeController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CustomSizeController.podspec; path = ../CustomSizeController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F4BE946371218951BFC62452 /* Pods-CustomSizeController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomSizeController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomSizeController_Example/Pods-CustomSizeController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94D4C90C792AE3FAEEA27058 /* Pods_CustomSizeController_Example.framework in Frameworks */,
+				C0297E313A06FDD815414F20 /* Pods_BonsaiController_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB7C651A8F189B9057251F43 /* Pods_CustomSizeController_Tests.framework in Frameworks */,
+				2FD950760DE96FDEF73AD2EC /* Pods_BonsaiController_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +166,8 @@
 			children = (
 				0B64C55697D6FE9BEC26F2DE /* Pods_CustomSizeController_Example.framework */,
 				1950F0286E3EE64C5F7F5B71 /* Pods_CustomSizeController_Tests.framework */,
+				14E6AC5A5F2EF984CB9F04F5 /* Pods_BonsaiController_Example.framework */,
+				DF2D4044E757FF49CEE27814 /* Pods_BonsaiController_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,6 +179,10 @@
 				D373FA2444DAD867D6FC338B /* Pods-CustomSizeController_Example.release.xcconfig */,
 				D44C6807FBF7174579792ADB /* Pods-CustomSizeController_Tests.debug.xcconfig */,
 				94E527973E7BD3A5B8B174F6 /* Pods-CustomSizeController_Tests.release.xcconfig */,
+				6A4C78421957D0D925618EA2 /* Pods-BonsaiController_Example.debug.xcconfig */,
+				8E06610C7E302E5B7833009E /* Pods-BonsaiController_Example.release.xcconfig */,
+				D26AAAC4042B13ACAEC1A4AD /* Pods-BonsaiController_Tests.debug.xcconfig */,
+				7FE69E785FDC4BFA3DF9065C /* Pods-BonsaiController_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -284,7 +300,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CustomSizeController_Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BonsaiController_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -297,7 +313,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CustomSizeController_Example/Pods-CustomSizeController_Example-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-BonsaiController_Example/Pods-BonsaiController_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CustomSizeController/CustomSizeController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -306,7 +322,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomSizeController_Example/Pods-CustomSizeController_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BonsaiController_Example/Pods-BonsaiController_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A36F1F0CA65690083F540F28 /* [CP] Check Pods Manifest.lock */ = {
@@ -320,7 +336,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CustomSizeController_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BonsaiController_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -486,7 +502,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4BE946371218951BFC62452 /* Pods-CustomSizeController_Example.debug.xcconfig */;
+			baseConfigurationReference = 6A4C78421957D0D925618EA2 /* Pods-BonsaiController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/BonsaiController/Info.plist";
@@ -501,7 +517,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D373FA2444DAD867D6FC338B /* Pods-CustomSizeController_Example.release.xcconfig */;
+			baseConfigurationReference = 8E06610C7E302E5B7833009E /* Pods-BonsaiController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/BonsaiController/Info.plist";
@@ -516,7 +532,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D44C6807FBF7174579792ADB /* Pods-CustomSizeController_Tests.debug.xcconfig */;
+			baseConfigurationReference = D26AAAC4042B13ACAEC1A4AD /* Pods-BonsaiController_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -537,7 +553,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94E527973E7BD3A5B8B174F6 /* Pods-CustomSizeController_Tests.release.xcconfig */;
+			baseConfigurationReference = 7FE69E785FDC4BFA3DF9065C /* Pods-BonsaiController_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

@@ -1,3 +1,5 @@
+platform :ios, '9.3'
+
 use_frameworks!
 
 target 'BonsaiController_Example' do
@@ -5,7 +7,5 @@ target 'BonsaiController_Example' do
 
   target 'BonsaiController_Tests' do
     inherit! :search_paths
-
-    
   end
 end

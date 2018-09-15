@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_CustomSizeController_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_CustomSizeController_TestsVersionString[];
+FOUNDATION_EXPORT double Pods_BonsaiController_TestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_BonsaiController_TestsVersionString[];
 
