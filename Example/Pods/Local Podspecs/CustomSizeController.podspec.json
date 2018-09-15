@@ -1,5 +1,5 @@
 {
-  "name": "CustomSizeController",
+  "name": "BonsaiController",
   "version": "1.0.0",
   "summary": "Custom size any view controller",
   "description": "his CocoaPod adds the ability to change frame of any view controller",

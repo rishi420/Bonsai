@@ -1,5 +1,5 @@
 import XCTest
-import CustomSizeController
+import BonsaiController
 
 class Tests: XCTestCase {
     

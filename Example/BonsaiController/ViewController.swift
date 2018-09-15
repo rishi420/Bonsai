@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CustomSizeController
+import BonsaiController
 import AVKit // Needed for AVPlayerViewController example
 
 private enum TransitionType {

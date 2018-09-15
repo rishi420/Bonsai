@@ -54,7 +54,7 @@
 		BC74107A20BC409F008039B3 /* SmallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallViewController.swift; sourceTree = "<group>"; };
 		D26AAAC4042B13ACAEC1A4AD /* Pods-BonsaiController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonsaiController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BonsaiController_Tests/Pods-BonsaiController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF2D4044E757FF49CEE27814 /* Pods_BonsaiController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonsaiController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F225CDA1BA1F705E77798746 /* CustomSizeController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CustomSizeController.podspec; path = ../CustomSizeController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F225CDA1BA1F705E77798746 /* BonsaiController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BonsaiController.podspec; path = ../BonsaiController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +144,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				F225CDA1BA1F705E77798746 /* CustomSizeController.podspec */,
+				F225CDA1BA1F705E77798746 /* BonsaiController.podspec */,
 				B4362DCF45BD8A29FA1528BF /* README.md */,
 				50EAA890AD49A70E7FDD7600 /* LICENSE */,
 			);
@@ -298,11 +298,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BonsaiController_Example/Pods-BonsaiController_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CustomSizeController/CustomSizeController.framework",
+				"${BUILT_PRODUCTS_DIR}/BonsaiController/BonsaiController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CustomSizeController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BonsaiController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

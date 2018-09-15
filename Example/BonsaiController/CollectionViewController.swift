@@ -1,13 +1,13 @@
 //
 //  CollectionViewController.swift
-//  CustomSizeController_Example
+//  BonsaiController_Example
 //
 //  Created by Warif Akhand Rishi on 5/8/18.
 //  Copyright © 2018 CocoaPods. All rights reserved.
 //
 
 import UIKit
-import CustomSizeController
+import BonsaiController
 
 class CollectionViewController: UIViewController {
 

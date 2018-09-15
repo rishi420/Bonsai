@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## CustomSizeController
+## BonsaiController
 
 Copyright (c) 2018 rishi420 <rishi420@gmail.com>
 

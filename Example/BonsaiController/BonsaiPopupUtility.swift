@@ -1,13 +1,13 @@
 //
 //  BonsaiPopupUtility.swift
-//  CustomSizeController_Example
+//  BonsaiController_Example
 //
 //  Created by Warif Akhand Rishi on 1/6/18.
 //  Copyright © 2018 CocoaPods. All rights reserved.
 //
 
 import UIKit
-import CustomSizeController
+import BonsaiController
 
 class BonsaiPopupUtility: NSObject {
     
@@ -50,13 +50,13 @@ extension BonsaiPopupUtility: BonsaiControllerDelegate {
         
         let frame = frameOfPresentedView(in: source.view.frame)
         let originFrame = frame.insetBy(dx: -20, dy: -20)
-        let customSizeC = BonsaiController(fromOrigin: originFrame, presentedViewController: presented, delegate: self)
-        customSizeC.springWithDamping = 0.5
-        customSizeC.duration = 0.5
-        customSizeC.isDisabledTapOutside = true
-        customSizeC.isDisabledDismissAnimation = true
+        let bonsaiController = BonsaiController(fromOrigin: originFrame, presentedViewController: presented, delegate: self)
+        bonsaiController.springWithDamping = 0.5
+        bonsaiController.duration = 0.5
+        bonsaiController.isDisabledTapOutside = true
+        bonsaiController.isDisabledDismissAnimation = true
         
-        return customSizeC
+        return bonsaiController
     }
 
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {

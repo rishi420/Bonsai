@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint CustomSizeController.podspec' to ensure this is a
+# Be sure to run `pod lib lint BonsaiController.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'CustomSizeController'
+  s.name             = 'BonsaiController'
   s.version          = '1.0.0'
-  s.summary          = 'Custom size any view controller'
+  s.summary          = '🌲 Bonsai makes custom frame and transition animation to any view controller'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,23 +18,23 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-his CocoaPod adds the ability to change frame of any view controller
+  Adds the ability to change custom frame with cool transition animation to any view controller.
                        DESC
 
-  s.homepage         = 'https://github.com/rishi420/CustomSizeController'
+  s.homepage         = 'https://github.com/rishi420/Bonsai'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Warif Akhand Rishi' => 'rishi420@gmail.com' }
-  s.source           = { :git => 'https://github.com/rishi420/CustomSizeController.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/rishi420/Bonsai.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.swift_version = '4'
   
   s.ios.deployment_target = '9.3'
 
-  s.source_files = 'CustomSizeController/Classes/**/*'
+  s.source_files = 'BonsaiController/Classes/**/*'
   
   # s.resource_bundles = {
-  #   'CustomSizeController' => ['CustomSizeController/Assets/*.png']
+  #   'BonsaiController' => ['BonsaiController/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

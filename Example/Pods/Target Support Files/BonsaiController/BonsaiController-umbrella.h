@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double CustomSizeControllerVersionNumber;
-FOUNDATION_EXPORT const unsigned char CustomSizeControllerVersionString[];
+FOUNDATION_EXPORT double BonsaiControllerVersionNumber;
+FOUNDATION_EXPORT const unsigned char BonsaiControllerVersionString[];
 

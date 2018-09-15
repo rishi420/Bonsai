@@ -1,16 +1,16 @@
 PODS:
-  - CustomSizeController (1.0.0)
+  - BonsaiController (1.0.0)
 
 DEPENDENCIES:
-  - CustomSizeController (from `../`)
+  - BonsaiController (from `../`)
 
 EXTERNAL SOURCES:
-  CustomSizeController:
+  BonsaiController:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CustomSizeController: d7f31fca133421f112dda812c9ac375ad1279d8b
+  BonsaiController: f3b229a6328de1006be9430454c88a2bf79050bf
 
-PODFILE CHECKSUM: 03503fa03ee297ed93309cff9a4653fe2cab9586
+PODFILE CHECKSUM: 325e9beddf9080d9769346dbc1d30e34f5df5f85
 
 COCOAPODS: 1.5.0
