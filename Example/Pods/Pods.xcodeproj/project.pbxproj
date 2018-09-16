@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		073F92ADF370C10C77E401B31C56B280 /* Pods-BonsaiController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FD285033D208C88FED68F589BBB763B /* Pods-BonsaiController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15B490264A566A39CA6FE7A0DEBDB9B6 /* BonsaiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8EE047A7A916B7DF96C33D3500B65E /* BonsaiController.swift */; };
-		4CD57EB88DFE8A66DD3BE7C47B594C9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		60BFF5D13C5FBC9E0EEB787A4F4B5DC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		7227ABD8699B2B4C38B9C298B3F969CC /* Pods-BonsaiController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D61C00FC4A8D8BCBDBD27BA3025F1D6C /* Pods-BonsaiController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7227ABD8699B2B4C38B9C298B3F969CC /* Pods-BonsaiController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F72D819636567FCEDC32CC79F27D5205 /* Pods-BonsaiController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B21589AFFC9AF06C6C9C45A579A9ADD /* BonsaiController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA395AC3BE2988F3481BB0ECB4772F7B /* BonsaiController-dummy.m */; };
-		C08EBA8A6B271B1F5FE54EA889F55029 /* Pods-BonsaiController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 557CF767C8FFD1EFE22BD1EFDE7BC058 /* Pods-BonsaiController_Example-dummy.m */; };
-		C16AFF44D5B7FDE6E55A3EF43E643CFB /* Pods-BonsaiController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86379BD8DEB066E628C7507B42FF6068 /* Pods-BonsaiController_Tests-dummy.m */; };
+		C08EBA8A6B271B1F5FE54EA889F55029 /* Pods-BonsaiController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F48506145CB683F573DF057901C2767 /* Pods-BonsaiController_Example-dummy.m */; };
 		C3F6886045FECC1EC94220995E8414F6 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1CDD6415E45BA48E7DF7E1079263E2 /* SlideInTransition.swift */; };
 		CDCB25D07C12420C4D47B2CF5CDFD0FB /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38108D5F1291E8B59314B7DD0D71EBE2 /* BubbleTransition.swift */; };
 		D24F8DC594318BB08F9DDCD89195EF8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -22,13 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0CD42B7A67FC478F9F17C1DFC0482E0A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 669DAFDAA9295CCA15D8634BE342886D;
-			remoteInfo = "Pods-BonsaiController_Example";
-		};
 		8FE127CB48FFF7BE0590C37141983E18 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -39,42 +29,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F8B457744AFE466BEDFE8E9603293E1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2601C7A5560D8D1C11996B2C12191CFD /* Pods-BonsaiController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BonsaiController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2C3852E63889FE3E2BC75ACEF93F6CFA /* Pods-BonsaiController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BonsaiController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2F56E3969557E7D30AD1D24A41074CC9 /* Pods-BonsaiController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BonsaiController_Example.modulemap"; sourceTree = "<group>"; };
-		2F7403F0B1F56C910BB3CB82C813A678 /* Pods-BonsaiController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BonsaiController_Tests-resources.sh"; sourceTree = "<group>"; };
-		32CC8A2D0E3DF7B1EAAA0FB6A7BFACFE /* Pods-BonsaiController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BonsaiController_Tests.modulemap"; sourceTree = "<group>"; };
+		0A4F74BF82FC73102E7955B19D1924D2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		240079180A281B2C3E740FBDC6A69F65 /* Pods-BonsaiController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BonsaiController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		320A99855F40DC230F3C1019619CF44B /* Pods-BonsaiController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BonsaiController_Example.modulemap"; sourceTree = "<group>"; };
 		35370323CF586145DF8449E96C09CCCB /* BonsaiController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BonsaiController.xcconfig; sourceTree = "<group>"; };
 		38108D5F1291E8B59314B7DD0D71EBE2 /* BubbleTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleTransition.swift; path = BonsaiController/Classes/BubbleTransition.swift; sourceTree = "<group>"; };
-		4D11B756A2C7B0CAD4A581DC5D582E12 /* BonsaiController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BonsaiController.framework; path = BonsaiController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		557CF767C8FFD1EFE22BD1EFDE7BC058 /* Pods-BonsaiController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BonsaiController_Example-dummy.m"; sourceTree = "<group>"; };
 		5C8EE047A7A916B7DF96C33D3500B65E /* BonsaiController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonsaiController.swift; path = BonsaiController/Classes/BonsaiController.swift; sourceTree = "<group>"; };
-		62DB4A8992995716A4A8931C66A653F6 /* Pods-BonsaiController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BonsaiController_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		69D0C1E47CBC44F6AAE0A09795B2DADF /* Pods-BonsaiController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BonsaiController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6CE6CA1797150B14D397E1862AC40BB7 /* BonsaiController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BonsaiController-prefix.pch"; sourceTree = "<group>"; };
-		6F89464F83259E9D6EC54193887A7B13 /* Pods-BonsaiController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BonsaiController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6F48506145CB683F573DF057901C2767 /* Pods-BonsaiController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BonsaiController_Example-dummy.m"; sourceTree = "<group>"; };
 		70CCA60EBED41C56C9F8458357A4E1A9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		74DECF748FFF49BC4646BD84C415B8F2 /* Pods-BonsaiController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BonsaiController_Example-frameworks.sh"; sourceTree = "<group>"; };
+		77CEB935718A85C1702520B2F7DAB999 /* Pods-BonsaiController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BonsaiController_Example-resources.sh"; sourceTree = "<group>"; };
 		7D06660B9E5288383457749830BC50EB /* BonsaiController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BonsaiController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		811B5BA9DE99E97B2F74B61B54AACC09 /* Pods_BonsaiController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BonsaiController_Example.framework; path = "Pods-BonsaiController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		86379BD8DEB066E628C7507B42FF6068 /* Pods-BonsaiController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BonsaiController_Tests-dummy.m"; sourceTree = "<group>"; };
-		8FD285033D208C88FED68F589BBB763B /* Pods-BonsaiController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BonsaiController_Tests-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95781B065070E63B6357F9BFF1165749 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4C6DD9CEA6ADFF247E43F932A8F8AF6 /* Pods-BonsaiController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BonsaiController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		AD57723484BA0EBD8960CAFD4CA77D12 /* Pods-BonsaiController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BonsaiController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B7D1981C6603907697AE4D0FC9C53638 /* Pods_BonsaiController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BonsaiController_Example.framework; path = "Pods-BonsaiController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA395AC3BE2988F3481BB0ECB4772F7B /* BonsaiController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BonsaiController-dummy.m"; sourceTree = "<group>"; };
-		BF7EB0295892201EA1C10662D5A7D3D9 /* Pods-BonsaiController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BonsaiController_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C8FD134ACA8D89D8242E43ED37F8C36C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		CA6DB41A292989A60BA306D7F6DA1032 /* Pods-BonsaiController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BonsaiController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D61C00FC4A8D8BCBDBD27BA3025F1D6C /* Pods-BonsaiController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BonsaiController_Example-umbrella.h"; sourceTree = "<group>"; };
 		DB1CDD6415E45BA48E7DF7E1079263E2 /* SlideInTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideInTransition.swift; path = BonsaiController/Classes/SlideInTransition.swift; sourceTree = "<group>"; };
-		DD755E25BB1C3BDD35334932C4F86204 /* Pods-BonsaiController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BonsaiController_Example-resources.sh"; sourceTree = "<group>"; };
-		DDB0AD53ABEA8F6F9DD968386488F927 /* Pods_BonsaiController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BonsaiController_Tests.framework; path = "Pods-BonsaiController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEB1B795978B8E7FC60EE46F2A95019B /* Pods-BonsaiController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BonsaiController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DF03E65EEF980C98DEF0C5C13DE5C344 /* BonsaiController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BonsaiController-umbrella.h"; sourceTree = "<group>"; };
 		E01CDD564D8D22E1F4028208E5E2DEF9 /* BonsaiController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BonsaiController.modulemap; sourceTree = "<group>"; };
-		F8A90872757E742CEDF3482F56B046B3 /* Pods-BonsaiController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BonsaiController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E53FD2EC51BEC892B708CB194B0A74B1 /* Pods-BonsaiController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BonsaiController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EE2311C49356D9C2914ED73D0EAF283C /* BonsaiController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BonsaiController.framework; path = BonsaiController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF9F7B3D64E0B739A5E65A5CEB0019C9 /* Pods-BonsaiController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BonsaiController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		F72D819636567FCEDC32CC79F27D5205 /* Pods-BonsaiController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BonsaiController_Example-umbrella.h"; sourceTree = "<group>"; };
 		FA399FC265C69D199919A357A8938023 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,14 +63,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D24F8DC594318BB08F9DDCD89195EF8F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		809C9838DF43647161C72D88F99B26FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CD57EB88DFE8A66DD3BE7C47B594C9A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3C9EDE6FA5340FE25B090977E38A4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE2311C49356D9C2914ED73D0EAF283C /* BonsaiController.framework */,
+				B7D1981C6603907697AE4D0FC9C53638 /* Pods_BonsaiController_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		26045CC4C96ED0A357A25474503B2380 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,61 +96,41 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		36D02330438973756F1C81CA37D17191 /* Pods-BonsaiController_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				95781B065070E63B6357F9BFF1165749 /* Info.plist */,
-				32CC8A2D0E3DF7B1EAAA0FB6A7BFACFE /* Pods-BonsaiController_Tests.modulemap */,
-				6F89464F83259E9D6EC54193887A7B13 /* Pods-BonsaiController_Tests-acknowledgements.markdown */,
-				A4C6DD9CEA6ADFF247E43F932A8F8AF6 /* Pods-BonsaiController_Tests-acknowledgements.plist */,
-				86379BD8DEB066E628C7507B42FF6068 /* Pods-BonsaiController_Tests-dummy.m */,
-				62DB4A8992995716A4A8931C66A653F6 /* Pods-BonsaiController_Tests-frameworks.sh */,
-				2F7403F0B1F56C910BB3CB82C813A678 /* Pods-BonsaiController_Tests-resources.sh */,
-				8FD285033D208C88FED68F589BBB763B /* Pods-BonsaiController_Tests-umbrella.h */,
-				2C3852E63889FE3E2BC75ACEF93F6CFA /* Pods-BonsaiController_Tests.debug.xcconfig */,
-				F8A90872757E742CEDF3482F56B046B3 /* Pods-BonsaiController_Tests.release.xcconfig */,
-			);
-			name = "Pods-BonsaiController_Tests";
-			path = "Target Support Files/Pods-BonsaiController_Tests";
-			sourceTree = "<group>";
-		};
-		3B4B6AE4D6FCE7BAB2DBC162D46CEDC7 /* Pods-BonsaiController_Example */ = {
-			isa = PBXGroup;
-			children = (
-				0F8B457744AFE466BEDFE8E9603293E1 /* Info.plist */,
-				2F56E3969557E7D30AD1D24A41074CC9 /* Pods-BonsaiController_Example.modulemap */,
-				CA6DB41A292989A60BA306D7F6DA1032 /* Pods-BonsaiController_Example-acknowledgements.markdown */,
-				AD57723484BA0EBD8960CAFD4CA77D12 /* Pods-BonsaiController_Example-acknowledgements.plist */,
-				557CF767C8FFD1EFE22BD1EFDE7BC058 /* Pods-BonsaiController_Example-dummy.m */,
-				BF7EB0295892201EA1C10662D5A7D3D9 /* Pods-BonsaiController_Example-frameworks.sh */,
-				DD755E25BB1C3BDD35334932C4F86204 /* Pods-BonsaiController_Example-resources.sh */,
-				D61C00FC4A8D8BCBDBD27BA3025F1D6C /* Pods-BonsaiController_Example-umbrella.h */,
-				2601C7A5560D8D1C11996B2C12191CFD /* Pods-BonsaiController_Example.debug.xcconfig */,
-				DEB1B795978B8E7FC60EE46F2A95019B /* Pods-BonsaiController_Example.release.xcconfig */,
-			);
-			name = "Pods-BonsaiController_Example";
-			path = "Target Support Files/Pods-BonsaiController_Example";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				AE166F197DB743FFEB379D26E8294687 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				9AFC9FD8934AD1018B3E66EE372E8AC1 /* Products */,
-				ED96516D10C50707E50BD47C3618679C /* Targets Support Files */,
+				0F3C9EDE6FA5340FE25B090977E38A4B /* Products */,
+				9157E215C5EF25E870B109F6EB7C4E84 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9AFC9FD8934AD1018B3E66EE372E8AC1 /* Products */ = {
+		90639D19D51271157688D36F820CDB8A /* Pods-BonsaiController_Example */ = {
 			isa = PBXGroup;
 			children = (
-				4D11B756A2C7B0CAD4A581DC5D582E12 /* BonsaiController.framework */,
-				811B5BA9DE99E97B2F74B61B54AACC09 /* Pods_BonsaiController_Example.framework */,
-				DDB0AD53ABEA8F6F9DD968386488F927 /* Pods_BonsaiController_Tests.framework */,
+				0A4F74BF82FC73102E7955B19D1924D2 /* Info.plist */,
+				320A99855F40DC230F3C1019619CF44B /* Pods-BonsaiController_Example.modulemap */,
+				240079180A281B2C3E740FBDC6A69F65 /* Pods-BonsaiController_Example-acknowledgements.markdown */,
+				EF9F7B3D64E0B739A5E65A5CEB0019C9 /* Pods-BonsaiController_Example-acknowledgements.plist */,
+				6F48506145CB683F573DF057901C2767 /* Pods-BonsaiController_Example-dummy.m */,
+				74DECF748FFF49BC4646BD84C415B8F2 /* Pods-BonsaiController_Example-frameworks.sh */,
+				77CEB935718A85C1702520B2F7DAB999 /* Pods-BonsaiController_Example-resources.sh */,
+				F72D819636567FCEDC32CC79F27D5205 /* Pods-BonsaiController_Example-umbrella.h */,
+				69D0C1E47CBC44F6AAE0A09795B2DADF /* Pods-BonsaiController_Example.debug.xcconfig */,
+				E53FD2EC51BEC892B708CB194B0A74B1 /* Pods-BonsaiController_Example.release.xcconfig */,
 			);
-			name = Products;
+			name = "Pods-BonsaiController_Example";
+			path = "Target Support Files/Pods-BonsaiController_Example";
+			sourceTree = "<group>";
+		};
+		9157E215C5EF25E870B109F6EB7C4E84 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				90639D19D51271157688D36F820CDB8A /* Pods-BonsaiController_Example */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		A41D949166D14978F811369F727B64FC /* BonsaiController */ = {
@@ -224,15 +184,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		ED96516D10C50707E50BD47C3618679C /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3B4B6AE4D6FCE7BAB2DBC162D46CEDC7 /* Pods-BonsaiController_Example */,
-				36D02330438973756F1C81CA37D17191 /* Pods-BonsaiController_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -252,35 +203,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E39A062253E4DE094E53EAB4F1F0826E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				073F92ADF370C10C77E401B31C56B280 /* Pods-BonsaiController_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		34B46514AEC3A1E4F67F414BFAFEA006 /* Pods-BonsaiController_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 47D25C5140A6F03B927D8D5C2DB1C73E /* Build configuration list for PBXNativeTarget "Pods-BonsaiController_Tests" */;
-			buildPhases = (
-				5FB63556FA301D031276E0E906A78ADE /* Sources */,
-				809C9838DF43647161C72D88F99B26FD /* Frameworks */,
-				E39A062253E4DE094E53EAB4F1F0826E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				984DF8DE6EAB9B5C461EBF904DEA1A40 /* PBXTargetDependency */,
-			);
-			name = "Pods-BonsaiController_Tests";
-			productName = "Pods-BonsaiController_Tests";
-			productReference = DDB0AD53ABEA8F6F9DD968386488F927 /* Pods_BonsaiController_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		669DAFDAA9295CCA15D8634BE342886D /* Pods-BonsaiController_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4089616425E9037A1F36179EA1D677D0 /* Build configuration list for PBXNativeTarget "Pods-BonsaiController_Example" */;
@@ -296,7 +221,7 @@
 			);
 			name = "Pods-BonsaiController_Example";
 			productName = "Pods-BonsaiController_Example";
-			productReference = 811B5BA9DE99E97B2F74B61B54AACC09 /* Pods_BonsaiController_Example.framework */;
+			productReference = B7D1981C6603907697AE4D0FC9C53638 /* Pods_BonsaiController_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D1DD51556B39CF8D52076F224FFA4758 /* BonsaiController */ = {
@@ -313,7 +238,7 @@
 			);
 			name = BonsaiController;
 			productName = BonsaiController;
-			productReference = 4D11B756A2C7B0CAD4A581DC5D582E12 /* BonsaiController.framework */;
+			productReference = EE2311C49356D9C2914ED73D0EAF283C /* BonsaiController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -333,26 +258,17 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 9AFC9FD8934AD1018B3E66EE372E8AC1 /* Products */;
+			productRefGroup = 0F3C9EDE6FA5340FE25B090977E38A4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D1DD51556B39CF8D52076F224FFA4758 /* BonsaiController */,
 				669DAFDAA9295CCA15D8634BE342886D /* Pods-BonsaiController_Example */,
-				34B46514AEC3A1E4F67F414BFAFEA006 /* Pods-BonsaiController_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5FB63556FA301D031276E0E906A78ADE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C16AFF44D5B7FDE6E55A3EF43E643CFB /* Pods-BonsaiController_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		87F1F2C0EDFAFAD8E3923C7526822F89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,52 +297,12 @@
 			target = D1DD51556B39CF8D52076F224FFA4758 /* BonsaiController */;
 			targetProxy = 8FE127CB48FFF7BE0590C37141983E18 /* PBXContainerItemProxy */;
 		};
-		984DF8DE6EAB9B5C461EBF904DEA1A40 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-BonsaiController_Example";
-			target = 669DAFDAA9295CCA15D8634BE342886D /* Pods-BonsaiController_Example */;
-			targetProxy = 0CD42B7A67FC478F9F17C1DFC0482E0A /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5C47402F8AFFBE927C7460680DAECA5C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8A90872757E742CEDF3482F56B046B3 /* Pods-BonsaiController_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BonsaiController_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BonsaiController_Tests/Pods-BonsaiController_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		85D5C743DE3C21912F15E70A6D03F69D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEB1B795978B8E7FC60EE46F2A95019B /* Pods-BonsaiController_Example.release.xcconfig */;
+			baseConfigurationReference = E53FD2EC51BEC892B708CB194B0A74B1 /* Pods-BonsaiController_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -614,7 +490,7 @@
 		};
 		CB5F4B1173E84482F4B8DEC710B23234 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2601C7A5560D8D1C11996B2C12191CFD /* Pods-BonsaiController_Example.debug.xcconfig */;
+			baseConfigurationReference = 69D0C1E47CBC44F6AAE0A09795B2DADF /* Pods-BonsaiController_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -680,39 +556,6 @@
 			};
 			name = Release;
 		};
-		FA4BCB8CEE2E14822B39C18A676018DA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C3852E63889FE3E2BC75ACEF93F6CFA /* Pods-BonsaiController_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BonsaiController_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BonsaiController_Tests/Pods-BonsaiController_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -730,15 +573,6 @@
 			buildConfigurations = (
 				CB5F4B1173E84482F4B8DEC710B23234 /* Debug */,
 				85D5C743DE3C21912F15E70A6D03F69D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		47D25C5140A6F03B927D8D5C2DB1C73E /* Build configuration list for PBXNativeTarget "Pods-BonsaiController_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA4BCB8CEE2E14822B39C18A676018DA /* Debug */,
-				5C47402F8AFFBE927C7460680DAECA5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

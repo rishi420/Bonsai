@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FD950760DE96FDEF73AD2EC /* Pods_BonsaiController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2D4044E757FF49CEE27814 /* Pods_BonsaiController_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -45,14 +44,12 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6A4C78421957D0D925618EA2 /* Pods-BonsaiController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonsaiController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BonsaiController_Example/Pods-BonsaiController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7FE69E785FDC4BFA3DF9065C /* Pods-BonsaiController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonsaiController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BonsaiController_Tests/Pods-BonsaiController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8E06610C7E302E5B7833009E /* Pods-BonsaiController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonsaiController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BonsaiController_Example/Pods-BonsaiController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B4362DCF45BD8A29FA1528BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BC03EB7120C14F2D00D1930E /* BonsaiPopupUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonsaiPopupUtility.swift; sourceTree = "<group>"; };
 		BC61BCB12116D203006969E0 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		BC61BCB32116D27C006969E0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BC74107A20BC409F008039B3 /* SmallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallViewController.swift; sourceTree = "<group>"; };
-		D26AAAC4042B13ACAEC1A4AD /* Pods-BonsaiController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonsaiController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BonsaiController_Tests/Pods-BonsaiController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF2D4044E757FF49CEE27814 /* Pods_BonsaiController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonsaiController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F225CDA1BA1F705E77798746 /* BonsaiController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BonsaiController.podspec; path = ../BonsaiController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
@@ -70,7 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FD950760DE96FDEF73AD2EC /* Pods_BonsaiController_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,8 +161,6 @@
 			children = (
 				6A4C78421957D0D925618EA2 /* Pods-BonsaiController_Example.debug.xcconfig */,
 				8E06610C7E302E5B7833009E /* Pods-BonsaiController_Example.release.xcconfig */,
-				D26AAAC4042B13ACAEC1A4AD /* Pods-BonsaiController_Tests.debug.xcconfig */,
-				7FE69E785FDC4BFA3DF9065C /* Pods-BonsaiController_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -197,7 +191,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "BonsaiController_Tests" */;
 			buildPhases = (
-				32C820D2FF55C3E7CC23EBAC /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -273,24 +266,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32C820D2FF55C3E7CC23EBAC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BonsaiController_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9B2D23DA1A82265413FF0193 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,7 +491,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D26AAAC4042B13ACAEC1A4AD /* Pods-BonsaiController_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -537,7 +511,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FE69E785FDC4BFA3DF9065C /* Pods-BonsaiController_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
