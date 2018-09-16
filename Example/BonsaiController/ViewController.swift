@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         transitionType = transition
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
-        vc.view.backgroundColor = .red
+        vc.view.backgroundColor = UIColor(red: 208/255.0, green: 5/255.0, blue: 30/255.0, alpha: 1)
         vc.transitioningDelegate = self
         vc.modalPresentationStyle = .custom
         present(vc, animated: true, completion: nil)
