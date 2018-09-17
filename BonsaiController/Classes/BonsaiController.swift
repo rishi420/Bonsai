@@ -69,7 +69,7 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
     }
     
-    public func dismiss() {
+    @objc public func dismiss() {
         presentedViewController.dismiss(animated: true, completion: nil)
     }
     

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BonsaiController'
   s.version          = '1.0.0'
-  s.summary          = '🌲 Bonsai makes custom frame and transition animation to any view controller'
+  s.summary          = '🌲 Bonsai makes custom frame size and transition animation to any view controller'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  Adds the ability to change custom frame with cool transition animation to any view controller.
+  Add the ability to change custom frame size with cool transition animation to any view controller.
                        DESC
 
   s.homepage         = 'https://github.com/rishi420/Bonsai'

@@ -4,4 +4,9 @@ use_frameworks!
 
 target 'BonsaiController_Example' do
   pod 'BonsaiController', :path => '../'
+  
+  
+  target 'BonsaiController_Tests' do
+      inherit! :search_paths
+  end
 end
