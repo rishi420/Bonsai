@@ -18,7 +18,10 @@ private enum TransitionType {
     case notification(fromDirection: Direction)
 }
 
-// TODO: Readme file mailVC, SMSVC, VideoPlayerVC, photoLibrary
+// TODO: Objective-C compatibility check
+// TODO: Utility folder Notification utility
+// TODO: Background Color
+// TODO: Blur effect customization
 
 class ViewController: UIViewController {
     

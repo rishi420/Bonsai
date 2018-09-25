@@ -4,15 +4,31 @@
 [![License](https://img.shields.io/cocoapods/l/BonsaiController.svg?style=flat)](https://cocoapods.org/pods/BonsaiController)
 [![Platform](https://img.shields.io/cocoapods/p/BonsaiController.svg?style=flat)](https://cocoapods.org/pods/BonsaiController)
 
-**🌲 Bonsai** makes custom frame size with cool transition animation to any view controller.
+**🌲 Bonsai** makes any view controller to present in a user defined frame with custom transition animation.
 
-## Usage
+**Bonsai** does not change the source code of the view controller. So it can be used on view controllers on which source code is not open. For eample, UIImagePickerController, AVPlayerViewController, MFMailComposeViewController, MFMessageComposeViewController etc.
+
+## Features
+
+1. Makes view controller appear as
+    - Popup alert
+    - Notification alert 
+    - Side menu
+2. Transition animation 
+    - Slide In from left, right, top and bottom
+    - Bubble pop from an initial frame or a view
+3. Supports both Storyboard and Code 
+4. Blur effect on background view
+5. Supports both landscape and portrait 
+
+
+## How to use
 
 ```Swift
 import BonsaiController
 ```
 
-Add `BonsaiControllerDelegate` extension to your view controller
+Add (copy paste) `BonsaiControllerDelegate` extension to your view controller
 
 ```Swift
 extension YourViewController: BonsaiControllerDelegate {
@@ -38,13 +54,12 @@ extension YourViewController: BonsaiControllerDelegate {
 }
 ```
 
-## How to Present the view controller 
-
+## How to present the view controller 
 
 ### From Code:
 
 ```Swift
-let smallVC = yourViewController()
+let smallVC = YourViewController() // instantiateViewController(withIdentifier:)
 
 smallVC.transitioningDelegate = self
 smallVC.modalPresentationStyle = .custom
@@ -64,8 +79,28 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 }
 ```
 
+## Installation with CocoaPods
+
+BonsaiController is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'BonsaiController'
+```
+
+## Install Manually
+
+Drag the `BonsaiController/Classes` folder anywhere in your project.
+
+
 ## Customization
 
+###  Auto dismiss after delay
+
+```Swift
+let bonsaiController = BonsaiController(...
+bonsaiController.perform(#selector(bonsaiController.dismiss), with: nil, afterDelay: 2)
+```
 
 ### Disable dismiss on tap outside
 
@@ -78,12 +113,7 @@ public var dismissDirection: Direction? // Availabel only for slide in transitio
 public var isDisabledTapOutside: Bool = false
 ```
 
-###  Auto dismiss after delay
 
-```Swift
-let bonsaiController = BonsaiController(...
-bonsaiController.perform(#selector(bonsaiController.dismiss), with: nil, afterDelay: 2)
-```
 
 ### Custom transition animation
 
@@ -103,87 +133,59 @@ extension YourViewController: UIViewControllerTransitioningDelegate {
 ```
 
 
-
 ## Example
 
 An example project is included with this repo. To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+
 ## Minimum Requirements
+
 * Xcode 9
 * iOS 9.3
 
-## Installation with CocoaPods
 
-BonsaiController is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## Backlog
 
-```ruby
-pod 'BonsaiController'
-```
+ - Objective-C compatibility check
+ - Utility folder Notification utility
+ - Blur effect customization
 
-Manually
 
-Drag the Sources folder anywhere in your project.
+##   Your input is welcome!
+
+If you have any suggestions, please get in touch with us.  
+If you need help or found a bug, please open an issue.
+If you have a new transition animation or want to contribute, please submit a pull request.
+
+
+## Let us know!
+
+If you like BonsaiController, give it a ★ at the top right of this page.
+Using BonsaiController in your app? Send us a link to your app in the app store!
+
+
+## Credits
+
+- Jelly - https://github.com/SebastianBoldt/Jelly
+- PresentHalfModal - https://github.com/khuong291/PresentHalfModal
+- SideMenu - https://github.com/jonkykong/SideMenu
+- TransitionTreasury - https://github.com/DianQK/TransitionTreasury
+- Transition - https://github.com/Touchwonders/Transition
+- StarWars.iOS - https://github.com/Yalantis/StarWars.iOS
+- Hero - https://github.com/HeroTransitions/Hero
+
+
+## Thank You
+
+A special thank you to everyone that has contributed to this library to make it better. Your support is appreciated!
 
 
 ## Author
 
-Warif Akhand Rishi, rishi420@gmail.com
+Developer: Warif Akhand Rishi, rishi420@gmail.com
+Designer: Takmila Tasmim Mim, mim.tasmim93@gmail.com 
+
 
 ## License
 
 BonsaiController is available under the MIT license. See the LICENSE file for more info.
-
-## Credits
-
-Jelly 
-https://github.com/SebastianBoldt/Jelly
-
-PresentHalfModal 
-https://github.com/khuong291/PresentHalfModal
-
-SideMenu
-https://github.com/jonkykong/SideMenu
-
-TransitionTreasury
-https://github.com/DianQK/TransitionTreasury
-
-Transition
-https://github.com/Touchwonders/Transition
-
-StarWars.iOS
-https://github.com/Yalantis/StarWars.iOS
-
-Hero
-https://github.com/HeroTransitions/Hero
-
-Your input is welcome!
-
-If you have any suggestions, please get in touch with us. Feel free to fork and submit pull requests. Also, we're Dutch, so if any naming is odd, might be improved or is just plain inappropriate, let us know!
-
-Backlog
-
-Add functioning UIPresentationController support (it's there, but it doesn't animate properly...)
-Write more tests
-
-
-Communication
-
-If you need help or found a bug, open an issue.
-If you have a new transition animation or want to contribute, submit a pull request. :]
-
-Thank You
-A special thank you to everyone that has contributed to this library to make it better. Your support is appreciated!
-
-
-If you like SideMenu, give it a ★ at the top right of this page.
-
-Using SideMenu in your app? Send me a link to your app in the app store!
-
-Let us know!
-
-We’d be really happy if you sent us links to your projects where you use our component. Just send an email to github@yalantis.com And do let us know if you have any questions or suggestion regarding the animation.
-
-P.S. We’re going to publish more awesomeness wrapped in code and a tutorial on how to make UI for iOS (Android) better than better. Stay tuned!
-
-

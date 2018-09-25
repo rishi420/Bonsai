@@ -34,7 +34,6 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     public var dismissDirection: Direction? // Availabel only for slide in transition
     public var isDisabledTapOutside: Bool = false
     
-    // TODO: CUSTOM VIEW CONTROLLER ANIMATION README
     weak public var sizeDelegate: BonsaiControllerDelegate?
     
     var originView: UIView?   // For Bubble transition
