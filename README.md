@@ -95,7 +95,7 @@ pod 'BonsaiController'
 Drag the `BonsaiController/Classes` folder anywhere in your project.
 
 
-## Customization
+## Customize
 
 ###  Auto dismiss after delay
 
@@ -104,15 +104,12 @@ let bonsaiController = BonsaiController(...
 bonsaiController.perform(#selector(bonsaiController.dismiss), with: nil, afterDelay: 2)
 ```
 
-### Disable dismiss on tap outside
-
 ```Swift
-bonsaiController.springWithDamping = 0.5
-bonsaiController.duration = 0.5
-bonsaiController.isDisabledTapOutside = true
-bonsaiController.isDisabledDismissAnimation = true
+bonsaiController.springWithDamping = 0.8
+bonsaiController.duration = 0.4
+bonsaiController.isDisabledTapOutside = false
+bonsaiController.isDisabledDismissAnimation = false
 public var dismissDirection: Direction? // Availabel only for slide in transition animation
-public var isDisabledTapOutside: Bool = false
 ```
 
 ### Custom transition animation
