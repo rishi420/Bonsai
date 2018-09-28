@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CustomSizeController'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Custom size any view controller'
   s.deprecated 		= true
   s.deprecated_in_favor_of = 'BonsaiController.podspec'
