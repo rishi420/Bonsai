@@ -6,20 +6,22 @@
 
 **🌲 Bonsai** makes any view controller to present in a user defined frame with custom transition animation.
 
+![Bonsai](https://user-images.githubusercontent.com/2233857/46226655-cbf61d80-c37e-11e8-9d2b-3d69177988a1.png)
+
 **Bonsai** does not change the source code of the view controller. So it can be used on view controllers on which source code is not open. For eample, UIImagePickerController, AVPlayerViewController, MFMailComposeViewController, MFMessageComposeViewController etc.
 
 ## Features
 
-1. Makes view controller appear as
-    - Popup alert
-    - Notification alert 
-    - Side menu
-2. Transition animation 
-    - Slide In from left, right, top and bottom
-    - Bubble pop from an initial frame or a view
-3. Supports both Storyboard and Code 
-4. Blur effect on background view
-5. Supports both landscape and portrait 
+* [x] Makes view controller appear as
+    - [x] Popup alert
+    - [x] Notification alert 
+    - [x] Side menu
+* [x] Transition animation 
+    - [x] Slide In from left, right, top and bottom
+    - [x] Bubble pop from an initial frame or a view
+* [x] Supports both Storyboard and Code 
+* [x] Blur effect on background view
+* [x] Supports both landscape and portrait 
 
 
 ## How to use
@@ -113,8 +115,6 @@ public var dismissDirection: Direction? // Availabel only for slide in transitio
 public var isDisabledTapOutside: Bool = false
 ```
 
-
-
 ### Custom transition animation
 
 Implement these two method for custom transition animation 
@@ -146,9 +146,9 @@ An example project is included with this repo. To run the example project, clone
 
 ## Backlog
 
- - Objective-C compatibility check
- - Utility folder Notification utility
- - Blur effect customization
+* Objective-C compatibility check
+* Utility folder Notification utility
+* Blur effect customization
 
 
 ##   Your input is welcome!
