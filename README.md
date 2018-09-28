@@ -104,6 +104,8 @@ let bonsaiController = BonsaiController(...
 bonsaiController.perform(#selector(bonsaiController.dismiss), with: nil, afterDelay: 2)
 ```
 
+### Customizable properties
+
 ```Swift
 bonsaiController.springWithDamping = 0.8
 bonsaiController.duration = 0.4
