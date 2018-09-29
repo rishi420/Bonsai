@@ -104,14 +104,14 @@ let bonsaiController = BonsaiController(...
 bonsaiController.perform(#selector(bonsaiController.dismiss), with: nil, afterDelay: 2)
 ```
 
-### Customizable properties
+### Customizable properties (Default values)
 
 ```Swift
 bonsaiController.springWithDamping = 0.8
 bonsaiController.duration = 0.4
 bonsaiController.isDisabledTapOutside = false
 bonsaiController.isDisabledDismissAnimation = false
-public var dismissDirection: Direction? // Availabel only for slide in transition animation
+bonsaiController.dismissDirection = nil // Reverse direction. Availabel only for slide in transition.
 ```
 
 ### Custom transition animation
@@ -181,8 +181,8 @@ A special thank you to everyone that has contributed to this library to make it 
 
 ## Author
 
-Developer: Warif Akhand Rishi, rishi420@gmail.com
-Designer: Takmila Tasmim Mim, mim.tasmim93@gmail.com 
+* Developer: Warif Akhand Rishi, rishi420@gmail.com
+* Designer: Takmila Tasmim Mim, mim.tasmim93@gmail.com 
 
 
 ## License
