@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rQv-ee-f0X">
-                                <rect key="frame" x="103.5" y="260.5" width="168" height="210"/>
+                                <rect key="frame" x="103.5" y="245.5" width="168" height="240"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjE-YT-1Pf">
                                         <rect key="frame" x="12.5" y="0.0" width="143" height="30"/>
@@ -98,6 +98,13 @@
                                             <action selector="videoPlayerButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DjD-3o-ecI"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-H2-rFd">
+                                        <rect key="frame" x="11.5" y="210" width="145" height="30"/>
+                                        <state key="normal" title="Objective-C Example"/>
+                                        <connections>
+                                            <segue destination="3Ry-Hq-kx8" kind="show" id="hM3-HY-fbj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -137,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081" y="107"/>
+            <point key="canvasLocation" x="1110" y="107"/>
         </scene>
         <!--Small View Controller-->
         <scene sceneID="ubT-9U-ibZ">
@@ -204,7 +211,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeg-ch-RVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eMj-Sl-bp2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1921" y="107"/>
+            <point key="canvasLocation" x="3154" y="107"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="q4h-NC-Mgw">
@@ -247,6 +254,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="aLabel" destination="Cgy-VW-X2c" id="rx1-Be-q3m"/>
+                                            <segue destination="37k-zS-NPD" kind="presentation" id="ycp-yI-XJ2"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -271,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4M-aU-ARA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921" y="873"/>
+            <point key="canvasLocation" x="2113" y="512"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="20e-Pv-6zn">
@@ -303,7 +311,7 @@
                                 <rect key="frame" x="135" y="318" width="104" height="30"/>
                                 <state key="normal" title="Obj-C Example"/>
                                 <connections>
-                                    <segue destination="37k-zS-NPD" kind="show" id="gOZ-AF-yUj"/>
+                                    <segue destination="37k-zS-NPD" kind="presentation" id="gOZ-AF-yUj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -320,10 +328,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdd-SK-eTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="649" y="872"/>
+            <point key="canvasLocation" x="2113" y="-233"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gOZ-AF-yUj"/>
+        <segue reference="ycp-yI-XJ2"/>
     </inferredMetricsTieBreakers>
 </document>

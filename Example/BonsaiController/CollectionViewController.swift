@@ -21,6 +21,17 @@ class CollectionViewController: UIViewController {
     }
 }
 
+// MARK:- From Storyboard
+extension CollectionViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is SmallViewController {
+            segue.destination.transitioningDelegate = self
+            segue.destination.modalPresentationStyle = .custom
+        }
+    }
+}
+
+// MARK:- CollectionView Data Source
 extension CollectionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -37,20 +48,22 @@ extension CollectionViewController: UICollectionViewDataSource {
     
 }
 
-extension CollectionViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
-        vc.view.backgroundColor = .red
-        
-        vc.transitioningDelegate = self
-        vc.modalPresentationStyle = .custom
-        present(vc, animated: true, completion: nil)
-    }
-    
-}
+// MARK:- CollectionView Delegate (From Code)
+//extension CollectionViewController: UICollectionViewDelegate {
+//    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
+//        vc.view.backgroundColor = .red
+//        
+//        vc.transitioningDelegate = self
+//        vc.modalPresentationStyle = .custom
+//        present(vc, animated: true, completion: nil)
+//    }
+//    
+//}
 
+// MARK:- BonsaiController Delegate
 extension CollectionViewController: BonsaiControllerDelegate {
     
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
