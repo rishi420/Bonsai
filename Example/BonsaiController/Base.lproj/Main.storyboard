@@ -291,5 +291,39 @@
             </objects>
             <point key="canvasLocation" x="221.59999999999999" y="106.59670164917542"/>
         </scene>
+        <!--ObjectiveC View Controller-->
+        <scene sceneID="iKf-wr-FJ9">
+            <objects>
+                <viewController id="3Ry-Hq-kx8" customClass="ObjectiveCViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rqb-il-7aq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zH8-Gc-uYi">
+                                <rect key="frame" x="135" y="318" width="104" height="30"/>
+                                <state key="normal" title="Obj-C Example"/>
+                                <connections>
+                                    <segue destination="37k-zS-NPD" kind="show" id="gOZ-AF-yUj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zH8-Gc-uYi" firstAttribute="centerY" secondItem="Rqb-il-7aq" secondAttribute="centerY" id="3kZ-da-uKA"/>
+                            <constraint firstItem="zH8-Gc-uYi" firstAttribute="centerX" secondItem="Rqb-il-7aq" secondAttribute="centerX" id="rvd-VZ-ROV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P26-wY-7YS"/>
+                    </view>
+                    <connections>
+                        <outlet property="exampleButton" destination="zH8-Gc-uYi" id="HcZ-xU-Xd6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdd-SK-eTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="872"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gOZ-AF-yUj"/>
+    </inferredMetricsTieBreakers>
 </document>

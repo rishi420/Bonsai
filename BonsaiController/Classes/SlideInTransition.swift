@@ -8,6 +8,7 @@
 
 import UIKit
 
+@objc
 public enum Direction: UInt32 {
     
     case left, right, top, bottom

@@ -8,6 +8,7 @@
 
 import UIKit
 
+@objc
 public protocol BonsaiControllerDelegate: UIViewControllerTransitioningDelegate {
     
     /// Returns a frame for presented viewController on containerView
@@ -16,6 +17,7 @@ public protocol BonsaiControllerDelegate: UIViewControllerTransitioningDelegate 
     
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect
     
+    @objc(presentationControllerForPresentedViewController:presentingViewController:sourceViewController:)
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController?
 }
 
@@ -24,6 +26,7 @@ public protocol BonsaiTransitionProperties {
     var springWithDamping: CGFloat {get set}
     var isDisabledDismissAnimation: Bool {get set}
 }
+
 
 public class BonsaiController: UIPresentationController, BonsaiTransitionProperties {
     
@@ -40,6 +43,7 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     var originFrame: CGRect?   // For Bubble transition
     var fromDirection: Direction! // For slide Transition
     
+    @objc
     convenience public init(fromDirection: Direction, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
@@ -48,6 +52,7 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
         setup(presentedViewController: presentedViewController)
     }
     
+    @objc
     convenience public init(fromOrigin: CGRect, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
@@ -56,6 +61,7 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
         setup(presentedViewController: presentedViewController)
     }
     
+    @objc
     convenience public init(fromView: UIView, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
@@ -139,7 +145,7 @@ extension BonsaiController: BonsaiControllerDelegate {
         return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height/2), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height/2))
     }
     
-    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+    @objc(presentationControllerForPresentedViewController:presentingViewController:sourceViewController:) public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return self
     }
 }
