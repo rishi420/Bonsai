@@ -49,9 +49,6 @@ extension YourViewController: BonsaiControllerDelegate {
         
         // or Bubble animation initiated from a view
         //return BonsaiController(fromView: yourOriginView, presentedViewController: presented, delegate: self)
-        
-        // or Bubble animation initiated from a frame
-        //return BonsaiController(fromOrigin: yourOriginFrame, presentedViewController: presented, delegate: self)
     }
 }
 ```
@@ -145,7 +142,6 @@ An example project is included with this repo. To run the example project, clone
 
 ## Backlog
 
-* Objective-C compatibility check
 * Utility folder Notification utility
 * Blur effect customization
 

@@ -40,7 +40,6 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     weak public var sizeDelegate: BonsaiControllerDelegate?
     
     var originView: UIView?   // For Bubble transition
-    var originFrame: CGRect?   // For Bubble transition
     var fromDirection: Direction! // For slide Transition
     
     @objc
@@ -48,15 +47,6 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.fromDirection = fromDirection
-        self.sizeDelegate = delegate
-        setup(presentedViewController: presentedViewController)
-    }
-    
-    @objc
-    convenience public init(fromOrigin: CGRect, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
-        self.init(presentedViewController: presentedViewController, presenting: nil)
-        
-        self.originFrame = fromOrigin
         self.sizeDelegate = delegate
         setup(presentedViewController: presentedViewController)
     }
@@ -168,9 +158,7 @@ extension BonsaiController: UIViewControllerTransitioningDelegate {
         
         var transitioning: BonsaiTransitionProperties?
         
-        if let originFrame = originFrame {
-            transitioning = BubbleTransition(originFrame: originFrame)
-        } else if let originView = originView {
+        if let originView = originView {
             transitioning = BubbleTransition(originView: originView)
         } else {
             transitioning = SlideInTransition(fromDirection: fromDirection)
@@ -187,10 +175,8 @@ extension BonsaiController: UIViewControllerTransitioningDelegate {
         
         var transitioning: BonsaiTransitionProperties?
         
-        if let originFrame = originFrame {
-            transitioning = BubbleTransition(originFrame: originFrame, reverse: true)
-        } else if let originFrame = originView {
-            transitioning = BubbleTransition(originView: originFrame, reverse: true)
+        if let originView = originView {
+            transitioning = BubbleTransition(originView: originView, reverse: true)
         } else {
             transitioning = SlideInTransition(fromDirection: dismissDirection ?? fromDirection, reverse: true)
         }

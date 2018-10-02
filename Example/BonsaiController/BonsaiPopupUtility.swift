@@ -12,6 +12,7 @@ import BonsaiController
 class BonsaiPopupUtility: NSObject {
     
     static let shared = BonsaiPopupUtility()
+    let bonsaiPopupSize = CGSize(width: 280, height: 150)
     
     func show(viewController: UIViewController) {
         
@@ -50,7 +51,7 @@ extension BonsaiPopupUtility: BonsaiControllerDelegate {
         
         let frame = frameOfPresentedView(in: source.view.frame)
         let originFrame = frame.insetBy(dx: -20, dy: -20)
-        let bonsaiController = BonsaiController(fromOrigin: originFrame, presentedViewController: presented, delegate: self)
+        let bonsaiController = BonsaiController(fromView: UIView(frame: originFrame), presentedViewController: presented, delegate: self)
         bonsaiController.springWithDamping = 0.5
         bonsaiController.duration = 0.5
         bonsaiController.isDisabledTapOutside = true
@@ -61,8 +62,6 @@ extension BonsaiPopupUtility: BonsaiControllerDelegate {
 
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         
-        let popupSize = CGSize(width: 280, height: 150)
-        
-        return CGRect(origin: CGPoint(x: (containerViewFrame.width - popupSize.width) / 2, y: (containerViewFrame.height - popupSize.height) / 2), size: popupSize)
+        return CGRect(origin: CGPoint(x: (containerViewFrame.width - bonsaiPopupSize.width) / 2, y: (containerViewFrame.height - bonsaiPopupSize.height) / 2), size: bonsaiPopupSize)
     }
 }

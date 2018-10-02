@@ -16,15 +16,9 @@ class BubbleTransition: NSObject, BonsaiTransitionProperties {
     var isDisabledDismissAnimation: Bool = false 
     
     private let reverse: Bool
-    private var originFrame = CGRect.zero
     private var originView: UIView!
     
     var dismissCompletion: (()->Void)?
-    
-    init(originFrame: CGRect, reverse: Bool = false) {
-        self.reverse = reverse
-        self.originFrame = originFrame
-    }
     
     init(originView: UIView, reverse: Bool = false) {
         self.reverse = reverse
@@ -46,11 +40,7 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
         let viewToAnimate = viewControllerToAnimate.view!
         viewToAnimate.frame = transitionContext.finalFrame(for: viewControllerToAnimate)
         
-        var initialFrame = originFrame
-        
-        if let originView = originView {
-            initialFrame = originView.superview!.convert(originView.frame, to: nil)
-        }
+        let initialFrame = ((originView.superview) ?? originView).convert(originView.frame, to: nil)
         
         let finalFrame = viewToAnimate.frame
 
