@@ -308,9 +308,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zH8-Gc-uYi">
-                                <rect key="frame" x="135" y="318" width="104" height="30"/>
-                                <state key="normal" title="Obj-C Example"/>
+                                <rect key="frame" x="114.5" y="318" width="145" height="30"/>
+                                <state key="normal" title="Objective-C Example"/>
                                 <connections>
+                                    <action selector="exampleButtonAction:" destination="3Ry-Hq-kx8" eventType="touchUpInside" id="5sF-cI-0cC"/>
                                     <segue destination="37k-zS-NPD" kind="presentation" id="gOZ-AF-yUj"/>
                                 </connections>
                             </button>
@@ -332,6 +333,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ycp-yI-XJ2"/>
+        <segue reference="gOZ-AF-yUj"/>
     </inferredMetricsTieBreakers>
 </document>

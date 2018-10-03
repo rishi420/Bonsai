@@ -21,26 +21,26 @@ public protocol BonsaiControllerDelegate: UIViewControllerTransitioningDelegate 
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController?
 }
 
+@objc
 public protocol BonsaiTransitionProperties {
     var duration: TimeInterval {get set}
     var springWithDamping: CGFloat {get set}
     var isDisabledDismissAnimation: Bool {get set}
 }
 
-
 public class BonsaiController: UIPresentationController, BonsaiTransitionProperties {
     
     public var duration: TimeInterval = 0.4
     public var springWithDamping: CGFloat = 0.8
     public var isDisabledDismissAnimation: Bool = false
-    public var blurEffectView: UIVisualEffectView!
-    public var dismissDirection: Direction? // Availabel only for slide in transition
-    public var isDisabledTapOutside: Bool = false
+    @objc public var blurEffectView: UIVisualEffectView?
+    @nonobjc public var dismissDirection: Direction? = nil // Availabel only for slide in transition in swift
+    @objc public var isDisabledTapOutside: Bool = false
     
     weak public var sizeDelegate: BonsaiControllerDelegate?
     
-    var originView: UIView?   // For Bubble transition
-    var fromDirection: Direction! // For slide Transition
+    private var originView: UIView?   // For Bubble transition
+    private var fromDirection: Direction! // For slide Transition
     
     @objc
     convenience public init(fromDirection: Direction, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
@@ -72,11 +72,16 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
         
         let blurEffect = UIBlurEffect(style: .dark)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.isUserInteractionEnabled = true
+        blurEffectView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView?.isUserInteractionEnabled = true
+        
+        // Vibrancy Effect
+//        let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
+//        let vibrancyEffectView = UIVisualEffectView(effect: vibrancyEffect)
+//        vibrancyEffectView.frame = view.bounds
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        blurEffectView.addGestureRecognizer(tapGestureRecognizer)
+        blurEffectView?.addGestureRecognizer(tapGestureRecognizer)
         
         presentedView!.layer.masksToBounds = true
         presentedView!.layer.cornerRadius = 10
@@ -98,21 +103,24 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     
     override public func dismissalTransitionWillBegin() {
         presentedViewController.transitionCoordinator?.animate(alongsideTransition: { [weak self] (UIViewControllerTransitionCoordinatorContext) in
-            self?.blurEffectView.alpha = 0
+            self?.blurEffectView?.alpha = 0
         }, completion: { [weak self] (UIViewControllerTransitionCoordinatorContext) in
-            self?.blurEffectView.removeFromSuperview()
+            self?.blurEffectView?.removeFromSuperview()
         })
     }
     
     override public func presentationTransitionWillBegin() {
         
-        blurEffectView.alpha = 0
-        blurEffectView.frame = containerView!.bounds
-        containerView?.addSubview(blurEffectView)
+        if let blurEffectView = blurEffectView {
+            blurEffectView.alpha = 0
+            blurEffectView.frame = containerView!.bounds
+            containerView?.addSubview(blurEffectView)
+        }
+        
         presentedView?.frame = frameOfPresentedViewInContainerView
         
         presentedViewController.transitionCoordinator?.animate(alongsideTransition: { [weak self] (UIViewControllerTransitionCoordinatorContext) in
-            self?.blurEffectView.alpha = 1
+            self?.blurEffectView?.alpha = 1
         }, completion: { (UIViewControllerTransitionCoordinatorContext) in
             
         })
@@ -143,7 +151,6 @@ extension BonsaiController: BonsaiControllerDelegate {
 extension BonsaiController: UIViewControllerTransitioningDelegate {
     
     private func setupTransitioningProperties(transitioning: BonsaiTransitionProperties?) -> UIViewControllerAnimatedTransitioning? {
-        var transitioning = transitioning
         transitioning?.duration = duration
         transitioning?.springWithDamping = springWithDamping
         transitioning?.isDisabledDismissAnimation = isDisabledDismissAnimation

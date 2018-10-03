@@ -22,6 +22,8 @@
 * [x] Supports both Storyboard and Code 
 * [x] Blur effect on background view
 * [x] Supports both landscape and portrait 
+* [x] Created with Swift compatible with Objective-C
+* [x] Preserves Safe Area and Auto Layout constraints 
 
 
 ## How to use

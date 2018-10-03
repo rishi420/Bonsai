@@ -8,6 +8,7 @@
 
 #import "ObjectiveCViewController.h"
 #import "BonsaiController-Swift.h"
+#import "BonsaiController_Example-Swift.h"
 
 @interface ObjectiveCViewController () <BonsaiControllerDelegate>
 
@@ -21,14 +22,26 @@
     [super viewDidLoad];
 }
 
+// MARK:- From Storyboard
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    segue.destinationViewController.transitioningDelegate = self;
-    segue.destinationViewController.modalPresentationStyle = UIModalPresentationCustom;
+    if ([segue.destinationViewController isKindOfClass:SmallViewController.class]) {
+        segue.destinationViewController.transitioningDelegate = self;
+        segue.destinationViewController.modalPresentationStyle = UIModalPresentationCustom;
+    }
 }
 
-#pragma mark- Bonsai Controller Delegate
+// MARK:- Or From Code
+- (IBAction)exampleButtonAction:(id)sender {
+    
+//    SmallViewController *smallVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SmallVC"];
+//    smallVC.transitioningDelegate = self;
+//    smallVC.modalPresentationStyle = UIModalPresentationCustom;
+//    [self presentViewController:smallVC animated:true completion:nil];
+}
 
+
+// MARK:- Bonsai Controller Delegate
 - (CGRect)frameOfPresentedViewIn:(CGRect)containerViewFrame {
     
     return CGRectMake(0, containerViewFrame.size.height / 4, containerViewFrame.size.width, containerViewFrame.size.height / (4.0 / 3.0));
@@ -38,7 +51,11 @@
     
     //return [[BonsaiController alloc] initFromDirection: DirectionBottom presentedViewController:presented delegate:self];
     
-    return [[BonsaiController alloc] initFromView:self.exampleButton presentedViewController:presented delegate:self];
+    BonsaiController *bc = [[BonsaiController alloc] initFromView:self.exampleButton presentedViewController:presented delegate:self];
+    
+    bc.blurEffectView = nil;
+
+    return bc;
 }
 
 @end
