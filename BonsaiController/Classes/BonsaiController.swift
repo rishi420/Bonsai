@@ -33,30 +33,35 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     public var duration: TimeInterval = 0.4
     public var springWithDamping: CGFloat = 0.8
     public var isDisabledDismissAnimation: Bool = false
-    @objc public var blurEffectView: UIVisualEffectView?
-    @nonobjc public var dismissDirection: Direction? = nil // Availabel only for slide in transition in swift
     @objc public var isDisabledTapOutside: Bool = false
+    
+    // Availabel only for slide in transition in swift
+    @nonobjc public var dismissDirection: Direction? = nil
     
     weak public var sizeDelegate: BonsaiControllerDelegate?
     
     private var originView: UIView?   // For Bubble transition
     private var fromDirection: Direction! // For slide Transition
+    private var blurEffectView: UIVisualEffectView!
+    private var blurEffectStyle: UIBlurEffectStyle!
     
     @objc
-    convenience public init(fromDirection: Direction, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
+    convenience public init(fromDirection: Direction, blurEffectStyle: UIBlurEffectStyle, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.fromDirection = fromDirection
         self.sizeDelegate = delegate
+        self.blurEffectStyle = blurEffectStyle
         setup(presentedViewController: presentedViewController)
     }
     
     @objc
-    convenience public init(fromView: UIView, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
+    convenience public init(fromView: UIView, blurEffectStyle: UIBlurEffectStyle, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.originView = fromView
         self.sizeDelegate = delegate
+        self.blurEffectStyle = blurEffectStyle
         setup(presentedViewController: presentedViewController)
     }
     
@@ -70,18 +75,13 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     
     private func setup(presentedViewController: UIViewController) {
         
-        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffect = UIBlurEffect(style: blurEffectStyle)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView?.isUserInteractionEnabled = true
-        
-        // Vibrancy Effect
-//        let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
-//        let vibrancyEffectView = UIVisualEffectView(effect: vibrancyEffect)
-//        vibrancyEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.isUserInteractionEnabled = true
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        blurEffectView?.addGestureRecognizer(tapGestureRecognizer)
+        blurEffectView.addGestureRecognizer(tapGestureRecognizer)
         
         presentedView!.layer.masksToBounds = true
         presentedView!.layer.cornerRadius = 10
@@ -103,24 +103,22 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     
     override public func dismissalTransitionWillBegin() {
         presentedViewController.transitionCoordinator?.animate(alongsideTransition: { [weak self] (UIViewControllerTransitionCoordinatorContext) in
-            self?.blurEffectView?.alpha = 0
+            self?.blurEffectView.alpha = 0
         }, completion: { [weak self] (UIViewControllerTransitionCoordinatorContext) in
-            self?.blurEffectView?.removeFromSuperview()
+            self?.blurEffectView.removeFromSuperview()
         })
     }
     
     override public func presentationTransitionWillBegin() {
         
-        if let blurEffectView = blurEffectView {
-            blurEffectView.alpha = 0
-            blurEffectView.frame = containerView!.bounds
-            containerView?.addSubview(blurEffectView)
-        }
+        blurEffectView.alpha = 0
+        blurEffectView.frame = containerView!.bounds
+        containerView?.addSubview(blurEffectView)
         
         presentedView?.frame = frameOfPresentedViewInContainerView
         
         presentedViewController.transitionCoordinator?.animate(alongsideTransition: { [weak self] (UIViewControllerTransitionCoordinatorContext) in
-            self?.blurEffectView?.alpha = 1
+            self?.blurEffectView.alpha = 1
         }, completion: { (UIViewControllerTransitionCoordinatorContext) in
             
         })

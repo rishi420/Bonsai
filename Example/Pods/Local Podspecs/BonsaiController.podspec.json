@@ -1,6 +1,6 @@
 {
   "name": "BonsaiController",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "summary": "🌲 Bonsai makes custom frame size and transition animation to any view controller",
   "description": "Add the ability to change custom frame size with cool transition animation to any view controller.",
   "homepage": "https://github.com/rishi420/Bonsai",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/rishi420/Bonsai.git",
-    "tag": "1.0.0"
+    "tag": "2.0.0"
   },
   "swift_version": "4",
   "platforms": {

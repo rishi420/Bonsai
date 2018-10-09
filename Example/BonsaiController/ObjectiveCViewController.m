@@ -7,8 +7,9 @@
 //
 
 #import "ObjectiveCViewController.h"
-#import "BonsaiController-Swift.h"
 #import "BonsaiController_Example-Swift.h"
+
+@import BonsaiController;
 
 @interface ObjectiveCViewController () <BonsaiControllerDelegate>
 
@@ -49,13 +50,9 @@
 
 - (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
     
-    //return [[BonsaiController alloc] initFromDirection: DirectionBottom presentedViewController:presented delegate:self];
+    //return [[BonsaiController alloc] initFromDirection:DirectionBottom blurEffectStyle:UIBlurEffectStyleLight presentedViewController:presented delegate:self];
     
-    BonsaiController *bc = [[BonsaiController alloc] initFromView:self.exampleButton presentedViewController:presented delegate:self];
-    
-    bc.blurEffectView = nil;
-
-    return bc;
+    return [[BonsaiController alloc] initFromView:self.exampleButton blurEffectStyle:UIBlurEffectStyleDark presentedViewController:presented delegate:self];
 }
 
 @end

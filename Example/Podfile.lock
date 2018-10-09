@@ -1,5 +1,5 @@
 PODS:
-  - BonsaiController (1.0.0)
+  - BonsaiController (2.0.0)
 
 DEPENDENCIES:
   - BonsaiController (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BonsaiController: 54cdd1adc351b58bbc1b277eb81ad0faf35fe52b
+  BonsaiController: f57b725609942b0f606fb8e8aa058a7eaad9d17a
 
 PODFILE CHECKSUM: 0f7928e3a84b2cd0384bcf319e842b9fb650eee6
 

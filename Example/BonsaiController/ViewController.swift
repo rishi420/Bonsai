@@ -174,9 +174,9 @@ extension ViewController: BonsaiControllerDelegate {
         case .none:
             return nil
         case .bubble:
-            return BonsaiController(fromView: popButton, presentedViewController: presented, delegate: self)
+            return BonsaiController(fromView: popButton, blurEffectStyle: .dark,  presentedViewController: presented, delegate: self)
         case .slide(let fromDirection), .menu(let fromDirection), .notification(let fromDirection):
-            return BonsaiController(fromDirection: fromDirection, presentedViewController: presented, delegate: self)
+            return BonsaiController(fromDirection: fromDirection, blurEffectStyle: .light, presentedViewController: presented, delegate: self)
         }
     }
     

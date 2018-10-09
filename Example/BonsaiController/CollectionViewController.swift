@@ -77,8 +77,8 @@ extension CollectionViewController: BonsaiControllerDelegate {
             print("No selected cell")
             return nil
         }
-            
-        return BonsaiController(fromView: cell, presentedViewController: presented, delegate: self)
+        
+        return BonsaiController(fromView: cell, blurEffectStyle: .dark, presentedViewController: presented, delegate: self)
     }
 }
 
