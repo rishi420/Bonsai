@@ -19,9 +19,10 @@
 * [x] Transition animation 
     - [x] Slide In from left, right, top and bottom
     - [x] Bubble pop from an initial frame or a view
-* [x] Supports both Storyboard and Code 
-* [x] Blur effect on background view
-* [x] Supports both landscape and portrait 
+* [x] Blur effect on background 
+    - [x] light, dark, regular, prominent 
+* [x] Supports Storyboard and Code 
+* [x] Supports landscape and portrait orientation 
 * [x] Created with Swift compatible with Objective-C
 * [x] Preserves Safe Area and Auto Layout constraints 
 
@@ -47,10 +48,12 @@ extension YourViewController: BonsaiControllerDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
     
         // Slide animation from .left, .right, .top, .bottom
-        return BonsaiController(fromDirection: .bottom, presentedViewController: presented, delegate: self)
+        return BonsaiController(fromDirection: .bottom, blurEffectStyle: .light, presentedViewController: presented, delegate: self)
+        
+        
         
         // or Bubble animation initiated from a view
-        //return BonsaiController(fromView: yourOriginView, presentedViewController: presented, delegate: self)
+        //return BonsaiController(fromView: yourOriginView, blurEffectStyle: .dark,  presentedViewController: presented, delegate: self)
     }
 }
 ```
@@ -115,7 +118,7 @@ bonsaiController.dismissDirection = nil // Reverse direction. Availabel only for
 
 ### Custom transition animation
 
-Implement these two method for custom transition animation 
+If you want to create your own transition animation, implement this protocol in your viewController 
 
 ```Swift
 extension YourViewController: UIViewControllerTransitioningDelegate {
@@ -145,7 +148,6 @@ An example project is included with this repo. To run the example project, clone
 ## Backlog
 
 * Utility folder Notification utility
-* Blur effect customization
 
 
 ##   Your input is welcome!
