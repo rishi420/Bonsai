@@ -13,9 +13,9 @@
 ## Features
 
 * [x] Makes view controller appear as
-    - [x] Popup alert
-    - [x] Notification alert 
-    - [x] Side menu
+    - [x] Popup alert (no dismiss on tap outside)
+    - [x] Notification alert (auto dismiss after delay)
+    - [x] Side menu (drawer) 
 * [x] Transition animation 
     - [x] Slide In from left, right, top and bottom
     - [x] Bubble pop from an initial frame or a view
