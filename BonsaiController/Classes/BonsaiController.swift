@@ -28,6 +28,7 @@ public protocol BonsaiTransitionProperties {
     var isDisabledDismissAnimation: Bool {get set}
 }
 
+@objc
 public class BonsaiController: UIPresentationController, BonsaiTransitionProperties {
     
     public var duration: TimeInterval = 0.4

@@ -50,8 +50,10 @@
 
 - (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
     
+    // Slide animation from .left, .right, .top, .bottom
     //return [[BonsaiController alloc] initFromDirection:DirectionBottom blurEffectStyle:UIBlurEffectStyleLight presentedViewController:presented delegate:self];
     
+    // or Bubble animation initiated from a view
     return [[BonsaiController alloc] initFromView:self.exampleButton blurEffectStyle:UIBlurEffectStyleDark presentedViewController:presented delegate:self];
 }
 

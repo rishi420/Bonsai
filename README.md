@@ -10,6 +10,7 @@
 
 **Bonsai** does not change the source code of the view controller. So it can be used on view controllers on which source code is not open. For eample, UIImagePickerController, AVPlayerViewController, MFMailComposeViewController, MFMessageComposeViewController etc.
 
+
 ## Features
 
 * [x] Makes view controller appear as
@@ -25,6 +26,21 @@
 * [x] Supports landscape and portrait orientation 
 * [x] Created with Swift compatible with Objective-C
 * [x] Preserves Safe Area and Auto Layout constraints 
+
+
+## Installation with CocoaPods
+
+BonsaiController is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+use_frameworks!
+pod 'BonsaiController'
+```
+
+## Install Manually
+
+Drag the `~/BonsaiController` directory anywhere in your project.
 
 
 ## How to use
@@ -64,10 +80,8 @@ extension YourViewController: BonsaiControllerDelegate {
 
 ```Swift
 let smallVC = YourViewController() // instantiateViewController(withIdentifier:)
-
 smallVC.transitioningDelegate = self
 smallVC.modalPresentationStyle = .custom
-
 present(smallVC, animated: true, completion: nil)
 ```
 
@@ -82,19 +96,6 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 }
 ```
-
-## Installation with CocoaPods
-
-BonsaiController is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'BonsaiController'
-```
-
-## Install Manually
-
-Drag the `BonsaiController/Classes` folder anywhere in your project.
 
 
 ## Customize
@@ -129,6 +130,56 @@ extension YourViewController: UIViewControllerTransitioningDelegate {
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         // Your dismiss animation here
+    }
+}
+```
+
+## Usage In Objective-C
+
+```objc
+#import "YourModuleName-Swift.h"  // only if project created in swift
+
+@import BonsaiController;
+```
+
+### Add (copy paste) `BonsaiControllerDelegate` extension to your view controller
+
+```objc
+// MARK:- Bonsai Controller Delegate
+- (CGRect)frameOfPresentedViewIn:(CGRect)containerViewFrame {
+
+    return CGRectMake(0, containerViewFrame.size.height / 4, containerViewFrame.size.width, containerViewFrame.size.height / (4.0 / 3.0));
+}
+
+- (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
+
+    // Slide animation from .left, .right, .top, .bottom
+    //return [[BonsaiController alloc] initFromDirection:DirectionBottom blurEffectStyle:UIBlurEffectStyleLight presentedViewController:presented delegate:self];
+
+    // or Bubble animation initiated from a view
+    return [[BonsaiController alloc] initFromView:self.exampleButton blurEffectStyle:UIBlurEffectStyleDark presentedViewController:presented delegate:self];
+}
+```
+
+### How to present the view controller(obj-c) 
+
+### From Code:
+
+```objc
+SmallViewController *smallVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SmallVC"];
+smallVC.transitioningDelegate = self;
+smallVC.modalPresentationStyle = UIModalPresentationCustom;
+[self presentViewController:smallVC animated:true completion:nil];
+```
+
+### From Storyboard:
+
+```objc
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    if ([segue.destinationViewController isKindOfClass:SmallViewController.class]) {
+        segue.destinationViewController.transitioningDelegate = self;
+        segue.destinationViewController.modalPresentationStyle = UIModalPresentationCustom;
     }
 }
 ```
