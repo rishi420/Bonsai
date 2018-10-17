@@ -142,7 +142,7 @@ extension YourViewController: UIViewControllerTransitioningDelegate {
 @import BonsaiController;
 ```
 
-### Add (copy paste) `BonsaiControllerDelegate` extension to your view controller
+Add (copy paste) `BonsaiControllerDelegate` extension to your view controller
 
 ```objc
 // MARK:- Bonsai Controller Delegate
@@ -203,14 +203,14 @@ An example project is included with this repo. To run the example project, clone
 
 ##   Your input is welcome!
 
-If you have any suggestions, please get in touch with us.  
-If you need help or found a bug, please open an issue.
+If you have any suggestions, please get in touch with us.<br>
+If you need help or found a bug, please open an issue.<br>
 If you have a new transition animation or want to contribute, please submit a pull request.
 
 
 ## Let us know!
 
-If you like BonsaiController, give it a ★ at the top right of this page.
+If you like BonsaiController, give it a ★ at the top right of this page. <br>
 Using BonsaiController in your app? Send us a link to your app in the app store!
 
 
@@ -232,8 +232,8 @@ A special thank you to everyone that has contributed to this library to make it 
 
 ## Author
 
-* Developer: Warif Akhand Rishi, rishi420@gmail.com
-* Designer: Takmila Tasmim Mim, mim.tasmim93@gmail.com 
+Developer: Warif Akhand Rishi, rishi420@gmail.com <br>
+Designer: Takmila Tasmim Mim, mim.tasmim93@gmail.com 
 
 
 ## License
