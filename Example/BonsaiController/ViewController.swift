@@ -19,7 +19,6 @@ private enum TransitionType {
 }
 
 // TODO: Utility folder Notification utility
-// TODO: Create Obj-c example folder
 // TODO: Background Color image
 
 class ViewController: UIViewController {

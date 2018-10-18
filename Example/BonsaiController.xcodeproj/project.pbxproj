@@ -85,12 +85,10 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				BC1D2A962163428E00CCD3F3 /* ObjectiveCViewController.h */,
-				BC1D2A972163428E00CCD3F3 /* ObjectiveCViewController.m */,
 				BC74107A20BC409F008039B3 /* SmallViewController.swift */,
-				BC61BCB12116D203006969E0 /* CollectionViewController.swift */,
-				BC61BCB32116D27C006969E0 /* CollectionViewCell.swift */,
-				BC03EB7120C14F2D00D1930E /* BonsaiPopupUtility.swift */,
+				BC1A1A462178B2C700063373 /* CollectionView Example */,
+				BC1A1A452178B0CB00063373 /* Objective-C Example */,
+				BC1A1A472178B33700063373 /* Utilities */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -154,6 +152,32 @@
 				C2F172CF86BC86B75EA64ABD /* Pods-BonsaiController_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC1A1A452178B0CB00063373 /* Objective-C Example */ = {
+			isa = PBXGroup;
+			children = (
+				BC1D2A962163428E00CCD3F3 /* ObjectiveCViewController.h */,
+				BC1D2A972163428E00CCD3F3 /* ObjectiveCViewController.m */,
+			);
+			path = "Objective-C Example";
+			sourceTree = "<group>";
+		};
+		BC1A1A462178B2C700063373 /* CollectionView Example */ = {
+			isa = PBXGroup;
+			children = (
+				BC61BCB12116D203006969E0 /* CollectionViewController.swift */,
+				BC61BCB32116D27C006969E0 /* CollectionViewCell.swift */,
+			);
+			path = "CollectionView Example";
+			sourceTree = "<group>";
+		};
+		BC1A1A472178B33700063373 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BC03EB7120C14F2D00D1930E /* BonsaiPopupUtility.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
