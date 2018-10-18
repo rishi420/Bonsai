@@ -17,8 +17,6 @@ private enum TransitionType {
     case menu(fromDirection: Direction)
 }
 
-// TODO: Background Color image
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var popButton: UIButton!

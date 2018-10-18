@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf" translatesAutoresizingMaskIntoConstraints="NO" id="Bx6-2B-IcO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-8b-Y90">
                                 <rect key="frame" x="10" y="350.5" width="30" height="30"/>
                                 <state key="normal" title="Left"/>
@@ -111,15 +114,19 @@
                         <color key="backgroundColor" red="0.090196078431372548" green="0.28235294117647058" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Bx6-2B-IcO" secondAttribute="bottom" id="1HP-Rz-oT5"/>
                             <constraint firstItem="HuZ-8b-Y90" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2ij-tE-Zet"/>
                             <constraint firstItem="HuZ-8b-Y90" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="4hL-LV-FFx"/>
-                            <constraint firstItem="2vN-JV-pYf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" symbolic="YES" id="HLW-oz-BBZ"/>
+                            <constraint firstItem="2vN-JV-pYf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="HLW-oz-BBZ"/>
+                            <constraint firstItem="Bx6-2B-IcO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JIC-yd-UUO"/>
                             <constraint firstItem="1al-jq-QeX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="LVj-K8-UfL"/>
                             <constraint firstItem="1al-jq-QeX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Map-zj-4QY"/>
                             <constraint firstItem="uqn-1r-Rzf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PDT-ww-TiW"/>
                             <constraint firstItem="rQv-ee-f0X" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RZ1-ky-ZCP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HuZ-8b-Y90" secondAttribute="trailing" constant="20" symbolic="YES" id="SuR-67-LMW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HuZ-8b-Y90" secondAttribute="trailing" symbolic="YES" id="SuR-67-LMW"/>
+                            <constraint firstItem="Bx6-2B-IcO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gUz-10-6cr"/>
                             <constraint firstItem="2vN-JV-pYf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hff-1W-ngQ"/>
+                            <constraint firstItem="Bx6-2B-IcO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="klv-ve-ZZV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2vN-JV-pYf" secondAttribute="trailing" constant="10" id="qgm-pN-1dR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uqn-1r-Rzf" secondAttribute="bottom" constant="10" id="t0F-rJ-RGK"/>
                             <constraint firstItem="rQv-ee-f0X" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="yMm-Qe-3bp"/>
@@ -144,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="107"/>
+            <point key="canvasLocation" x="1109.5999999999999" y="106.59670164917542"/>
         </scene>
         <!--Small View Controller-->
         <scene sceneID="ubT-9U-ibZ">
@@ -196,12 +203,12 @@
                             <constraint firstItem="6Ua-9B-mUJ" firstAttribute="centerX" secondItem="D9W-Ll-7Jf" secondAttribute="centerX" id="35s-nG-uhS"/>
                             <constraint firstItem="D9W-Ll-7Jf" firstAttribute="bottom" secondItem="Omf-dh-p5t" secondAttribute="bottom" id="Jhf-Kw-8XT"/>
                             <constraint firstItem="Omf-dh-p5t" firstAttribute="centerX" secondItem="D9W-Ll-7Jf" secondAttribute="centerX" id="Uez-7u-aCW"/>
-                            <constraint firstItem="D9W-Ll-7Jf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QUs-Jx-79S" secondAttribute="trailing" constant="20" symbolic="YES" id="WbG-pJ-TH9"/>
+                            <constraint firstItem="D9W-Ll-7Jf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QUs-Jx-79S" secondAttribute="trailing" symbolic="YES" id="WbG-pJ-TH9"/>
                             <constraint firstItem="QUs-Jx-79S" firstAttribute="centerY" secondItem="D9W-Ll-7Jf" secondAttribute="centerY" id="Z4Y-9J-lYp"/>
                             <constraint firstItem="IlY-Ln-7m3" firstAttribute="centerX" secondItem="D9W-Ll-7Jf" secondAttribute="centerX" id="ZZg-Eh-Sdu"/>
                             <constraint firstItem="D9W-Ll-7Jf" firstAttribute="trailing" secondItem="z5p-Gb-ynl" secondAttribute="trailing" id="fjM-GC-Jwz"/>
                             <constraint firstItem="QUs-Jx-79S" firstAttribute="leading" secondItem="D9W-Ll-7Jf" secondAttribute="leading" id="k4x-Va-c9Y"/>
-                            <constraint firstItem="z5p-Gb-ynl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D9W-Ll-7Jf" secondAttribute="leading" constant="20" symbolic="YES" id="kS0-TB-4mw"/>
+                            <constraint firstItem="z5p-Gb-ynl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D9W-Ll-7Jf" secondAttribute="leading" symbolic="YES" id="kS0-TB-4mw"/>
                             <constraint firstItem="z5p-Gb-ynl" firstAttribute="centerY" secondItem="D9W-Ll-7Jf" secondAttribute="centerY" id="m0y-xY-Pov"/>
                             <constraint firstItem="6Ua-9B-mUJ" firstAttribute="top" secondItem="D9W-Ll-7Jf" secondAttribute="top" id="yAt-Ns-9wp"/>
                         </constraints>
@@ -332,6 +339,9 @@
             <point key="canvasLocation" x="2113" y="-233"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="leaf" width="3384" height="6000"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gOZ-AF-yUj"/>
     </inferredMetricsTieBreakers>
