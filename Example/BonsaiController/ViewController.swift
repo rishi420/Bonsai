@@ -22,9 +22,7 @@ private enum TransitionType {
 // TODO: Create Obj-c example folder
 // TODO: Create Obj-c properties
 // TODO: Background Color image
-// TODO: Blur effect customization
 // TODO: origin frame init delete
-// TODO: check ! in bonsaicontroller
 
 class ViewController: UIViewController {
     

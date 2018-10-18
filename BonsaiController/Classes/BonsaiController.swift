@@ -84,8 +84,8 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         blurEffectView.addGestureRecognizer(tapGestureRecognizer)
         
-        presentedView!.layer.masksToBounds = true
-        presentedView!.layer.cornerRadius = 10
+        presentedView?.layer.masksToBounds = true
+        presentedView?.layer.cornerRadius = 10
         
         presentedViewController.modalPresentationStyle = .custom
         presentedViewController.transitioningDelegate = self
@@ -159,7 +159,7 @@ extension BonsaiController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         if let sizeDelegate = sizeDelegate,  sizeDelegate.responds(to:#selector(animationController(forPresented:presenting:source:))) {
-            return sizeDelegate.animationController!(forPresented: presented, presenting: presenting, source: source)
+            return sizeDelegate.animationController?(forPresented: presented, presenting: presenting, source: source)
         }
         
         var transitioning: BonsaiTransitionProperties?
@@ -176,7 +176,7 @@ extension BonsaiController: UIViewControllerTransitioningDelegate {
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         if let sizeDelegate = sizeDelegate,  sizeDelegate.responds(to:#selector(animationController(forDismissed:))) {
-            return sizeDelegate.animationController!(forDismissed:dismissed)
+            return sizeDelegate.animationController?(forDismissed:dismissed)
         }
         
         var transitioning: BonsaiTransitionProperties?
