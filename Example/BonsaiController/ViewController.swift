@@ -15,10 +15,8 @@ private enum TransitionType {
     case bubble
     case slide(fromDirection: Direction)
     case menu(fromDirection: Direction)
-    case notification(fromDirection: Direction)
 }
 
-// TODO: Utility folder Notification utility
 // TODO: Background Color image
 
 class ViewController: UIViewController {
@@ -102,16 +100,8 @@ extension ViewController {
     @IBAction func notificationButtonAction(_ sender: Any) {
         print("Notification Button Action")
         
-        transitionType = .notification(fromDirection: .right)
-        
         let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
-        
-        vc.transitioningDelegate = self
-        vc.modalPresentationStyle = .custom
-    
-        vc.perform(#selector(vc.dismissButtonAction(_:)), with: nil, afterDelay: 2)
-        
-        present(vc, animated: true, completion: nil)
+        BonsaiNotificationUtility.shared.show(viewController: vc)
     }
     
     // MARK: Bubble Button
@@ -170,7 +160,7 @@ extension ViewController: BonsaiControllerDelegate {
             return nil
         case .bubble:
             return BonsaiController(fromView: popButton, blurEffectStyle: .dark,  presentedViewController: presented, delegate: self)
-        case .slide(let fromDirection), .menu(let fromDirection), .notification(let fromDirection):
+        case .slide(let fromDirection), .menu(let fromDirection):
             return BonsaiController(fromDirection: fromDirection, blurEffectStyle: .light, presentedViewController: presented, delegate: self)
         }
     }
@@ -190,9 +180,6 @@ extension ViewController: BonsaiControllerDelegate {
                 origin = CGPoint(x: containerViewFrame.width / 2, y: 0)
             }
             return CGRect(origin: origin, size: CGSize(width: containerViewFrame.width / 2, height: containerViewFrame.height))
-        case .notification:
-            let origin = CGPoint.zero
-            return CGRect(origin: origin, size: CGSize(width: containerViewFrame.width, height: 120))
         }
     }
 }

@@ -196,11 +196,6 @@ An example project is included with this repo. To run the example project, clone
 * iOS 9.3
 
 
-## Backlog
-
-* Utility folder Notification utility
-
-
 ##   Your input is welcome!
 
 If you have any suggestions, please get in touch with us.<br>
