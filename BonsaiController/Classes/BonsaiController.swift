@@ -36,7 +36,7 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     public var isDisabledDismissAnimation: Bool = false
     @objc public var isDisabledTapOutside: Bool = false
     
-    // Availabel only for slide in transition in swift
+    /// Availabel only for slide in transition in swift
     @nonobjc public var dismissDirection: Direction? = nil
     
     weak public var sizeDelegate: BonsaiControllerDelegate?
@@ -141,7 +141,7 @@ extension BonsaiController: BonsaiControllerDelegate {
     public func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height/2), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height/2))
     }
-    
+
     @objc(presentationControllerForPresentedViewController:presentingViewController:sourceViewController:) public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return self
     }

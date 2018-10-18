@@ -20,9 +20,7 @@ private enum TransitionType {
 
 // TODO: Utility folder Notification utility
 // TODO: Create Obj-c example folder
-// TODO: Create Obj-c properties
 // TODO: Background Color image
-// TODO: origin frame init delete
 
 class ViewController: UIViewController {
     
