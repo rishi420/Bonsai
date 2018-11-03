@@ -4,7 +4,8 @@
 [![License](https://img.shields.io/cocoapods/l/BonsaiController.svg?style=flat)](https://cocoapods.org/pods/BonsaiController)
 [![Platform](https://img.shields.io/cocoapods/p/BonsaiController.svg?style=flat)](https://cocoapods.org/pods/BonsaiController)
 
-**🌲 Bonsai** makes any view controller to present in a user defined frame with custom transition animation.
+
+**🌲 Bonsai** makes iOS Popup View Using Separate View Controller.
 
 ![Bonsai](https://user-images.githubusercontent.com/2233857/46226655-cbf61d80-c37e-11e8-9d2b-3d69177988a1.png)
 
