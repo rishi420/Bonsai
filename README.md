@@ -9,17 +9,6 @@
 
 ![Bonsai](https://user-images.githubusercontent.com/2233857/46226655-cbf61d80-c37e-11e8-9d2b-3d69177988a1.png)
 
-
-**Bonsai** does not change the source code of the view controller. So it can be used on view controllers on which source code is not open. For eample, UIImagePickerController, AVPlayerViewController, MFMailComposeViewController, MFMessageComposeViewController etc.
-
-
-<p>
-<a href="https://youtu.be/jEiE5DIUSRQ">
-<img src="https://user-images.githubusercontent.com/2233857/47339168-3703ed00-d6bc-11e8-8220-4706e716d103.png" width="480">
-</a>
-</p>
-
-
 ## Features
 
 * [x] Makes view controller appear as
@@ -35,6 +24,12 @@
 * [x] Supports landscape and portrait orientation 
 * [x] Created with Swift compatible with Objective-C
 * [x] Preserves Safe Area and Auto Layout constraints 
+
+<p>
+<a href="https://youtu.be/jEiE5DIUSRQ">
+<img src="https://user-images.githubusercontent.com/2233857/47339168-3703ed00-d6bc-11e8-8220-4706e716d103.png" width="480">
+</a>
+</p>
 
 
 ## Installation with CocoaPods
