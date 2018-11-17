@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/BonsaiController.svg?style=flat)](https://cocoapods.org/pods/BonsaiController)
 
 
-**🌲 Bonsai** makes iOS Popup View Using Separate View Controller.
+**🌲 Bonsai** makes iOS View Controller appear in any size and any position of your choice with cool transition animation.
 
 ![Bonsai](https://user-images.githubusercontent.com/2233857/46226655-cbf61d80-c37e-11e8-9d2b-3d69177988a1.png)
 
