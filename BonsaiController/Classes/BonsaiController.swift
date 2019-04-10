@@ -44,10 +44,10 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     private var originView: UIView?   // For Bubble transition
     private var fromDirection: Direction! // For slide Transition
     private var blurEffectView: UIVisualEffectView!
-    private var blurEffectStyle: UIBlurEffectStyle!
+    private var blurEffectStyle: UIBlurEffect.Style!
     
     @objc
-    convenience public init(fromDirection: Direction, blurEffectStyle: UIBlurEffectStyle, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
+    convenience public init(fromDirection: Direction, blurEffectStyle: UIBlurEffect.Style, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.fromDirection = fromDirection
@@ -57,7 +57,7 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     }
     
     @objc
-    convenience public init(fromView: UIView, blurEffectStyle: UIBlurEffectStyle, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
+    convenience public init(fromView: UIView, blurEffectStyle: UIBlurEffect.Style, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.originView = fromView

@@ -50,7 +50,7 @@ extension SlideInTransition: UIViewControllerAnimatedTransitioning {
             viewToAnimate.frame = offsetFrame
         }
         
-        let options: UIViewAnimationOptions = [.curveEaseOut]
+        let options: UIView.AnimationOptions = [.curveEaseOut]
         
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: springWithDamping, initialSpringVelocity: 0.0, options: options, animations: { [weak self] in
             
