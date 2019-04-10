@@ -4,12 +4,10 @@
 [![License](https://img.shields.io/cocoapods/l/BonsaiController.svg?style=flat)](https://cocoapods.org/pods/BonsaiController)
 [![Platform](https://img.shields.io/cocoapods/p/BonsaiController.svg?style=flat)](https://cocoapods.org/pods/BonsaiController)
 
-**🌲 Bonsai** makes any view controller to present in a user defined frame with custom transition animation.
+
+**🌲 Bonsai** makes iOS View Controller present modally in any size and any position with cool transition animation.
 
 ![Bonsai](https://user-images.githubusercontent.com/2233857/46226655-cbf61d80-c37e-11e8-9d2b-3d69177988a1.png)
-
-**Bonsai** does not change the source code of the view controller. So it can be used on view controllers on which source code is not open. For eample, UIImagePickerController, AVPlayerViewController, MFMailComposeViewController, MFMessageComposeViewController etc.
-
 
 ## Features
 
@@ -26,6 +24,12 @@
 * [x] Supports landscape and portrait orientation 
 * [x] Created with Swift compatible with Objective-C
 * [x] Preserves Safe Area and Auto Layout constraints 
+
+<p>
+<a href="https://youtu.be/jEiE5DIUSRQ">
+<img src="https://user-images.githubusercontent.com/2233857/47339168-3703ed00-d6bc-11e8-8220-4706e716d103.png" width="480">
+</a>
+</p>
 
 
 ## Installation with CocoaPods
@@ -236,6 +240,8 @@ Designer: Takmila Tasmim Mim, mim.tasmim93@gmail.com
 BonsaiController is available under the MIT license. See the LICENSE file for more info.
 
 
+
 ## Support Us 
 
 <a href="https://www.buymeacoffee.com/UeJvuWlwR" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
