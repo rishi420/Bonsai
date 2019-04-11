@@ -196,7 +196,7 @@ An example project is included with this repo. To run the example project, clone
 
 ## Minimum Requirements
 
-* Xcode 9
+* Xcode 10.2 with swift5 (check previous releases and pod versions for older xcode) 
 * iOS 9.3
 
 
