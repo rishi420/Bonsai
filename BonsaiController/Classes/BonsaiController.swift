@@ -19,6 +19,7 @@ public protocol BonsaiControllerDelegate: UIViewControllerTransitioningDelegate 
     
     //@objc(presentationControllerForPresentedViewController:presentingViewController:sourceViewController:)
     //func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController?
+    @objc optional func didDismiss()
 }
 
 @objc
@@ -129,6 +130,7 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
             self?.blurEffectView.alpha = 0
         }, completion: { [weak self] (UIViewControllerTransitionCoordinatorContext) in
             self?.blurEffectView.removeFromSuperview()
+            self?.sizeDelegate?.didDismiss?()
         })
     }
     

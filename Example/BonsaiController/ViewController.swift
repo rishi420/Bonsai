@@ -180,4 +180,8 @@ extension ViewController: BonsaiControllerDelegate {
             return CGRect(origin: origin, size: CGSize(width: containerViewFrame.width / 2, height: containerViewFrame.height))
         }
     }
+    
+    func didDismiss() {
+        print("didDismiss")
+    }
 }
