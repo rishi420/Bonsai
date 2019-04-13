@@ -44,7 +44,7 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     private var originView: UIView?   // For Bubble transition
     private var fromDirection: Direction! // For slide Transition
     private var blurEffectView: UIVisualEffectView!
-    private var blurEffectStyle: UIBlurEffect.Style!
+    private var blurEffectStyle: UIBlurEffect.Style?
     
     @objc
     convenience public init(fromDirection: Direction, blurEffectStyle: UIBlurEffect.Style, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
@@ -53,6 +53,15 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
         self.fromDirection = fromDirection
         self.sizeDelegate = delegate
         self.blurEffectStyle = blurEffectStyle
+        setup(presentedViewController: presentedViewController)
+    }
+    
+    @objc
+    convenience public init(fromDirection: Direction, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
+        self.init(presentedViewController: presentedViewController, presenting: nil)
+        
+        self.fromDirection = fromDirection
+        self.sizeDelegate = delegate
         setup(presentedViewController: presentedViewController)
     }
     
@@ -66,6 +75,15 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
         setup(presentedViewController: presentedViewController)
     }
     
+    @objc
+    convenience public init(fromView: UIView, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
+        self.init(presentedViewController: presentedViewController, presenting: nil)
+        
+        self.originView = fromView
+        self.sizeDelegate = delegate
+        setup(presentedViewController: presentedViewController)
+    }
+    
     override private init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
     }
@@ -76,7 +94,11 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     
     private func setup(presentedViewController: UIViewController) {
         
-        let blurEffect = UIBlurEffect(style: blurEffectStyle)
+        var blurEffect: UIBlurEffect?
+        if let blurEffectStyle = blurEffectStyle {
+            blurEffect = UIBlurEffect(style: blurEffectStyle)
+        }
+        
         blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.isUserInteractionEnabled = true
