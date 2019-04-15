@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class BubbleTransition: NSObject, BonsaiTransitionProperties {
     
@@ -40,7 +41,16 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
         let viewToAnimate = viewControllerToAnimate.view!
         viewToAnimate.frame = transitionContext.finalFrame(for: viewControllerToAnimate)
         
-        let initialFrame = ((originView.superview) ?? originView).convert(originView.frame, to: nil)
+        var initialFrame = CGRect.zero
+        
+        if let originImageView = originView as? UIImageView, originImageView.contentMode == .scaleAspectFit  {
+            let imageSize = originImageView.image!.size
+            let imageViewRect = originImageView.frame
+            let frame = AVMakeRect(aspectRatio:imageSize , insideRect: imageViewRect)
+            initialFrame = ((originView.superview) ?? originView).convert(frame, to: nil)
+        } else {
+            initialFrame = ((originView.superview) ?? originView).convert(originView.frame, to: nil)
+        }
         
         let finalFrame = viewToAnimate.frame
 
