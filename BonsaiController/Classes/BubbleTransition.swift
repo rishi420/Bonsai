@@ -70,10 +70,12 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
             let frame = self.reverse ? initialFrame : finalFrame
             viewToAnimate.center = CGPoint(x: frame.midX, y: frame.midY)
             
-            viewToAnimate.alpha = self.reverse ? 0.5 : 1
-            
             }, completion: { _ in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        })
+        
+        UIView.animate(withDuration: duration/2, delay: duration/2, options: .curveEaseOut, animations: {
+            viewToAnimate.alpha = self.reverse ? 0.0 : 1
         })
     }
 }
