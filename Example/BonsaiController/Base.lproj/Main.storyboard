@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rQv-ee-f0X">
-                                <rect key="frame" x="103.5" y="250.5" width="168" height="210"/>
+                                <rect key="frame" x="103.5" y="235.5" width="168" height="240"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjE-YT-1Pf">
                                         <rect key="frame" x="12.5" y="0.0" width="143" height="30"/>
@@ -92,15 +92,15 @@
                                             <action selector="imagePickerButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tcv-3y-iqZ"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSB-Wa-RhI">
-                                        <rect key="frame" x="10" y="180" width="148" height="0.0"/>
-                                        <state key="normal" title="Video Player Example"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSB-Wa-RhI">
+                                        <rect key="frame" x="30.5" y="180" width="107" height="30"/>
+                                        <state key="normal" title="Full Screen Pop"/>
                                         <connections>
-                                            <action selector="videoPlayerButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DjD-3o-ecI"/>
+                                            <action selector="fullScreenPopButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DjD-3o-ecI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-H2-rFd">
-                                        <rect key="frame" x="11.5" y="180" width="145" height="30"/>
+                                        <rect key="frame" x="11.5" y="210" width="145" height="30"/>
                                         <state key="normal" title="Objective-C Example"/>
                                         <connections>
                                             <segue destination="3Ry-Hq-kx8" kind="show" id="hM3-HY-fbj"/>

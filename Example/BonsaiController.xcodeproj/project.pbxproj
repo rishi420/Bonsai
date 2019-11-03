@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		BC03EB7220C14F2D00D1930E /* BonsaiPopupUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC03EB7120C14F2D00D1930E /* BonsaiPopupUtility.swift */; };
+		BC160524236F0ABB00D845EB /* BonsaiFullScreenPopUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC160523236F0ABB00D845EB /* BonsaiFullScreenPopUtility.swift */; };
 		BC1A1A492178BF6D00063373 /* BonsaiNotificationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A1A482178BF6D00063373 /* BonsaiNotificationUtility.swift */; };
 		BC1D2A982163428E00CCD3F3 /* ObjectiveCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1D2A972163428E00CCD3F3 /* ObjectiveCViewController.m */; };
 		BC61BCB22116D203006969E0 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61BCB12116D203006969E0 /* CollectionViewController.swift */; };
@@ -38,6 +39,7 @@
 		8E06610C7E302E5B7833009E /* Pods-BonsaiController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonsaiController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BonsaiController_Example/Pods-BonsaiController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B4362DCF45BD8A29FA1528BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BC03EB7120C14F2D00D1930E /* BonsaiPopupUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonsaiPopupUtility.swift; sourceTree = "<group>"; };
+		BC160523236F0ABB00D845EB /* BonsaiFullScreenPopUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonsaiFullScreenPopUtility.swift; sourceTree = "<group>"; };
 		BC1A1A482178BF6D00063373 /* BonsaiNotificationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonsaiNotificationUtility.swift; sourceTree = "<group>"; };
 		BC1D2A952163428D00CCD3F3 /* BonsaiController_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BonsaiController_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		BC1D2A962163428E00CCD3F3 /* ObjectiveCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCViewController.h; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			children = (
 				BC03EB7120C14F2D00D1930E /* BonsaiPopupUtility.swift */,
 				BC1A1A482178BF6D00063373 /* BonsaiNotificationUtility.swift */,
+				BC160523236F0ABB00D845EB /* BonsaiFullScreenPopUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				BC74107B20BC40A0008039B3 /* SmallViewController.swift in Sources */,
 				BC1A1A492178BF6D00063373 /* BonsaiNotificationUtility.swift in Sources */,
 				BC61BCB42116D27C006969E0 /* CollectionViewCell.swift in Sources */,
+				BC160524236F0ABB00D845EB /* BonsaiFullScreenPopUtility.swift in Sources */,
 				BC03EB7220C14F2D00D1930E /* BonsaiPopupUtility.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				BC1D2A982163428E00CCD3F3 /* ObjectiveCViewController.m in Sources */,

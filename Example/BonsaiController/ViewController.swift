@@ -129,22 +129,12 @@ extension ViewController {
         self.present(imagePicker, animated: true, completion: nil)
     }
         
-    @IBAction func videoPlayerButtonAction(_ sender: Any) {
+    @IBAction func fullScreenPopButtonAction(_ sender: UIButton) {
         print("Video Player Button Action")
         
-        transitionType = .slide(fromDirection: Direction.randomDirection())
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SmallVC") as! SmallViewController
         
-        let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-        let player = AVPlayer(url: videoURL!)
-        let playerViewController = AVPlayerViewController()
-        playerViewController.player = player
-        
-        playerViewController.transitioningDelegate = self
-        playerViewController.modalPresentationStyle = .custom
-        
-        self.present(playerViewController, animated: true) {
-            playerViewController.player!.play()
-        }
+        BonsaiFullScreenPopUtility.shared.show(viewController: vc, fromView: sender)
     }
 }
 
