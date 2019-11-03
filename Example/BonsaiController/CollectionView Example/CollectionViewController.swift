@@ -78,7 +78,13 @@ extension CollectionViewController: BonsaiControllerDelegate {
             return nil
         }
         
-        return BonsaiController(fromView: cell, blurEffectStyle: .dark, presentedViewController: presented, delegate: self)
+        var blurEffectStyle = UIBlurEffect.Style.dark
+        
+        if #available(iOS 13.0, *) {
+            blurEffectStyle = .systemChromeMaterial
+        }
+        
+        return BonsaiController(fromView: cell, blurEffectStyle: blurEffectStyle, presentedViewController: presented, delegate: self)
     }
 }
 

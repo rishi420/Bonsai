@@ -153,13 +153,19 @@ extension ViewController: BonsaiControllerDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         
+        var blurEffectStyle = UIBlurEffect.Style.dark
+        
+        if #available(iOS 13.0, *) {
+            blurEffectStyle = .systemChromeMaterial
+        }
+        
         switch transitionType {
         case .none:
             return nil
         case .bubble:
-            return BonsaiController(fromView: popButton, blurEffectStyle: .dark,  presentedViewController: presented, delegate: self)
+            return BonsaiController(fromView: popButton, blurEffectStyle: blurEffectStyle,  presentedViewController: presented, delegate: self)
         case .slide(let fromDirection), .menu(let fromDirection):
-            return BonsaiController(fromDirection: fromDirection, blurEffectStyle: .light, presentedViewController: presented, delegate: self)
+            return BonsaiController(fromDirection: fromDirection, blurEffectStyle: blurEffectStyle, presentedViewController: presented, delegate: self)
         }
     }
     

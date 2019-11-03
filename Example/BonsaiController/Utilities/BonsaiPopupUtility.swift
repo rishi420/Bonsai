@@ -51,7 +51,14 @@ extension BonsaiPopupUtility: BonsaiControllerDelegate {
         
         let frame = frameOfPresentedView(in: source.view.frame)
         let originFrame = frame.insetBy(dx: -20, dy: -20)
-        let bonsaiController = BonsaiController(fromView: UIView(frame: originFrame), blurEffectStyle: .light, presentedViewController: presented, delegate: self)
+        
+        var blurEffectStyle = UIBlurEffect.Style.light
+        
+        if #available(iOS 13.0, *) {
+            blurEffectStyle = .systemChromeMaterial
+        }
+        
+        let bonsaiController = BonsaiController(fromView: UIView(frame: originFrame), blurEffectStyle: blurEffectStyle, presentedViewController: presented, delegate: self)
         bonsaiController.springWithDamping = 0.5
         bonsaiController.duration = 0.5
         bonsaiController.isDisabledTapOutside = true
