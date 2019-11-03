@@ -68,7 +68,7 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
         
         UIView.animate(withDuration: duration, delay:0.0, usingSpringWithDamping: reverse ? 1 : springWithDamping, initialSpringVelocity: 0.0, animations: { [weak self] in
             
-            guard let `self` = self else { return }
+            guard let self = self else { return }
             
             if self.reverse && self.isDisabledDismissAnimation {
                 viewToAnimate.alpha = 0

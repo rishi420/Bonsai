@@ -153,7 +153,7 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
         super.viewWillTransition(to: size, with: coordinator)
         
         coordinator.animate(alongsideTransition: { [weak self] (contx) in
-            guard let `self` = self else { return }
+            guard let self = self else { return }
             self.presentedView?.frame = self.frameOfPresentedViewInContainerView
             self.presentedView?.layoutIfNeeded()
         })

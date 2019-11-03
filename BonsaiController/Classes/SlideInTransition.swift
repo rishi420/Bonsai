@@ -54,7 +54,7 @@ extension SlideInTransition: UIViewControllerAnimatedTransitioning {
         
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: springWithDamping, initialSpringVelocity: 0.0, options: options, animations: { [weak self] in
             
-            guard let `self` = self else { return }
+            guard let self = self else { return }
             
             if self.reverse && self.isDisabledDismissAnimation {
                 viewToAnimate.alpha = 0
