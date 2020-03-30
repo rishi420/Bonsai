@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BonsaiController'
-  s.version          = '5.1.1'
+  s.version          = '6.0.0'
   s.summary          = '🌲 Bonsai makes custom frame size and transition animation to any view controller'
 
 # This description is used to generate tags and improve search results.
