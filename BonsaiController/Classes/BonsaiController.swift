@@ -46,6 +46,7 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     private var fromDirection: Direction! // For slide Transition
     private var blurEffectView: UIVisualEffectView!
     private var blurEffectStyle: UIBlurEffect.Style?
+    private var backgroundColor: UIColor?
     
     @objc
     convenience public init(fromDirection: Direction, blurEffectStyle: UIBlurEffect.Style, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
@@ -57,12 +58,14 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
         setup(presentedViewController: presentedViewController)
     }
     
+    
     @objc
-    convenience public init(fromDirection: Direction, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
+    convenience public init(fromDirection: Direction, backgroundColor: UIColor, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.fromDirection = fromDirection
         self.sizeDelegate = delegate
+        self.backgroundColor = backgroundColor
         setup(presentedViewController: presentedViewController)
     }
     
@@ -77,11 +80,12 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
     }
     
     @objc
-    convenience public init(fromView: UIView, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
+    convenience public init(fromView: UIView, backgroundColor: UIColor, presentedViewController: UIViewController, delegate: BonsaiControllerDelegate?) {
         self.init(presentedViewController: presentedViewController, presenting: nil)
         
         self.originView = fromView
         self.sizeDelegate = delegate
+        self.backgroundColor = backgroundColor
         setup(presentedViewController: presentedViewController)
     }
     
@@ -98,9 +102,12 @@ public class BonsaiController: UIPresentationController, BonsaiTransitionPropert
         var blurEffect: UIBlurEffect?
         if let blurEffectStyle = blurEffectStyle {
             blurEffect = UIBlurEffect(style: blurEffectStyle)
+            blurEffectView = UIVisualEffectView(effect: blurEffect)
+        } else {
+            blurEffectView = UIVisualEffectView(effect: nil)
+            blurEffectView.backgroundColor = self.backgroundColor
         }
         
-        blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.isUserInteractionEnabled = true
         

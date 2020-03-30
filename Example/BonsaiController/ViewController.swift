@@ -149,13 +149,27 @@ extension ViewController: BonsaiControllerDelegate {
             blurEffectStyle = .systemChromeMaterial
         }
         
+        let backgroundColor = UIColor(white: 0, alpha: 0.5)
+        
         switch transitionType {
         case .none:
             return nil
+            
         case .bubble:
-            return BonsaiController(fromView: popButton, blurEffectStyle: blurEffectStyle,  presentedViewController: presented, delegate: self)
+            
+            // With Blur Style
+            // return BonsaiController(fromView: popButton, blurEffectStyle: blurEffectStyle,  presentedViewController: presented, delegate: self)
+        
+            // With Background Color
+            return BonsaiController(fromView: popButton, backgroundColor: backgroundColor, presentedViewController: presented, delegate: self)
+            
         case .slide(let fromDirection), .menu(let fromDirection):
-            return BonsaiController(fromDirection: fromDirection, blurEffectStyle: blurEffectStyle, presentedViewController: presented, delegate: self)
+            
+            // With Blur Style
+            // return BonsaiController(fromDirection: fromDirection, blurEffectStyle: blurEffectStyle, presentedViewController: presented, delegate: self)
+            
+            // With Background Color
+            return BonsaiController(fromDirection: fromDirection, backgroundColor: backgroundColor, presentedViewController: presented, delegate: self)
         }
     }
     
