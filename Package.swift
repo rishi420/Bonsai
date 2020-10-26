@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "BonsaiController",
             dependencies: [],
-            path: "BonsaiController"
+            path: "BonsaiController/Classes"
         )
     ]
 )
